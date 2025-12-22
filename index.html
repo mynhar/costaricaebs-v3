@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBS | Integrador Híbrido: IT + Cloud + Energía</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+    <script src="menu.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="#" class="brand">
+                <div class="logo-placeholder">EBS</div>
+                <div class="brand-name">Costa Rica EBS</div>
+            </a>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i data-lucide="menu"></i>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="active">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#msft">Microsoft</a></li>
+                    <li><a href="#datacenter">Centro de Datos</a></li>
+                    <li><a href="#cybersecurity">Ciberseguridad</a></li>
+                    <li><a href="#solar">Solar</a></li>
+                    <li><a href="#industrias">Industrias</a></li>
+                    <li><a href="#whycrebs">Por qué EBS</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <span class="hero-badge">INTEGRACIÓN HÍBRIDA 360º</span>
+            <h1>Costa Rica Enterprise Business Solutions</h1>
+            <p style="color: white;">Transformamos infraestructura crítica en ventajas competitivas mediante soluciones
+                híbridas de TI, Cloud
+                y Energía. Soluciones innovadoras, resultados excepcionales.</p>
+            <div class="cta-group">
+                <a href="#contacto" class="cta-button">
+                    <i data-lucide="message-square"></i> Consulta gratuita
+                </a>
+                <a href="#servicios" class="cta-button secondary">
+                    <i data-lucide="arrow-down"></i> Nuestros servicios
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="servicios" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Servicios Profesionales</h2>
+                <p>Soluciones integrales desde consultoría hasta operación gestionada</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="services-nav">
+                <button class="nav-pill active" onclick="showTab(event, 'core')">CORE IT</button>
+                <button class="nav-pill" onclick="showTab(event, 'dc')">DATA CENTER</button>
+                <button class="nav-pill" onclick="showTab(event, 'msft')">MICROSOFT</button>
+                <button class="nav-pill" onclick="showTab(event, 'sec')">SEGURIDAD</button>
+                <button class="nav-pill" onclick="showTab(event, 'solar')">ENERGÍA</button>
+                <button class="nav-pill" onclick="showTab(event, 'managed')">GESTIONADOS</button>
+                <button class="nav-pill" onclick="showTab(event, 'autoDevOps')">DEVOPS</button>
+            </div>
+            <div id="core" class="ecosystem-grid active">
+                <div class="service-card">
+                    <h3><i data-lucide="briefcase"></i> Consultoría y Arquitectura</h3>
+                    <ul class="service-list">
+                        <li>Arquitectura de Infraestructura On-Prem, Híbrida y Cloud</li>
+                        <li>Evaluaciones de Madurez Tecnológica (IT Assessments)</li>
+                        <li>Diseño de Data Centers (Tier-oriented, resiliencia, DR)</li>
+                        <li>Roadmaps tecnológicos y planes de modernización</li>
+                        <li>Due Diligence técnica para adquisiciones (M&A IT)</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3><i data-lucide="arrow-right-circle"></i> Implementación y Migraciones</h3>
+                    <ul class="service-list">
+                        <li>Migración VMware → Hyper-V / Azure Stack HCI</li>
+                        <li>Migraciones a Azure (IaaS, PaaS, híbrido)</li>
+                        <li>Consolidación de data centers</li>
+                        <li>Modernización de Active Directory</li>
+                        <li>Migración de workloads legacy</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3><i data-lucide="arrow-right-circle"></i> Operación y Soporte</h3>
+                    <ul class="service-list">
+                        <li>Soporte Nivel 3 / Escalamiento Enterprise</li>
+                        <li>Administración de Infraestructura Crítica</li>
+                        <li>Soporte post-implementación</li>
+                        <li>Gestión de incidentes críticos</li>
+                        <li>IT Staff Augmentation (especialistas senior)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="dc" class="ecosystem-grid">
+                <div class="service-card">
+                    <h3><i data-lucide="briefcase"></i> Virtualización y Compute</h3>
+                    <ul class="service-list">
+                        <li>Hyper-V Clusters (Windows Server 2022/2025)</li>
+                        <li>Azure Stack HCI</li>
+                        <li>VMware (assessment, optimización, salida ordenada)</li>
+                        <li>Alta disponibilidad y clustering</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3><i data-lucide="arrow-right-circle"></i> Storage & Backup</h3>
+                    <ul class="service-list">
+                        <li>Arquitecturas SAN / HCI</li>
+                        <li>Azure File Sync</li>
+                        <li>Backup empresarial (Veeam, Arcserve, Azure Backup)</li>
+                        <li>Backup inmutable y ransomware-ready</li>
+                        <li>Retención legal y compliance</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3><i data-lucide="arrow-right-circle"></i> Disaster Recovery & Continuidad</h3>
+                    <ul class="service-list">
+                        <li>DRaaS en Azure</li>
+                        <li>Hyper-V Replica</li>
+                        <li>Azure Site Recovery</li>
+                        <li>Diseño y pruebas de BCP/DRP</li>
+                        <li>Automatización de failover</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="msft" class="ecosystem-grid">
+                <div class="service-card">
+                    <h3><i data-lucide="briefcase"></i> Microsoft Azure</h3>
+                    <ul class="service-list">
+                        <li>Diseño de Landing Zones</li>
+                        <li>Azure IaaS / PaaS</li>
+                        <li>Azure Arc (servers, SQL, governance)</li>
+                        <li>Cost Management & FinOps</li>
+                        <li>Azure Bastion, VPN, ExpressRoute</li>
+                        <li>Azure Virtual Desktop (AVD)</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3><i data-lucide="arrow-right-circle"></i> Microsoft 365 & Entra ID</h3>
+                    <ul class="service-list">
+                        <li>Entra ID (Azure AD) diseño y hardening</li>
+                        <li>Migración y optimización Microsoft 365</li>
+                        <li>Identidad híbrida</li>
+                        <li>Conditional Access & Zero Trust</li>
+                        <li>Autopilot & Modern Workplace</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3><i data-lucide="arrow-right-circle"></i> Seguridad Microsoft</h3>
+                    <ul class="service-list">
+                        <li>Microsoft Defender (Endpoint, Servers, M365)</li>
+                        <li>Defender for Cloud</li>
+                        <li>Microsoft Purview (compliance, DLP)</li>
+                        <li>Seguridad post-incidente</li>
+                        <li>Hardening y Zero Trust Architecture</li>
+                    </ul>
+                </div>
+                <div class="service-card"
+                    style="border-top-color: var(--accent-solar); background: rgba(245, 158, 11, 0.05);">
+
+                    <h3 style="color:var(--accent-solar)">
+                        <i data-lucide="arrow-right-circle"></i> Licenciamiento Microsoft
+                    </h3>
+                    <ul class="service-list">
+                        <li>Optimización de licencias</li>
+                        <li>Auditorías de cumplimiento</li>
+                        <li>Transición E3 → E5</li>
+                        <li>Estrategia CAPEX vs OPEX</li>
+                        <li>Asesoría pre-auditoría (SAM readiness)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="sec" class="ecosystem-grid">
+                <div class="service-card">
+                    <h3><i data-lucide="briefcase"></i> Servicios de Seguridad</h3>
+                    <ul class="service-list">
+                        <li>Security Assessments</li>
+                        <li>Post-breach remediation</li>
+                        <li>Hardening de Active Directory</li>
+                        <li>Purple Knight / herramientas equivalentes</li>
+                        <li>Seguridad híbrida (on-prem + cloud)</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3><i data-lucide="arrow-right-circle"></i> Operación de Seguridad</h3>
+                    <ul class="service-list">
+                        <li>Onboarding a Microsoft Defender</li>
+                        <li>Alertas, tuning y reducción de ruido</li>
+                        <li>Integración SIEM / XDR</li>
+                        <li>Políticas y gobernanza de seguridad</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="solar" class="ecosystem-grid">
+                <div class="service-card"
+                    style="border-top-color: var(--accent-solar); background: rgba(245, 158, 11, 0.05);">
+                    <h3 style="color:var(--accent-solar)">
+                        <i data-lucide="sun"></i> Respaldo Energético para Data Centers
+                    </h3>
+                    <ul class="service-list">
+                        <li>Diseño de sistemas solares híbridos (Grid + Solar + Baterías)</li>
+                        <li>UPS + Solar + Generadores</li>
+                        <li>Microgrids para centros de datos</li>
+                        <li>Continuidad energética para cargas críticas</li>
+                    </ul>
+                </div>
+                <div class="service-card" style="border-top-color: var(--accent-solar);">
+                    <h3 style="color:var(--accent-solar)"><i data-lucide="leaf"></i> Solar Empresarial</h3>
+                    <ul class="service-list">
+                        <li>Solar para oficinas corporativas</li>
+                        <li>Solar para edificios comerciales</li>
+                        <li>Solar para industria</li>
+                        <li>Evaluación ROI energético</li>
+                        <li>Reducción de huella de carbono (ESG)</li>
+                    </ul>
+                </div>
+                <div class="service-card" style="border-top-color: var(--accent-solar);">
+                    <h3 style="color:var(--accent-solar)"><i data-lucide="leaf"></i> Casos de Uso Críticos</h3>
+                    <ul class="service-list">
+                        <li>Data centers on-prem</li>
+                        <li>Edge locations</li>
+                        <li>Sites remotos</li>
+                        <li>Operación 24/7</li>
+                        <li>Infraestructura regulada</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="managed" class="ecosystem-grid">
+                <div class="service-card">
+                    <h3><i data-lucide="briefcase"></i> Servicios Gestionados (MRR – piensa como CEO)</h3>
+                    <ul class="service-list">
+                        <li>Managed Infrastructure Services</li>
+                        <li>Managed Backup & DR</li>
+                        <li>Managed Microsoft 365 Security</li>
+                        <li>Managed Azure (monitoreo, optimización, costos)</li>
+                        <li>Soporte híbrido mensual</li>
+                        <li>SLA empresariales</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="autoDevOps" class="ecosystem-grid">
+                <div class="service-card">
+                    <h3><i data-lucide="briefcase"></i> Automatización & DevOps</h3>
+                    <ul class="service-list">
+                        <li>PowerShell & scripting avanzado</li>
+                        <li>Automatización de despliegues</li>
+                        <li>Infrastructure as Code (ARM / Bicep / Terraform)</li>
+                        <li>Estandarización de entornos</li>
+                        <li>Reducción de errores humanos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <section id="industrias" style="padding: 100px 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Soluciones por Industria</h2>
+                    <p>Especialización vertical para entornos regulatorios y de misión crítica</p>
+                </div>
+                <div class="why-grid" style="margin-top: 60px;">
+                    <div class="why-card" onclick="showIndustry('fina')"
+                        style="border-left: 4px solid var(--accent-blue); cursor: pointer;">
+                        <h3
+                            style="color:var(--accent-blue); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <i data-lucide="landmark"></i> Banca y Finanzas
+                        </h3>
+                        <p>Infraestructura financiera resiliente y audit-ready con RTO/RPO cercano a cero</p>
+                    </div>
+                    <div class="why-card" onclick="showIndustry('manu')"
+                        style="border-left: 4px solid var(--accent-green); cursor: pointer;">
+                        <h3
+                            style="color:var(--accent-green); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <i data-lucide="factory"></i> Manufactura
+                        </h3>
+                        <p>Edge Computing para plantas de producción con alta disponibilidad</p>
+                    </div>
+                    <div class="why-card" onclick="showIndustry('heal')"
+                        style="border-left: 4px solid var(--accent-red); cursor: pointer;">
+                        <h3
+                            style="color:var(--accent-red); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <i data-lucide="activity"></i> Salud / Pharma
+                        </h3>
+                        <p>Gobernanza de datos sensibles HIPAA y cumplimiento regulatorio</p>
+                    </div>
+                    <div class="why-card" onclick="showIndustry('ener')"
+                        style="border-left: 4px solid var(--accent-solar); cursor: pointer;">
+                        <h3
+                            style="color:var(--accent-solar); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <i data-lucide="zap"></i> Energía y Utilities
+                        </h3>
+                        <p>Infraestructura crítica 24/7/365 con alta resiliencia</p>
+                    </div>
+                </div>
+                <!-- <div class="industry-content-wrapper">
+                    <div id="fina" class="industry-content active">
+                        <div class="content-grid">
+                            <div>
+                                <h4>Banca y Finanzas</h4>
+                                <p class="lead">Infraestructura financiera resiliente y audit-ready</p>
+                                <ul class="feature-list">
+                                    <li><i data-lucide="check"></i> Arquitecturas HA/DR para Core Banking</li>
+                                    <li><i data-lucide="check"></i> Seguridad y cumplimiento regulatorio</li>
+                                    <li><i data-lucide="check"></i> Modernización de plataformas legadas</li>
+                                </ul>
+                            </div>
+                            <div class="industry-image">
+                                <img src="http://static.photos/finance/640x360/1" alt="Banca y Finanzas" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        <section id="whycrebs" style="padding: 100px 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Por qué Costa Rica EBS</h2>
+                    <p>Experiencia empresarial con las ventajas de nearshore costo-efectivo</p>
+                </div>
+                <div class="why-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 60px;">
+                    <div class="why-card"
+                        style="background: var(--bg-card); padding: 30px; border-radius: var(--radius-md); border-left: 4px solid var(--purple-main);">
+                        <h3
+                            style="color: var(--purple-light); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <i data-lucide="award"></i> Experiencia Empresarial
+                        </h3>
+                        <p>15+ años diseñando soluciones para empresas Fortune 500 e industrias reguladas.</p>
+                    </div>
+                    <div class="why-card"
+                        style="background: var(--bg-card); padding: 30px; border-radius: var(--radius-md); border-left: 4px solid var(--accent-green);">
+                        <h3
+                            style="color: var(--accent-green); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <i data-lucide="globe"></i> Enfoque Híbrido
+                        </h3>
+                        <p>Amplia experiencia integrando infraestructura on-prem con plataformas cloud, especialmente
+                            Microsoft Azure.</p>
+                    </div>
+                    <div class="why-card"
+                        style="background: var(--bg-card); padding: 30px; border-radius: var(--radius-md); border-left: 4px solid var(--accent-solar);">
+                        <h3
+                            style="color: var(--accent-solar); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <i data-lucide="zap"></i> Experiencia Energética
+                        </h3>
+                        <p>Combinación única de infraestructura IT y soluciones de energía solar para sistemas
+                            resilientes.</p>
+                    </div>
+                    <div class="why-card"
+                        style="background: var(--bg-card); padding: 30px; border-radius: var(--radius-md); border-left: 4px solid var(--purple-light);">
+                        <h3
+                            style="color: var(--purple-light); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <i data-lucide="map-pin"></i> Ventaja Nearshore
+                        </h3>
+                        <p>Costa Rica ofrece misma zona horaria que EE.UU., afinidad cultural y alto dominio del inglés.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" style="padding: 100px 0; background: #0A0F1C;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 style="color: white;">Solicita una Evaluación de Arquitectura</h2>
+                    <p style="color: white;">Obtén una consulta gratuita con nuestros arquitectos empresariales</p>
+                </div>
+
+                <div
+                    style="max-width: 800px; margin: 0 auto; background: var(--bg-card); border-radius: var(--radius-lg); padding: 60px; box-shadow: var(--shadow-lg);">
+                    <form id="contactForm" style="display: grid; gap: 24px;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div>
+                                <label for="name"
+                                    style="color: white; display: block; margin-bottom: 8px; font-weight: 500;">Nombre
+                                    Completo</label>
+                                <input type="text" id="name" name="name" required
+                                    style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;">
+                            </div>
+                            <div>
+                                <label for="company"
+                                    style="color: white; display: block; margin-bottom: 8px; font-weight: 500;">Empresa</label>
+                                <input type="text" id="company" name="company" required
+                                    style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;">
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div>
+                                <label for="email"
+                                    style="color: white; display: block; margin-bottom: 8px; font-weight: 500;">Correo
+                                    Electrónico</label>
+                                <input type="email" id="email" name="email" required
+                                    style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;">
+                            </div>
+                            <div>
+                                <label for="phone"
+                                    style=" color: white; display: block; margin-bottom: 8px; font-weight: 500;">Teléfono</label>
+                                <input type="tel" id="phone" name="phone"
+                                    style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="service"
+                                style="color: white; display: block; margin-bottom: 8px; font-weight: 500;">Servicio
+                                de Interés</label>
+                            <select id="service" name="service"
+                                style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;">
+                                <option class="text-color" value="">Seleccione un servicio</option>
+                                <option class="text-color" value="core">Infraestructura IT Principal</option>
+                                <option class="text-color" value="dc">Centro de Datos & Rec. ante fallas</option>
+                                <option class="text-color" value="msft">Microsoft & Azure</option>
+                                <option class="text-color" value="sec">Ciberseguridad</option>
+                                <option class="text-color" value="solar">Soluciones de Energía Solar</option>
+                                <option class="text-color" value="managed">Servicios Gestionados</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message"
+                                style="color: white; display: block; margin-bottom: 8px; font-weight: 500;">Mensaje</label>
+                            <textarea id="message" name="message" rows="4"
+                                style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button"
+                            style="width: 100%; justify-content: center; margin-top: 20px;">
+                            <i data-lucide="send"></i> Enviar Solicitud
+                        </button>
+                    </form>
+                </div>
+
+                <div
+                    style="margin-top: 60px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; text-align: center;">
+                    <div>
+                        <div
+                            style="background: rgba(106, 13, 173, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i data-lucide="mail" style="color: var(--purple-light);"></i>
+                        </div>
+                        <h3 style="margin-bottom: 10px;">Escríbenos</h3>
+                        <p>info@costaricaebs.com</p>
+                    </div>
+                    <div>
+                        <div
+                            style="background: rgba(106, 13, 173, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i data-lucide="phone" style="color: var(--purple-light);"></i>
+                        </div>
+                        <h3 style="margin-bottom: 10px;">Llámanos</h3>
+                        <p>+506 1234 5678</p>
+                    </div>
+                    <div>
+                        <div
+                            style="background: rgba(106, 13, 173, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i data-lucide="map-pin" style="color: var(--purple-light);"></i>
+                        </div>
+                        <h3 style="margin-bottom: 10px;">Ubicación</h3>
+                        <p>San José, Costa Rica</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container footer-content">
+                <div class="footer-logo">
+                    <div class="logo-placeholder">EBS</div>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Inicio</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#msft">Microsoft</a>
+                    <a href="#datacenter">Centro de Datos</a>
+                    <a href="#cybersecurity">Ciberseguridad</a>
+                    <a href="#solar">Solar</a>
+                    <a href="#industrias">Industrias</a>
+                    <a href="#whycrebs">Por qué EBS</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <p class="copyright">© 2023 Costa Rica EBS. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+        <a href="https://wa.me/TUNUMEROAQUI" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+            <i data-lucide="message-circle"></i>
+        </a>
+        <script>
+            lucide.createIcons();
+            // Mobile menu toggle
+            document.querySelector('.menu-toggle').addEventListener('click', function () {
+                const navMenu = document.querySelector('.nav-menu');
+                navMenu.classList.toggle('active');
+                document.querySelector('body').classList.toggle('no-scroll');
+                this.querySelector('i').setAttribute('data-lucide',
+                    navMenu.classList.contains('active') ? 'x' : 'menu');
+                lucide.createIcons();
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function (event) {
+                const nav = document.querySelector('.main-nav');
+                if (!nav.contains(event.target) && !event.target.classList.contains('menu-toggle')) {
+                    document.querySelector('.nav-menu').classList.remove('active');
+                    document.querySelector('.menu-toggle i').setAttribute('data-lucide', 'menu');
+                    document.querySelector('body').classList.remove('no-scroll');
+                    lucide.createIcons();
+                }
+            });
+            // Form submission handler
+            document.getElementById('contactForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                const formData = new FormData(this);
+
+                // Here you would send the form data to your backend
+                console.log('Form submitted:', Object.fromEntries(formData));
+
+                // Show success message
+                alert('¡Gracias por tu solicitud! Nuestro equipo se contactará contigo pronto.');
+                this.reset();
+            });
+
+            // Services Navigation
+            function showTab(evt, tabId) {
+                document.querySelectorAll('.ecosystem-grid').forEach(g => g.classList.remove('active'));
+                document.querySelectorAll('.nav-pill').forEach(p => p.classList.remove('active'));
+                document.getElementById(tabId).classList.add('active');
+                evt.currentTarget.classList.add('active');
+
+                // Smooth scroll to services
+                document.getElementById('servicios').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+
+            // Industry Selector
+            function showIndustry(id) {
+                document.querySelectorAll('.industry-content').forEach(c => c.classList.remove('active'));
+                document.querySelectorAll('.industry-card').forEach(b => b.classList.remove('active'));
+                document.getElementById(id).classList.add('active');
+                event.currentTarget.classList.add('active');
+            }
+            // Initialize first industry
+            document.addEventListener('DOMContentLoaded', function () {
+                showIndustry('fina');
+
+                // Close mobile menu when clicking a link
+                document.querySelectorAll('.nav-menu a').forEach(link => {
+                    link.addEventListener('click', function () {
+                        if (window.innerWidth <= 1024) {
+                            document.querySelector('.nav-menu').classList.remove('active');
+                            document.querySelector('body').classList.remove('no-scroll');
+                            document.querySelector('.menu-toggle i').setAttribute('data-lucide', 'menu');
+                            lucide.createIcons();
+                        }
+                    });
+                });
+            });
+            // Add intersection observer for animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        </script>
+        <!-- <script src="https://huggingface.co/deepsite/deepsite-badge.js"></script> -->
+</body>
+
+</html>
