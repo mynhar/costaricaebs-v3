@@ -18,10 +18,16 @@
 <body>
     <header>
         <div class="container header-content">
-            <a href="#" class="brand">
+            <!-- <a href="#" class="brand">
                 <div class="logo-placeholder">EBS</div>
                 <div class="brand-name">Costa Rica EBS</div>
-            </a>
+            </a> -->
+            <div class="brand-container">
+                <!-- <img src="logo.png" alt="Logo" class="logo"> -->
+                <div class="logo-placeholder">EBS</div>
+                <span class="brand-text">Costa Rica Enterprise Business Solutions</span>
+            </div>
+
             <nav class="main-nav">
                 <button class="menu-toggle" aria-label="Toggle menu">
                     <i data-lucide="menu"></i>
@@ -31,7 +37,8 @@
                     </li>
                     <li><a href="#servicios" id="Servicios" onclick="showNavActive(event, 'Servicios')">Servicios</a>
                     </li>
-                    <li><a href="microsoft-azure.html" target="_blank" id="Microsoft" onclick="showNavActive(event, 'Microsoft')">Microsoft</a></li>
+                    <li><a href="microsoft-azure.html" target="_blank" id="Microsoft"
+                            onclick="showNavActive(event, 'Microsoft')">Microsoft</a></li>
                     <li><a href="#datacenter" id="Datos" onclick="showNavActive(event, 'Datos')">Centro de Datos</a>
                     </li>
                     <li><a href="#cybersecurity" id="Ciberseguridad"
@@ -590,7 +597,7 @@
             <div class="footer-links">
                 <a href="#home">Inicio</a>
                 <a href="#servicios">Servicios</a>
-                <a href="#msft">Microsoft</a>
+                <a href="microsoft-azure.html" target="_blank">Microsoft</a> <!-- href="#msft" -->
                 <a href="#datacenter">Centro de Datos</a>
                 <a href="#cybersecurity">Ciberseguridad</a>
                 <a href="https://costaricaebs.com/product-category/it-solutions/microsoft/" target="_blank">Solar</a>
@@ -612,7 +619,7 @@
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             const navMenu = document.querySelector('.nav-menu');
             navMenu.classList.toggle('active');
-            document.querySelector('body').classList.toggle('no-scroll');
+            // document.querySelector('body').classList.toggle('no-scroll');
             this.querySelector('i').setAttribute('data-lucide',
                 navMenu.classList.contains('active') ? 'x' : 'menu');
             lucide.createIcons();
@@ -624,7 +631,7 @@
             if (!nav.contains(event.target) && !event.target.classList.contains('menu-toggle')) {
                 document.querySelector('.nav-menu').classList.remove('active');
                 document.querySelector('.menu-toggle i').setAttribute('data-lucide', 'menu');
-                document.querySelector('body').classList.remove('no-scroll');
+                // document.querySelector('body').classList.remove('no-scroll');
                 lucide.createIcons();
             }
         });

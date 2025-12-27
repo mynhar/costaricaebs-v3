@@ -95,6 +95,13 @@ header {
   height: 100%;
 }
 
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre logo y texto */
+  flex: 1; /* Toma espacio a la izquierda para empujar el resto */
+}
+
 .logo-placeholder {
   width: 44px;
   height: 44px;

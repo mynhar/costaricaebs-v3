@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EBS | Integrador Híbrido: IT + Cloud + Energía</title>
+    <title>Soluciones Microsoft Premium | Enterprise Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap"
         rel="stylesheet">
     <link rel="stylesheet"
@@ -12,26 +12,63 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contacto.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #05070a;
+            color: #e5e7eb;
+            font-family: 'Inter', sans-serif;
+        }
 
+        .premium-border {
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            background: linear-gradient(145deg, #0f172a, #1e293b);
+            position: relative;
+        }
+
+        .premium-border::before {
+            content: "PREMIUM SOLUTIONS";
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: #ffd700;
+            color: #000;
+            font-size: 0.7rem;
+            font-weight: bold;
+            padding: 2px 10px;
+            border-radius: 20px;
+        }
+
+        .glow-blue {
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <div class="container header-content">
-            <a href="#" class="brand">
+            <!-- <a href="#" class="brand">
                 <div class="logo-placeholder">EBS</div>
                 <div class="brand-name">Costa Rica EBS</div>
-            </a>
+            </a> -->
+            <div class="brand-container">
+                <!-- <img src="logo.png" alt="Logo" class="logo"> -->
+                <div class="logo-placeholder">EBS</div>
+                <span class="brand-text">Costa Rica Enterprise Business Solutions</span>
+            </div>
+
             <nav class="main-nav">
                 <button class="menu-toggle" aria-label="Toggle menu">
                     <i data-lucide="menu"></i>
                 </button>
                 <ul class="nav-menu">
-                    <li><a href="#home" id="Inicio" onclick="showNavActive(event, 'Inicio')">Inicio</a>
+                    <li><a href="#home" class="active" id="Inicio" onclick="showNavActive(event, 'Inicio')">Inicio</a>
                     </li>
                     <li><a href="#servicios" id="Servicios" onclick="showNavActive(event, 'Servicios')">Servicios</a>
                     </li>
-                    <li><a href="microsoft-azure.html" class="active" id="Microsoft"
+                    <li><a href="microsoft-azure.html" target="_blank" id="Microsoft"
                             onclick="showNavActive(event, 'Microsoft')">Microsoft</a></li>
                     <li><a href="#datacenter" id="Datos" onclick="showNavActive(event, 'Datos')">Centro de Datos</a>
                     </li>
@@ -51,654 +88,111 @@
 
     <section id="home" class="hero">
         <div class="container hero-content">
-            <span class="hero-badge">INTEGRACIÓN HÍBRIDA 360º</span>
-            <h1>Costa Rica Enterprise Business Solutions</h1>
-            <p style="color: white;">Transformamos infraestructura crítica en ventajas competitivas mediante soluciones
-                híbridas de TI, Cloud
-                y Energía. Soluciones innovadoras, resultados excepcionales.</p>
-            <div class="cta-group">
-                <a href="#contacto" class="cta-button">
-                    <i data-lucide="message-square"></i> Consulta gratuita
-                </a>
-                <a href="#servicios" class="cta-button secondary">
-                    <i data-lucide="arrow-down"></i> Nuestros servicios
-                </a>
-            </div>
+            <h1 class="text-5xl font-extrabold text-white mb-4">Soluciones <span class="text-blue-400">Microsoft</span>
+                para
+                Empresas</h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">Elevamos su infraestructura al estándar Gold.
+                Optimización,
+                Seguridad y Cumplimiento en el entorno Microsoft.</p>
         </div>
     </section>
 
-    <section id="servicios" class="services-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Servicios Profesionales</h2>
-                <p>Soluciones integrales desde consultoría hasta operación gestionada</p>
-                <div class="section-divider"></div>
-            </div>
-            <div class="services-nav">
-                <button class="nav-pill active" onclick="showTab(event, 'core')">CORE IT</button>
-                <button class="nav-pill" onclick="showTab(event, 'dc')">DATA CENTER</button>
-                <button class="nav-pill" onclick="showTab(event, 'msft')">MICROSOFT</button>
-                <button class="nav-pill" onclick="showTab(event, 'sec')">SEGURIDAD</button>
-                <button class="nav-pill" onclick="showTab(event, 'solar')">ENERGÍA</button>
-                <button class="nav-pill" onclick="showTab(event, 'managed')">GESTIONADOS</button>
-                <button class="nav-pill" onclick="showTab(event, 'autoDevOps')">DEVOPS</button>
-            </div>
-            <div id="core" class="ecosystem-grid active">
-                <div class="service-card">
-                    <h3><i data-lucide="briefcase"></i> Consultoría y Arquitectura</h3>
-                    <ul class="service-list">
-                        <li>Arquitectura de Infraestructura On-Prem, Híbrida y Cloud</li>
-                        <li>Evaluaciones de Madurez Tecnológica (IT Assessments)</li>
-                        <li>Diseño de Data Centers (Tier-oriented, resiliencia, DR)</li>
-                        <li>Roadmaps tecnológicos y planes de modernización</li>
-                        <li>Due Diligence técnica para adquisiciones (M&A IT)</li>
-                    </ul>
+    <!-- <main class="max-w-7xl mx-auto px-6 pb-24"> -->
+    <section id="main" class="services-section">
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <div class="premium-border p-8 rounded-2xl glow-blue transition-transform hover:scale-[1.02]">
+                <div class="flex items-center mb-6">
+                    <i class="fab fa-microsoft text-4xl text-blue-500 mr-4"></i>
+                    <h2 class="text-2xl font-bold text-white">Microsoft Azure</h2>
                 </div>
-                <div class="service-card">
-                    <h3><i data-lucide="arrow-right-circle"></i> Implementación y Migraciones</h3>
-                    <ul class="service-list">
-                        <li>Migración VMware → Hyper-V / Azure Stack HCI</li>
-                        <li>Migraciones a Azure (IaaS, PaaS, híbrido)</li>
-                        <li>Consolidación de data centers</li>
-                        <li>Modernización de Active Directory</li>
-                        <li>Migración de workloads legacy</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3><i data-lucide="arrow-right-circle"></i> Operación y Soporte</h3>
-                    <ul class="service-list">
-                        <li>Soporte Nivel 3 / Escalamiento Enterprise</li>
-                        <li>Administración de Infraestructura Crítica</li>
-                        <li>Soporte post-implementación</li>
-                        <li>Gestión de incidentes críticos</li>
-                        <li>IT Staff Augmentation (especialistas senior)</li>
-                    </ul>
-                </div>
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex items-start"><i class="fas fa-check text-blue-400 mt-1 mr-2"></i> Diseño de Landing
+                        Zones</li>
+                    <li class="flex items-start"><i class="fas fa-check text-blue-400 mt-1 mr-2"></i> Azure IaaS / PaaS
+                    </li>
+                    <li class="flex items-start"><i class="fas fa-check text-blue-400 mt-1 mr-2"></i> Azure Arc
+                        (Servers, SQL, Governance)</li>
+                    <li class="flex items-start"><i class="fas fa-check text-blue-400 mt-1 mr-2"></i> Cost Management &
+                        FinOps</li>
+                    <li class="flex items-start"><i class="fas fa-check text-blue-400 mt-1 mr-2"></i> Networking:
+                        Bastion, VPN, ExpressRoute</li>
+                    <li class="flex items-start"><i class="fas fa-check text-blue-400 mt-1 mr-2"></i> Azure Virtual
+                        Desktop (AVD)</li>
+                </ul>
             </div>
 
-            <div id="dc" class="ecosystem-grid">
-                <div class="service-card">
-                    <h3><i data-lucide="briefcase"></i> Virtualización y Compute</h3>
-                    <ul class="service-list">
-                        <li>Hyper-V Clusters (Windows Server 2022/2025)</li>
-                        <li>Azure Stack HCI</li>
-                        <li>VMware (assessment, optimización, salida ordenada)</li>
-                        <li>Alta disponibilidad y clustering</li>
-                    </ul>
+            <div class="premium-border p-8 rounded-2xl glow-blue transition-transform hover:scale-[1.02]">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-users-cog text-4xl text-cyan-400 mr-4"></i>
+                    <h2 class="text-2xl font-bold text-white">M365 & Entra ID</h2>
                 </div>
-                <div class="service-card">
-                    <h3><i data-lucide="arrow-right-circle"></i> Storage & Backup</h3>
-                    <ul class="service-list">
-                        <li>Arquitecturas SAN / HCI</li>
-                        <li>Azure File Sync</li>
-                        <li>Backup empresarial (Veeam, Arcserve, Azure Backup)</li>
-                        <li>Backup inmutable y ransomware-ready</li>
-                        <li>Retención legal y compliance</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3><i data-lucide="arrow-right-circle"></i> Disaster Recovery & Continuidad</h3>
-                    <ul class="service-list">
-                        <li>DRaaS en Azure</li>
-                        <li>Hyper-V Replica</li>
-                        <li>Azure Site Recovery</li>
-                        <li>Diseño y pruebas de BCP/DRP</li>
-                        <li>Automatización de failover</li>
-                    </ul>
-                </div>
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex items-start"><i class="fas fa-shield-alt text-cyan-400 mt-1 mr-2"></i> Entra ID
+                        (Azure AD) Diseño & Hardening</li>
+                    <li class="flex items-start"><i class="fas fa-sync text-cyan-400 mt-1 mr-2"></i> Migración y
+                        Optimización Microsoft 365</li>
+                    <li class="flex items-start"><i class="fas fa-id-badge text-cyan-400 mt-1 mr-2"></i> Identidad
+                        Híbrida</li>
+                    <li class="flex items-start"><i class="fas fa-lock text-cyan-400 mt-1 mr-2"></i> Conditional Access
+                        & Zero Trust</li>
+                    <li class="flex items-start"><i class="fas fa-laptop-code text-cyan-400 mt-1 mr-2"></i> Autopilot &
+                        Modern Workplace</li>
+                </ul>
             </div>
 
-            <div id="msft" class="ecosystem-grid">
-                <div class="service-card">
-                    <h3><i data-lucide="briefcase"></i> Microsoft Azure</h3>
-                    <ul class="service-list">
-                        <li>Diseño de Landing Zones</li>
-                        <li>Azure IaaS / PaaS</li>
-                        <li>Azure Arc (servers, SQL, governance)</li>
-                        <li>Cost Management & FinOps</li>
-                        <li>Azure Bastion, VPN, ExpressRoute</li>
-                        <li>Azure Virtual Desktop (AVD)</li>
-                    </ul>
+            <div class="premium-border p-8 rounded-2xl glow-blue transition-transform hover:scale-[1.02]">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-user-shield text-4xl text-red-500 mr-4"></i>
+                    <h2 class="text-2xl font-bold text-white">Seguridad Avanzada</h2>
                 </div>
-                <div class="service-card">
-                    <h3><i data-lucide="arrow-right-circle"></i> Microsoft 365 & Entra ID</h3>
-                    <ul class="service-list">
-                        <li>Entra ID (Azure AD) diseño y hardening</li>
-                        <li>Migración y optimización Microsoft 365</li>
-                        <li>Identidad híbrida</li>
-                        <li>Conditional Access & Zero Trust</li>
-                        <li>Autopilot & Modern Workplace</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3><i data-lucide="arrow-right-circle"></i> Seguridad Microsoft</h3>
-                    <ul class="service-list">
-                        <li>Microsoft Defender (Endpoint, Servers, M365)</li>
-                        <li>Defender for Cloud</li>
-                        <li>Microsoft Purview (compliance, DLP)</li>
-                        <li>Seguridad post-incidente</li>
-                        <li>Hardening y Zero Trust Architecture</li>
-                    </ul>
-                </div>
-                <div class="service-card"
-                    style="border-top-color: var(--accent-solar); background: rgba(245, 158, 11, 0.05);">
-
-                    <h3 style="color:var(--accent-solar)">
-                        <i data-lucide="arrow-right-circle"></i> Licenciamiento Microsoft
-                    </h3>
-                    <ul class="service-list">
-                        <li>Optimización de licencias</li>
-                        <li>Auditorías de cumplimiento</li>
-                        <li>Transición E3 → E5</li>
-                        <li>Estrategia CAPEX vs OPEX</li>
-                        <li>Asesoría pre-auditoría (SAM readiness)</li>
-                    </ul>
-                </div>
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex items-start"><i class="fas fa-shield-virus text-red-400 mt-1 mr-2"></i> Microsoft
+                        Defender (Endpoint, Servers, M365)</li>
+                    <li class="flex items-start"><i class="fas fa-cloud-shield text-red-400 mt-1 mr-2"></i> Defender for
+                        Cloud</li>
+                    <li class="flex items-start"><i class="fas fa-file-contract text-red-400 mt-1 mr-2"></i> Microsoft
+                        Purview (Compliance, DLP)</li>
+                    <li class="flex items-start"><i class="fas fa-biohazard text-red-400 mt-1 mr-2"></i> Seguridad
+                        Post-Incidente</li>
+                    <li class="flex items-start"><i class="fas fa-vault text-red-400 mt-1 mr-2"></i> Hardening & Zero
+                        Trust Architecture</li>
+                </ul>
             </div>
 
-            <div id="sec" class="ecosystem-grid">
-                <div class="service-card">
-                    <h3><i data-lucide="briefcase"></i> Servicios de Seguridad</h3>
-                    <ul class="service-list">
-                        <li>Security Assessments</li>
-                        <li>Post-breach remediation</li>
-                        <li>Hardening de Active Directory</li>
-                        <li>Purple Knight / herramientas equivalentes</li>
-                        <li>Seguridad híbrida (on-prem + cloud)</li>
-                    </ul>
+            <div class="premium-border p-8 rounded-2xl glow-blue transition-transform hover:scale-[1.02]">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-file-invoice-dollar text-4xl text-green-500 mr-4"></i>
+                    <h2 class="text-2xl font-bold text-white">Licenciamiento & SAM</h2>
                 </div>
-                <div class="service-card">
-                    <h3><i data-lucide="arrow-right-circle"></i> Operación de Seguridad</h3>
-                    <ul class="service-list">
-                        <li>Onboarding a Microsoft Defender</li>
-                        <li>Alertas, tuning y reducción de ruido</li>
-                        <li>Integración SIEM / XDR</li>
-                        <li>Políticas y gobernanza de seguridad</li>
-                    </ul>
-                </div>
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex items-start"><i class="fas fa-chart-line text-green-400 mt-1 mr-2"></i> Optimización
+                        de Licencias</li>
+                    <li class="flex items-start"><i class="fas fa-search text-green-400 mt-1 mr-2"></i> Auditorías de
+                        Cumplimiento</li>
+                    <li class="flex items-start"><i class="fas fa-arrow-up text-green-400 mt-1 mr-2"></i> Transición
+                        Estratégica E3 → E5</li>
+                    <li class="flex items-start"><i class="fas fa-balance-scale text-green-400 mt-1 mr-2"></i>
+                        Estrategia CAPEX vs OPEX</li>
+                    <li class="flex items-start"><i class="fas fa-clipboard-check text-green-400 mt-1 mr-2"></i>
+                        Asesoría Pre-Auditoría (SAM Readiness)</li>
+                </ul>
             </div>
+        </section>
 
-            <div id="solar" class="ecosystem-grid">
-                <div class="service-card"
-                    style="border-top-color: var(--accent-solar); background: rgba(245, 158, 11, 0.05);">
-                    <h3 style="color:var(--accent-solar)">
-                        <i data-lucide="sun"></i> Respaldo Energético para Data Centers
-                    </h3>
-                    <ul class="service-list">
-                        <li>Diseño de sistemas solares híbridos (Grid + Solar + Baterías)</li>
-                        <li>UPS + Solar + Generadores</li>
-                        <li>Microgrids para centros de datos</li>
-                        <li>Continuidad energética para cargas críticas</li>
-                    </ul>
-                </div>
-                <div class="service-card" style="border-top-color: var(--accent-solar);">
-                    <h3 style="color:var(--accent-solar)"><i data-lucide="leaf"></i> Solar Empresarial</h3>
-                    <ul class="service-list">
-                        <li>Solar para oficinas corporativas</li>
-                        <li>Solar para edificios comerciales</li>
-                        <li>Solar para industria</li>
-                        <li>Evaluación ROI energético</li>
-                        <li>Reducción de huella de carbono (ESG)</li>
-                    </ul>
-                </div>
-                <div class="service-card" style="border-top-color: var(--accent-solar);">
-                    <h3 style="color:var(--accent-solar)"><i data-lucide="leaf"></i> Casos de Uso Críticos</h3>
-                    <ul class="service-list">
-                        <li>Data centers on-prem</li>
-                        <li>Edge locations</li>
-                        <li>Sites remotos</li>
-                        <li>Operación 24/7</li>
-                        <li>Infraestructura regulada</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="managed" class="ecosystem-grid">
-                <div class="service-card">
-                    <h3><i data-lucide="briefcase"></i> Servicios Gestionados (MRR – piensa como CEO)</h3>
-                    <ul class="service-list">
-                        <li>Managed Infrastructure Services</li>
-                        <li>Managed Backup & DR</li>
-                        <li>Managed Microsoft 365 Security</li>
-                        <li>Managed Azure (monitoreo, optimización, costos)</li>
-                        <li>Soporte híbrido mensual</li>
-                        <li>SLA empresariales</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="autoDevOps" class="ecosystem-grid">
-                <div class="service-card">
-                    <h3><i data-lucide="briefcase"></i> Automatización & DevOps</h3>
-                    <ul class="service-list">
-                        <li>PowerShell & scripting avanzado</li>
-                        <li>Automatización de despliegues</li>
-                        <li>Infrastructure as Code (ARM / Bicep / Terraform)</li>
-                        <li>Estandarización de entornos</li>
-                        <li>Reducción de errores humanos</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <section
+            class="mt-20 bg-blue-900 bg-opacity-20 border border-blue-500 border-dashed p-10 rounded-3xl text-center">
+            <h3 class="text-3xl font-bold mb-4">¿Preparado para una auditoría o migración?</h3>
+            <p class="text-gray-400 mb-8 max-w-xl mx-auto">Nuestros expertos revisan su tenant para asegurar que cada
+                centavo invertido en Microsoft esté optimizado y protegido.</p>
+            <button
+                class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-10 rounded-full transition-all shadow-lg shadow-blue-500/50">
+                Agendar Consultoría SAM
+            </button>
+        </section>
     </section>
-
-    <section id="industrias" style="padding: 100px 0;">
-        <div class="container">
-            <div class="section-header">
-                <h2>Soluciones por Industria</h2>
-                <p>Especialización vertical para entornos regulatorios y de misión crítica</p>
-            </div>
-            <div class="why-grid" style="margin-top: 60px;">
-                <div class="why-card" onclick="showIndustry('fina')"
-                    style="border-left: 4px solid var(--accent-blue); cursor: pointer;">
-                    <h3
-                        style="color:var(--accent-blue); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-                        <i data-lucide="landmark"></i> Banca y Finanzas
-                    </h3>
-                    <p>Infraestructura financiera resiliente y audit-ready con RTO/RPO cercano a cero</p>
-                </div>
-                <div class="why-card" onclick="showIndustry('manu')"
-                    style="border-left: 4px solid var(--accent-green); cursor: pointer;">
-                    <h3
-                        style="color:var(--accent-green); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-                        <i data-lucide="factory"></i> Manufactura
-                    </h3>
-                    <p>Edge Computing para plantas de producción con alta disponibilidad</p>
-                </div>
-                <div class="why-card" onclick="showIndustry('heal')"
-                    style="border-left: 4px solid var(--accent-red); cursor: pointer;">
-                    <h3
-                        style="color:var(--accent-red); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-                        <i data-lucide="activity"></i> Salud / Pharma
-                    </h3>
-                    <p>Gobernanza de datos sensibles HIPAA y cumplimiento regulatorio</p>
-                </div>
-                <div class="why-card" onclick="showIndustry('ener')"
-                    style="border-left: 4px solid var(--accent-solar); cursor: pointer;">
-                    <h3
-                        style="color:var(--accent-solar); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-                        <i data-lucide="zap"></i> Energía y Utilities
-                    </h3>
-                    <p>Infraestructura crítica 24/7/365 con alta resiliencia</p>
-                </div>
-            </div>
-            <!-- <div class="industry-content-wrapper">
-                    <div id="fina" class="industry-content active">
-                        <div class="content-grid">
-                            <div>
-                                <h4>Banca y Finanzas</h4>
-                                <p class="lead">Infraestructura financiera resiliente y audit-ready</p>
-                                <ul class="feature-list">
-                                    <li><i data-lucide="check"></i> Arquitecturas HA/DR para Core Banking</li>
-                                    <li><i data-lucide="check"></i> Seguridad y cumplimiento regulatorio</li>
-                                    <li><i data-lucide="check"></i> Modernización de plataformas legadas</li>
-                                </ul>
-                            </div>
-                            <div class="industry-image">
-                                <img src="http://static.photos/finance/640x360/1" alt="Banca y Finanzas" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-        </div>
-    </section>
-
-    <section id="whycrebs" style="padding: 100px 0;">
-        <div class="container">
-            <div class="section-header">
-                <h2>Por qué Costa Rica EBS</h2>
-                <p>Experiencia empresarial con las ventajas de nearshore costo-efectivo</p>
-            </div>
-            <div class="why-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 60px;">
-                <div class="why-card"
-                    style="background: var(--bg-card); padding: 30px; border-radius: var(--radius-md); border-left: 4px solid var(--purple-main);">
-                    <h3
-                        style="color: var(--purple-light); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-                        <i data-lucide="award"></i> Experiencia Empresarial
-                    </h3>
-                    <p>15+ años diseñando soluciones para empresas Fortune 500 e industrias reguladas.</p>
-                </div>
-                <div class="why-card"
-                    style="background: var(--bg-card); padding: 30px; border-radius: var(--radius-md); border-left: 4px solid var(--accent-green);">
-                    <h3
-                        style="color: var(--accent-green); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-                        <i data-lucide="globe"></i> Enfoque Híbrido
-                    </h3>
-                    <p>Amplia experiencia integrando infraestructura on-prem con plataformas cloud, especialmente
-                        Microsoft Azure.</p>
-                </div>
-                <div class="why-card"
-                    style="background: var(--bg-card); padding: 30px; border-radius: var(--radius-md); border-left: 4px solid var(--accent-solar);">
-                    <h3
-                        style="color: var(--accent-solar); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-                        <i data-lucide="zap"></i> Experiencia Energética
-                    </h3>
-                    <p>Combinación única de infraestructura IT y soluciones de energía solar para sistemas
-                        resilientes.</p>
-                </div>
-                <div class="why-card"
-                    style="background: var(--bg-card); padding: 30px; border-radius: var(--radius-md); border-left: 4px solid var(--purple-light);">
-                    <h3
-                        style="color: var(--purple-light); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-                        <i data-lucide="map-pin"></i> Ventaja Nearshore
-                    </h3>
-                    <p>Costa Rica ofrece misma zona horaria que EE.UU., afinidad cultural y alto dominio del inglés.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- <section id="contacto" style="padding: 100px 0; background: #0A0F1C;">
-        <div class="container">
-            <div class="section-header">
-                <h2 style="color: white;">Solicita una Evaluación de Arquitectura</h2>
-                <p style="color: white;">Obtén una consulta gratuita con nuestros arquitectos empresariales</p>
-            </div>
-
-            <div
-                style="max-width: 800px; margin: 0 auto; background: var(--bg-card); border-radius: var(--radius-lg); padding: 60px; box-shadow: var(--shadow-lg);">
-                <form id="contactForm" style="display: grid; gap: 24px;">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div>
-                            <label for="name"
-                                style="color: white; display: block; margin-bottom: 8px; font-weight: 500;">Nombre
-                                Completo</label>
-                            <input type="text" id="name" name="name" required
-                                style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;">
-                        </div>
-                        <div>
-                            <label for="company"
-                                style="color: white; display: block; margin-bottom: 8px; font-weight: 500;">Empresa</label>
-                            <input type="text" id="company" name="company" required
-                                style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;">
-                        </div>
-                    </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div>
-                            <label for="email"
-                                style="color: white; display: block; margin-bottom: 8px; font-weight: 500;">Correo
-                                Electrónico</label>
-                            <input type="email" id="email" name="email" required
-                                style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;">
-                        </div>
-                        <div>
-                            <label for="phone"
-                                style=" color: white; display: block; margin-bottom: 8px; font-weight: 500;">Teléfono</label>
-                            <input type="tel" id="phone" name="phone"
-                                style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;">
-                        </div>
-                    </div>
-                    <div>
-                        <label for="service"
-                            style="color: white; display: block; margin-bottom: 8px; font-weight: 500;">Servicio
-                            de Interés</label>
-                        <select id="service" name="service"
-                            style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;">
-                            <option class="text-color" value="">Seleccione un servicio</option>
-                            <option class="text-color" value="core">Infraestructura IT Principal</option>
-                            <option class="text-color" value="dc">Centro de Datos & Rec. ante fallas</option>
-                            <option class="text-color" value="msft">Microsoft & Azure</option>
-                            <option class="text-color" value="sec">Ciberseguridad</option>
-                            <option class="text-color" value="solar">Soluciones de Energía Solar</option>
-                            <option class="text-color" value="managed">Servicios Gestionados</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="message"
-                            style="color: white; display: block; margin-bottom: 8px; font-weight: 500;">Mensaje</label>
-                        <textarea id="message" name="message" rows="4"
-                            style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;"></textarea>
-                    </div>
-                    <button type="submit" class="cta-button"
-                        style="width: 100%; justify-content: center; margin-top: 20px;">
-                        <i data-lucide="send"></i> Enviar Solicitud
-                    </button>
-                </form>
-            </div>
-
-            <div
-                style="margin-top: 60px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; text-align: center;">
-                <div>
-                    <div
-                        style="background: rgba(106, 13, 173, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                        <i data-lucide="mail" style="color: var(--purple-light);"></i>
-                    </div>
-                    <h3 style="margin-bottom: 10px;">Escríbenos</h3>
-                    <p>info@costaricaebs.com</p>
-                </div>
-                <div>
-                    <div
-                        style="background: rgba(106, 13, 173, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                        <i data-lucide="phone" style="color: var(--purple-light);"></i>
-                    </div>
-                    <h3 style="margin-bottom: 10px;">Llámanos</h3>
-                    <p>+506 1234 5678</p>
-                </div>
-                <div>
-                    <div
-                        style="background: rgba(106, 13, 173, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                        <i data-lucide="map-pin" style="color: var(--purple-light);"></i>
-                    </div>
-                    <h3 style="margin-bottom: 10px;">Ubicación</h3>
-                    <p>San José, Costa Rica</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <section id="contacto" class="contact-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="hero-badge">CONSULTORÍA ESPECIALIZADA</span>
-                <h2>Solicita una Evaluación de Arquitectura</h2>
-                <p>Transforma tu infraestructura con una hoja de ruta diseñada por expertos.</p>
-            </div>
-
-            <div class="contact-grid">
-                <div class="contact-info-card">
-                    <h3>¿Qué incluye la evaluación?</h3>
-                    <ul class="benefit-list">
-                        <li><i data-lucide="check-circle"></i> Análisis de brechas de seguridad</li>
-                        <li><i data-lucide="check-circle"></i> Optimización de costos en Cloud</li>
-                        <li><i data-lucide="check-circle"></i> Diagnóstico de eficiencia energética</li>
-                    </ul>
-
-                    <div class="direct-contact">
-                        <div class="info-item">
-                            <div class="info-icon"><i data-lucide="mail"></i></div>
-                            <div>
-                                <span>Escríbenos</span>
-                                <strong>info@costaricaebs.com</strong>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon"><i data-lucide="phone"></i></div>
-                            <div>
-                                <span>Llámanos</span>
-                                <strong>+506 2200-0000</strong>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon"><i data-lucide="map-pin"></i></div>
-                            <div>
-                                <span>Sede Central</span>
-                                <strong>San José, Costa Rica</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form-container">
-                    <form id="contactForm" class="modern-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Nombre Completo</label>
-                                <input type="text" id="name" name="name" placeholder="Ej: Juan Pérez" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="company">Empresa</label>
-                                <input type="text" id="company" name="company" placeholder="Nombre de tu organización"
-                                    required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Correo Corporativo</label>
-                                <input type="email" id="email" name="email" placeholder="jperez@empresa.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Teléfono</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+506 0000-0000">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="service">Servicio de Interés</label>
-                            <select id="service" name="service" required>
-                                <option value="" disabled selected>Seleccione una solución</option>
-                                <option value="core">Infraestructura IT Principal</option>
-                                <option value="dc">Centro de Datos & Disaster Recovery</option>
-                                <option value="msft">Microsoft & Azure</option>
-                                <option value="sec">Ciberseguridad</option>
-                                <option value="solar">Soluciones de Energía Solar</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Detalles del Proyecto</label>
-                            <textarea id="message" name="message" rows="4"
-                                placeholder="¿En qué podemos ayudarte?"></textarea>
-                        </div>
-
-                        <button type="submit" class="cta-button primary-btn">
-                            <span>Enviar Solicitud</span>
-                            <i data-lucide="arrow-right"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <div class="logo-placeholder">EBS</div>
-            </div>
-            <div class="footer-links">
-                <a href="#home">Inicio</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#msft">Microsoft</a>
-                <a href="#datacenter">Centro de Datos</a>
-                <a href="#cybersecurity">Ciberseguridad</a>
-                <a href="https://costaricaebs.com/product-category/it-solutions/microsoft/" target="_blank">Solar</a>
-                <a href="#industrias">Industrias</a>
-                <a href="#whycrebs">Por qué EBS</a>
-                <a href="#contacto">Contacto</a>
-            </div>
-            <p class="copyright">© 2023 Costa Rica Enterprise Business Solutions. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/TUNUMEROAQUI" class="whatsapp-float" target="_blank">
-        <i data-lucide="phone"></i>
-    </a>
-
-    <script>
-        lucide.createIcons();
-        // Mobile menu toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            const navMenu = document.querySelector('.nav-menu');
-            navMenu.classList.toggle('active');
-            document.querySelector('body').classList.toggle('no-scroll');
-            this.querySelector('i').setAttribute('data-lucide',
-                navMenu.classList.contains('active') ? 'x' : 'menu');
-            lucide.createIcons();
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function (event) {
-            const nav = document.querySelector('.main-nav');
-            if (!nav.contains(event.target) && !event.target.classList.contains('menu-toggle')) {
-                document.querySelector('.nav-menu').classList.remove('active');
-                document.querySelector('.menu-toggle i').setAttribute('data-lucide', 'menu');
-                document.querySelector('body').classList.remove('no-scroll');
-                lucide.createIcons();
-            }
-        });
-        // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const formData = new FormData(this);
-
-            // Here you would send the form data to your backend
-            console.log('Form submitted:', Object.fromEntries(formData));
-
-            // Show success message
-            alert('¡Gracias por tu solicitud! Nuestro equipo se contactará contigo pronto.');
-            this.reset();
-        });
-
-        // Services Navigation
-        function showTab(evt, tabId) {
-            document.querySelectorAll('.ecosystem-grid').forEach(g => g.classList.remove('active'));
-            document.querySelectorAll('.nav-pill').forEach(p => p.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-            evt.currentTarget.classList.add('active');
-
-            // Smooth scroll to services
-            document.getElementById('servicios').scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-
-        // Barra de menu
-        function showNavActive(evt, tabId) {
-            document.querySelectorAll('header .nav-menu a').forEach(p => p.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-            evt.currentTarget.classList.add('active');
-        }
-
-        // Industry Selector
-        function showIndustry(id) {
-            document.querySelectorAll('.industry-content').forEach(c => c.classList.remove('active'));
-            document.querySelectorAll('.industry-card').forEach(b => b.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-            event.currentTarget.classList.add('active');
-        }
-        // Initialize first industry
-        document.addEventListener('DOMContentLoaded', function () {
-            showIndustry('fina');
-
-            // Close mobile menu when clicking a link
-            document.querySelectorAll('.nav-menu a').forEach(link => {
-                link.addEventListener('click', function () {
-                    if (window.innerWidth <= 1024) {
-                        document.querySelector('.nav-menu').classList.remove('active');
-                        document.querySelector('body').classList.remove('no-scroll');
-                        document.querySelector('.menu-toggle i').setAttribute('data-lucide', 'menu');
-                        lucide.createIcons();
-                    }
-                });
-            });
-        });
-        // Add intersection observer for animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-    </script>
-    <!-- <script src="https://huggingface.co/deepsite/deepsite-badge.js"></script> -->
+    <!-- </main> -->
 </body>
 
 </html>
