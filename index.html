@@ -4,28 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EBS | Integrador Híbrido: IT + Cloud + Energía</title>
+    <meta name="description"
+        content="Costa Rica EBS - Integrador Híbrido especializado en IT, Cloud y Energía Solar para empresas">
+    <title>Costa Rica EBS | Integrador Híbrido: IT + Cloud + Energía</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="contacto.css">
     <script src="https://unpkg.com/lucide@latest"></script>
-
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
     <header>
         <div class="container header-content">
-            <!-- <a href="#" class="brand">
-                <div class="logo-placeholder">EBS</div>
-                <div class="brand-name">Costa Rica EBS</div>
-            </a> -->
             <div class="brand-container">
-                <!-- <img src="logo.png" alt="Logo" class="logo"> -->
                 <div class="logo-placeholder">EBS</div>
-                <span class="brand-text">Costa Rica Enterprise Business Solutions</span>
+                <span class="brand-text">CR Enterprise Business Solutions</span>
             </div>
 
             <nav class="main-nav">
@@ -33,23 +26,16 @@
                     <i data-lucide="menu"></i>
                 </button>
                 <ul class="nav-menu">
-                    <li><a href="#home" class="active" id="Inicio" onclick="showNavActive(event, 'Inicio')">Inicio</a>
-                    </li>
-                    <li><a href="#servicios" id="Servicios" onclick="showNavActive(event, 'Servicios')">Servicios</a>
-                    </li>
-                    <li><a href="microsoft-azure.html" target="_blank" id="Microsoft"
-                            onclick="showNavActive(event, 'Microsoft')">Microsoft</a></li>
-                    <li><a href="#datacenter" id="Datos" onclick="showNavActive(event, 'Datos')">Centro de Datos</a>
-                    </li>
-                    <li><a href="#cybersecurity" id="Ciberseguridad"
-                            onclick="showNavActive(event, 'Ciberseguridad')">Ciberseguridad</a></li>
+                    <li><a href="#home" class="active" id="Inicio">Inicio</a></li>
+                    <li><a href="#servicios" id="Servicios">Servicios</a></li>
+                    <li><a href="microsoft-azure.html" id="Microsoft">Microsoft</a></li>
+                    <li><a href="data-center.html" id="Datos">Centro de Datos</a></li>
+                    <li><a href="ciberseguridad.html" id="Ciberseguridad">Ciberseguridad</a></li>
                     <li><a href="https://costaricaebs.com/product-category/it-solutions/microsoft/" target="_blank"
-                            id="Solar" onclick="showNavActive(event, 'Solar')">Solar</a></li>
-                    <li><a href="#industrias" id="Industrias"
-                            onclick="showNavActive(event, 'Industrias')">Industrias</a></li>
-                    <li><a href="#whycrebs" id="PorqueEBS" onclick="showNavActive(event, 'PorqueEBS')">Por qué EBS</a>
-                    </li>
-                    <li><a href="#contacto" id="Contacto" onclick="showNavActive(event, 'Contacto')">Contacto</a></li>
+                            id="Solar">Solar</a></li>
+                    <li><a href="#industrias" id="Industrias">Industrias</a></li>
+                    <li><a href="#whycrebs" id="PorqueEBS">Por qué EBS</a></li>
+                    <li><a href="#contacto" id="Contacto">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -59,8 +45,7 @@
         <div class="container hero-content">
             <span class="hero-badge">INTEGRACIÓN HÍBRIDA 360º</span>
             <h1>Costa Rica Enterprise Business Solutions</h1>
-            <p style="color: white;">Transformamos infraestructura crítica en ventajas competitivas mediante soluciones
-                híbridas de TI, Cloud
+            <p>Transformamos infraestructura crítica en ventajas competitivas mediante soluciones híbridas de TI, Cloud
                 y Energía. Soluciones innovadoras, resultados excepcionales.</p>
             <div class="cta-group">
                 <a href="#contacto" class="cta-button">
@@ -188,7 +173,6 @@
                 </div>
                 <div class="service-card"
                     style="border-top-color: var(--accent-solar); background: rgba(245, 158, 11, 0.05);">
-
                     <h3 style="color:var(--accent-solar)">
                         <i data-lucide="arrow-right-circle"></i> Licenciamiento Microsoft
                     </h3>
@@ -294,58 +278,32 @@
                 <h2>Soluciones por Industria</h2>
                 <p>Especialización vertical para entornos regulatorios y de misión crítica</p>
             </div>
-            <div class="why-grid" style="margin-top: 60px;">
-                <div class="why-card" onclick="showIndustry('fina')"
-                    style="border-left: 4px solid var(--accent-blue); cursor: pointer;">
-                    <h3
-                        style="color:var(--accent-blue); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+            <div class="why-grid">
+                <div class="why-card" style="border-left: 4px solid var(--accent-blue); cursor: pointer;">
+                    <h3 style="color:var(--accent-blue);">
                         <i data-lucide="landmark"></i> Banca y Finanzas
                     </h3>
                     <p>Infraestructura financiera resiliente y audit-ready con RTO/RPO cercano a cero</p>
                 </div>
-                <div class="why-card" onclick="showIndustry('manu')"
-                    style="border-left: 4px solid var(--accent-green); cursor: pointer;">
-                    <h3
-                        style="color:var(--accent-green); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                <div class="why-card" style="border-left: 4px solid var(--accent-green); cursor: pointer;">
+                    <h3 style="color:var(--accent-green);">
                         <i data-lucide="factory"></i> Manufactura
                     </h3>
                     <p>Edge Computing para plantas de producción con alta disponibilidad</p>
                 </div>
-                <div class="why-card" onclick="showIndustry('heal')"
-                    style="border-left: 4px solid var(--accent-red); cursor: pointer;">
-                    <h3
-                        style="color:var(--accent-red); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                <div class="why-card" style="border-left: 4px solid var(--accent-red); cursor: pointer;">
+                    <h3 style="color:var(--accent-red);">
                         <i data-lucide="activity"></i> Salud / Pharma
                     </h3>
                     <p>Gobernanza de datos sensibles HIPAA y cumplimiento regulatorio</p>
                 </div>
-                <div class="why-card" onclick="showIndustry('ener')"
-                    style="border-left: 4px solid var(--accent-solar); cursor: pointer;">
-                    <h3
-                        style="color:var(--accent-solar); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                <div class="why-card" style="border-left: 4px solid var(--accent-solar); cursor: pointer;">
+                    <h3 style="color:var(--accent-solar);">
                         <i data-lucide="zap"></i> Energía y Utilities
                     </h3>
                     <p>Infraestructura crítica 24/7/365 con alta resiliencia</p>
                 </div>
             </div>
-            <!-- <div class="industry-content-wrapper">
-                    <div id="fina" class="industry-content active">
-                        <div class="content-grid">
-                            <div>
-                                <h4>Banca y Finanzas</h4>
-                                <p class="lead">Infraestructura financiera resiliente y audit-ready</p>
-                                <ul class="feature-list">
-                                    <li><i data-lucide="check"></i> Arquitecturas HA/DR para Core Banking</li>
-                                    <li><i data-lucide="check"></i> Seguridad y cumplimiento regulatorio</li>
-                                    <li><i data-lucide="check"></i> Modernización de plataformas legadas</li>
-                                </ul>
-                            </div>
-                            <div class="industry-image">
-                                <img src="http://static.photos/finance/640x360/1" alt="Banca y Finanzas" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
         </div>
     </section>
 
@@ -355,144 +313,36 @@
                 <h2>Por qué Costa Rica EBS</h2>
                 <p>Experiencia empresarial con las ventajas de nearshore costo-efectivo</p>
             </div>
-            <div class="why-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 60px;">
-                <div class="why-card"
-                    style="background: var(--bg-card); padding: 30px; border-radius: var(--radius-md); border-left: 4px solid var(--purple-main);">
-                    <h3
-                        style="color: var(--purple-light); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+            <div class="why-grid">
+                <div class="why-card" style="border-left: 4px solid var(--accent-purple);">
+                    <h3 style="color: var(--accent-purple);">
                         <i data-lucide="award"></i> Experiencia Empresarial
                     </h3>
                     <p>15+ años diseñando soluciones para empresas Fortune 500 e industrias reguladas.</p>
                 </div>
-                <div class="why-card"
-                    style="background: var(--bg-card); padding: 30px; border-radius: var(--radius-md); border-left: 4px solid var(--accent-green);">
-                    <h3
-                        style="color: var(--accent-green); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                <div class="why-card" style="border-left: 4px solid var(--accent-green);">
+                    <h3 style="color: var(--accent-green);">
                         <i data-lucide="globe"></i> Enfoque Híbrido
                     </h3>
                     <p>Amplia experiencia integrando infraestructura on-prem con plataformas cloud, especialmente
                         Microsoft Azure.</p>
                 </div>
-                <div class="why-card"
-                    style="background: var(--bg-card); padding: 30px; border-radius: var(--radius-md); border-left: 4px solid var(--accent-solar);">
-                    <h3
-                        style="color: var(--accent-solar); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                <div class="why-card" style="border-left: 4px solid var(--accent-solar);">
+                    <h3 style="color: var(--accent-solar);">
                         <i data-lucide="zap"></i> Experiencia Energética
                     </h3>
-                    <p>Combinación única de infraestructura IT y soluciones de energía solar para sistemas
-                        resilientes.</p>
+                    <p>Combinación única de infraestructura IT y soluciones de energía solar para sistemas resilientes.
+                    </p>
                 </div>
-                <div class="why-card"
-                    style="background: var(--bg-card); padding: 30px; border-radius: var(--radius-md); border-left: 4px solid var(--purple-light);">
-                    <h3
-                        style="color: var(--purple-light); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                <div class="why-card" style="border-left: 4px solid var(--accent-blue);">
+                    <h3 style="color: var(--accent-blue);">
                         <i data-lucide="map-pin"></i> Ventaja Nearshore
                     </h3>
-                    <p>Costa Rica ofrece misma zona horaria que EE.UU., afinidad cultural y alto dominio del inglés.
-                    </p>
+                    <p>Costa Rica ofrece misma zona horaria que EE.UU., afinidad cultural y alto dominio del inglés.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- <section id="contacto" style="padding: 100px 0; background: #0A0F1C;">
-        <div class="container">
-            <div class="section-header">
-                <h2 style="color: white;">Solicita una Evaluación de Arquitectura</h2>
-                <p style="color: white;">Obtén una consulta gratuita con nuestros arquitectos empresariales</p>
-            </div>
-
-            <div
-                style="max-width: 800px; margin: 0 auto; background: var(--bg-card); border-radius: var(--radius-lg); padding: 60px; box-shadow: var(--shadow-lg);">
-                <form id="contactForm" style="display: grid; gap: 24px;">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div>
-                            <label for="name"
-                                style="color: white; display: block; margin-bottom: 8px; font-weight: 500;">Nombre
-                                Completo</label>
-                            <input type="text" id="name" name="name" required
-                                style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;">
-                        </div>
-                        <div>
-                            <label for="company"
-                                style="color: white; display: block; margin-bottom: 8px; font-weight: 500;">Empresa</label>
-                            <input type="text" id="company" name="company" required
-                                style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;">
-                        </div>
-                    </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div>
-                            <label for="email"
-                                style="color: white; display: block; margin-bottom: 8px; font-weight: 500;">Correo
-                                Electrónico</label>
-                            <input type="email" id="email" name="email" required
-                                style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;">
-                        </div>
-                        <div>
-                            <label for="phone"
-                                style=" color: white; display: block; margin-bottom: 8px; font-weight: 500;">Teléfono</label>
-                            <input type="tel" id="phone" name="phone"
-                                style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;">
-                        </div>
-                    </div>
-                    <div>
-                        <label for="service"
-                            style="color: white; display: block; margin-bottom: 8px; font-weight: 500;">Servicio
-                            de Interés</label>
-                        <select id="service" name="service"
-                            style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;">
-                            <option class="text-color" value="">Seleccione un servicio</option>
-                            <option class="text-color" value="core">Infraestructura IT Principal</option>
-                            <option class="text-color" value="dc">Centro de Datos & Rec. ante fallas</option>
-                            <option class="text-color" value="msft">Microsoft & Azure</option>
-                            <option class="text-color" value="sec">Ciberseguridad</option>
-                            <option class="text-color" value="solar">Soluciones de Energía Solar</option>
-                            <option class="text-color" value="managed">Servicios Gestionados</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="message"
-                            style="color: white; display: block; margin-bottom: 8px; font-weight: 500;">Mensaje</label>
-                        <textarea id="message" name="message" rows="4"
-                            style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: white;"></textarea>
-                    </div>
-                    <button type="submit" class="cta-button"
-                        style="width: 100%; justify-content: center; margin-top: 20px;">
-                        <i data-lucide="send"></i> Enviar Solicitud
-                    </button>
-                </form>
-            </div>
-
-            <div
-                style="margin-top: 60px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; text-align: center;">
-                <div>
-                    <div
-                        style="background: rgba(106, 13, 173, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                        <i data-lucide="mail" style="color: var(--purple-light);"></i>
-                    </div>
-                    <h3 style="margin-bottom: 10px;">Escríbenos</h3>
-                    <p>info@costaricaebs.com</p>
-                </div>
-                <div>
-                    <div
-                        style="background: rgba(106, 13, 173, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                        <i data-lucide="phone" style="color: var(--purple-light);"></i>
-                    </div>
-                    <h3 style="margin-bottom: 10px;">Llámanos</h3>
-                    <p>+506 1234 5678</p>
-                </div>
-                <div>
-                    <div
-                        style="background: rgba(106, 13, 173, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                        <i data-lucide="map-pin" style="color: var(--purple-light);"></i>
-                    </div>
-                    <h3 style="margin-bottom: 10px;">Ubicación</h3>
-                    <p>San José, Costa Rica</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <section id="contacto" class="contact-section">
         <div class="container">
@@ -537,6 +387,7 @@
                 </div>
 
                 <div class="contact-form-container">
+                    <div id="formMessage" class="form-message"></div>
                     <form id="contactForm" class="modern-form">
                         <div class="form-row">
                             <div class="form-group">
@@ -570,6 +421,7 @@
                                 <option value="msft">Microsoft & Azure</option>
                                 <option value="sec">Ciberseguridad</option>
                                 <option value="solar">Soluciones de Energía Solar</option>
+                                <option value="managed">Servicios Gestionados</option>
                             </select>
                         </div>
 
@@ -579,7 +431,7 @@
                                 placeholder="¿En qué podemos ayudarte?"></textarea>
                         </div>
 
-                        <button type="submit" class="cta-button primary-btn">
+                        <button type="submit" class="primary-btn">
                             <span>Enviar Solicitud</span>
                             <i data-lucide="arrow-right"></i>
                         </button>
@@ -597,7 +449,7 @@
             <div class="footer-links">
                 <a href="#home">Inicio</a>
                 <a href="#servicios">Servicios</a>
-                <a href="microsoft-azure.html" target="_blank">Microsoft</a> <!-- href="#msft" -->
+                <a href="microsoft-azure.html" target="_blank">Microsoft</a>
                 <a href="#datacenter">Centro de Datos</a>
                 <a href="#cybersecurity">Ciberseguridad</a>
                 <a href="https://costaricaebs.com/product-category/it-solutions/microsoft/" target="_blank">Solar</a>
@@ -609,43 +461,56 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/TUNUMEROAQUI" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/TUNUMEROAQUI" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
         <i data-lucide="phone"></i>
     </a>
 
     <script>
+        // Initialize Lucide icons
         lucide.createIcons();
+
         // Mobile menu toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            const navMenu = document.querySelector('.nav-menu');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', function () {
             navMenu.classList.toggle('active');
-            // document.querySelector('body').classList.toggle('no-scroll');
-            this.querySelector('i').setAttribute('data-lucide',
-                navMenu.classList.contains('active') ? 'x' : 'menu');
+            document.body.classList.toggle('no-scroll');
+
+            const icon = this.querySelector('i');
+            icon.setAttribute('data-lucide', navMenu.classList.contains('active') ? 'x' : 'menu');
             lucide.createIcons();
         });
 
         // Close menu when clicking outside
         document.addEventListener('click', function (event) {
             const nav = document.querySelector('.main-nav');
-            if (!nav.contains(event.target) && !event.target.classList.contains('menu-toggle')) {
-                document.querySelector('.nav-menu').classList.remove('active');
-                document.querySelector('.menu-toggle i').setAttribute('data-lucide', 'menu');
-                // document.querySelector('body').classList.remove('no-scroll');
+            if (!nav.contains(event.target)) {
+                navMenu.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+                menuToggle.querySelector('i').setAttribute('data-lucide', 'menu');
                 lucide.createIcons();
             }
         });
-        // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const formData = new FormData(this);
 
-            // Here you would send the form data to your backend
-            console.log('Form submitted:', Object.fromEntries(formData));
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function () {
+                if (window.innerWidth <= 1024) {
+                    navMenu.classList.remove('active');
+                    document.body.classList.remove('no-scroll');
+                    menuToggle.querySelector('i').setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                }
+            });
+        });
 
-            // Show success message
-            alert('¡Gracias por tu solicitud! Nuestro equipo se contactará contigo pronto.');
-            this.reset();
+        // Active navigation highlighting
+        document.querySelectorAll('header .nav-menu a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                document.querySelectorAll('header .nav-menu a').forEach(a => a.classList.remove('active'));
+                this.classList.add('active');
+            });
         });
 
         // Services Navigation
@@ -657,40 +522,59 @@
 
             // Smooth scroll to services
             document.getElementById('servicios').scrollIntoView({
-                behavior: 'smooth'
+                behavior: 'smooth',
+                block: 'start'
             });
         }
 
-        // Barra de menu
-        function showNavActive(evt, tabId) {
-            document.querySelectorAll('header .nav-menu a').forEach(p => p.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-            evt.currentTarget.classList.add('active');
-        }
+        // Enhanced Form submission handler
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
 
-        // Industry Selector
-        function showIndustry(id) {
-            document.querySelectorAll('.industry-content').forEach(c => c.classList.remove('active'));
-            document.querySelectorAll('.industry-card').forEach(b => b.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-            event.currentTarget.classList.add('active');
-        }
-        // Initialize first industry
-        document.addEventListener('DOMContentLoaded', function () {
-            showIndustry('fina');
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
 
-            // Close mobile menu when clicking a link
-            document.querySelectorAll('.nav-menu a').forEach(link => {
-                link.addEventListener('click', function () {
-                    if (window.innerWidth <= 1024) {
-                        document.querySelector('.nav-menu').classList.remove('active');
-                        document.querySelector('body').classList.remove('no-scroll');
-                        document.querySelector('.menu-toggle i').setAttribute('data-lucide', 'menu');
-                        lucide.createIcons();
-                    }
-                });
-            });
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+
+            // Basic validation
+            if (!data.name || !data.company || !data.email || !data.service) {
+                showMessage('Por favor completa todos los campos requeridos.', 'error');
+                return;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.email)) {
+                showMessage('Por favor ingresa un correo electrónico válido.', 'error');
+                return;
+            }
+
+            // Simulate form submission (replace with actual backend call)
+            console.log('Form submitted:', data);
+
+            // Show success message
+            showMessage('¡Gracias por tu solicitud! Nuestro equipo se contactará contigo pronto.', 'success');
+
+            // Reset form
+            this.reset();
+
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
         });
+
+        function showMessage(message, type) {
+            formMessage.textContent = message;
+            formMessage.className = `form-message ${type}`;
+            formMessage.style.display = 'flex';
+
+            // Scroll to message
+            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
         // Add intersection observer for animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -703,8 +587,29 @@
         document.querySelectorAll('section').forEach(section => {
             observer.observe(section);
         });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Re-initialize Lucide icons after any dynamic content changes
+        setTimeout(() => {
+            lucide.createIcons();
+        }, 100);
     </script>
-    <!-- <script src="https://huggingface.co/deepsite/deepsite-badge.js"></script> -->
 </body>
 
 </html>

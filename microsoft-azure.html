@@ -4,195 +4,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soluciones Microsoft Premium | Enterprise Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="contacto.css">
+    <meta name="description" content="Soluciones Microsoft Premium - Azure, Microsoft 365, Seguridad y Licenciamiento por Costa Rica EBS">
+    <title>Costa Rica EBS | Microsoft Azure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body {
-            background-color: #05070a;
-            color: #e5e7eb;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .premium-border {
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            background: linear-gradient(145deg, #0f172a, #1e293b);
-            position: relative;
-        }
-
-        .premium-border::before {
-            content: "PREMIUM SOLUTIONS";
-            position: absolute;
-            top: -12px;
-            right: 20px;
-            background: #ffd700;
-            color: #000;
-            font-size: 0.7rem;
-            font-weight: bold;
-            padding: 2px 10px;
-            border-radius: 20px;
-        }
-
-        .glow-blue {
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
-        }
-    </style>
+    <link rel="stylesheet" href="/css/microsoft-azure.css">
 </head>
 
 <body>
     <header>
         <div class="container header-content">
-            <!-- <a href="#" class="brand">
-                <div class="logo-placeholder">EBS</div>
-                <div class="brand-name">Costa Rica EBS</div>
-            </a> -->
             <div class="brand-container">
-                <!-- <img src="logo.png" alt="Logo" class="logo"> -->
                 <div class="logo-placeholder">EBS</div>
-                <span class="brand-text">Costa Rica Enterprise Business Solutions</span>
+                <span class="brand-text">CR Enterprise Business Solutions</span>
             </div>
 
-            <nav class="main-nav">
-                <button class="menu-toggle" aria-label="Toggle menu">
-                    <i data-lucide="menu"></i>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="#home" class="active" id="Inicio" onclick="showNavActive(event, 'Inicio')">Inicio</a>
-                    </li>
-                    <li><a href="#servicios" id="Servicios" onclick="showNavActive(event, 'Servicios')">Servicios</a>
-                    </li>
-                    <li><a href="microsoft-azure.html" target="_blank" id="Microsoft"
-                            onclick="showNavActive(event, 'Microsoft')">Microsoft</a></li>
-                    <li><a href="#datacenter" id="Datos" onclick="showNavActive(event, 'Datos')">Centro de Datos</a>
-                    </li>
-                    <li><a href="#cybersecurity" id="Ciberseguridad"
-                            onclick="showNavActive(event, 'Ciberseguridad')">Ciberseguridad</a></li>
-                    <li><a href="https://costaricaebs.com/product-category/it-solutions/microsoft/" target="_blank"
-                            id="Solar" onclick="showNavActive(event, 'Solar')">Solar</a></li>
-                    <li><a href="#industrias" id="Industrias"
-                            onclick="showNavActive(event, 'Industrias')">Industrias</a></li>
-                    <li><a href="#whycrebs" id="PorqueEBS" onclick="showNavActive(event, 'PorqueEBS')">Por qué EBS</a>
-                    </li>
-                    <li><a href="#contacto" id="Contacto" onclick="showNavActive(event, 'Contacto')">Contacto</a></li>
-                </ul>
-            </nav>
+            <div class="header-cta">
+                <a href="index.html" class="btn-header btn-secondary">
+                    <i data-lucide="arrow-left"></i>
+                    Inicio
+                </a>
+                <a href="#contacto" class="btn-header btn-primary">
+                    <i data-lucide="calendar"></i>
+                    Agendar Consulta
+                </a>
+            </div>
         </div>
     </header>
 
-    <section id="home" class="hero">
+    <section class="hero-microsoft">
         <div class="container hero-content">
-            <h1 class="text-5xl font-extrabold text-white mb-4">Soluciones <span class="text-blue-400">Microsoft</span>
-                para
-                Empresas</h1>
-            <p class="text-xl text-gray-400 max-w-2xl mx-auto">Elevamos su infraestructura al estándar Gold.
-                Optimización,
-                Seguridad y Cumplimiento en el entorno Microsoft.</p>
+            <div class="microsoft-badge">
+                <i data-lucide="award"></i>
+                MICROSOFT PARTNER SOLUTIONS
+            </div>
+            <h1>Soluciones Microsoft Premium</h1>
+            <p>Transformamos tu ecosistema empresarial con arquitecturas Microsoft de clase mundial. Azure, Microsoft 365, Seguridad y Licenciamiento optimizado para maximizar tu inversión.</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Años de Experiencia</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Proyectos Exitosos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">99.9%</span>
+                    <span class="stat-label">SLA Garantizado</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- <main class="max-w-7xl mx-auto px-6 pb-24"> -->
-    <section id="main" class="services-section">
-
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-            <div class="premium-border p-8 rounded-2xl glow-blue transition-transform hover:scale-[1.02]">
-                <div class="flex items-center mb-6">
-                    <i class="fab fa-microsoft text-4xl text-blue-500 mr-4"></i>
-                    <h2 class="text-2xl font-bold text-white">Microsoft Azure</h2>
-                </div>
-                <ul class="space-y-3 text-gray-300">
-                    <li class="flex items-start"><i class="fas fa-check text-blue-400 mt-1 mr-2"></i> Diseño de Landing
-                        Zones</li>
-                    <li class="flex items-start"><i class="fas fa-check text-blue-400 mt-1 mr-2"></i> Azure IaaS / PaaS
-                    </li>
-                    <li class="flex items-start"><i class="fas fa-check text-blue-400 mt-1 mr-2"></i> Azure Arc
-                        (Servers, SQL, Governance)</li>
-                    <li class="flex items-start"><i class="fas fa-check text-blue-400 mt-1 mr-2"></i> Cost Management &
-                        FinOps</li>
-                    <li class="flex items-start"><i class="fas fa-check text-blue-400 mt-1 mr-2"></i> Networking:
-                        Bastion, VPN, ExpressRoute</li>
-                    <li class="flex items-start"><i class="fas fa-check text-blue-400 mt-1 mr-2"></i> Azure Virtual
-                        Desktop (AVD)</li>
-                </ul>
+    <section class="services-premium">
+        <div class="container">
+            <div class="section-intro">
+                <span class="section-label">SERVICIOS PREMIUM</span>
+                <h2>Ecosistema Microsoft Integral</h2>
+                <p>Soluciones empresariales completas que abarcan toda la plataforma Microsoft, desde infraestructura cloud hasta seguridad y optimización de licencias.</p>
             </div>
 
-            <div class="premium-border p-8 rounded-2xl glow-blue transition-transform hover:scale-[1.02]">
-                <div class="flex items-center mb-6">
-                    <i class="fas fa-users-cog text-4xl text-cyan-400 mr-4"></i>
-                    <h2 class="text-2xl font-bold text-white">M365 & Entra ID</h2>
+            <div class="premium-grid">
+                <!-- Microsoft Azure -->
+                <div class="premium-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop" alt="Microsoft Azure Cloud Infrastructure">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i data-lucide="cloud"></i>
+                            </div>
+                            <div class="card-title-group">
+                                <h3>Microsoft Azure</h3>
+                                <p class="card-subtitle">Infraestructura cloud empresarial escalable y resiliente</p>
+                            </div>
+                        </div>
+                        <ul class="service-features">
+                            <li>Diseño de Landing Zones</li>
+                            <li>Azure IaaS / PaaS</li>
+                            <li>Azure Arc (servers, SQL, governance)</li>
+                            <li>Cost Management & FinOps</li>
+                            <li>Azure Bastion, VPN, ExpressRoute</li>
+                            <li>Azure Virtual Desktop (AVD)</li>
+                        </ul>
+                    </div>
                 </div>
-                <ul class="space-y-3 text-gray-300">
-                    <li class="flex items-start"><i class="fas fa-shield-alt text-cyan-400 mt-1 mr-2"></i> Entra ID
-                        (Azure AD) Diseño & Hardening</li>
-                    <li class="flex items-start"><i class="fas fa-sync text-cyan-400 mt-1 mr-2"></i> Migración y
-                        Optimización Microsoft 365</li>
-                    <li class="flex items-start"><i class="fas fa-id-badge text-cyan-400 mt-1 mr-2"></i> Identidad
-                        Híbrida</li>
-                    <li class="flex items-start"><i class="fas fa-lock text-cyan-400 mt-1 mr-2"></i> Conditional Access
-                        & Zero Trust</li>
-                    <li class="flex items-start"><i class="fas fa-laptop-code text-cyan-400 mt-1 mr-2"></i> Autopilot &
-                        Modern Workplace</li>
-                </ul>
-            </div>
 
-            <div class="premium-border p-8 rounded-2xl glow-blue transition-transform hover:scale-[1.02]">
-                <div class="flex items-center mb-6">
-                    <i class="fas fa-user-shield text-4xl text-red-500 mr-4"></i>
-                    <h2 class="text-2xl font-bold text-white">Seguridad Avanzada</h2>
+                <!-- Microsoft 365 & Entra ID -->
+                <div class="premium-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop" alt="Microsoft 365 Collaboration">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i data-lucide="users"></i>
+                            </div>
+                            <div class="card-title-group">
+                                <h3>Microsoft 365 & Entra ID</h3>
+                                <p class="card-subtitle">Identidad moderna y productividad corporativa</p>
+                            </div>
+                        </div>
+                        <ul class="service-features">
+                            <li>Entra ID (Azure AD) diseño y hardening</li>
+                            <li>Migración y optimización Microsoft 365</li>
+                            <li>Identidad híbrida</li>
+                            <li>Conditional Access & Zero Trust</li>
+                            <li>Autopilot & Modern Workplace</li>
+                        </ul>
+                    </div>
                 </div>
-                <ul class="space-y-3 text-gray-300">
-                    <li class="flex items-start"><i class="fas fa-shield-virus text-red-400 mt-1 mr-2"></i> Microsoft
-                        Defender (Endpoint, Servers, M365)</li>
-                    <li class="flex items-start"><i class="fas fa-cloud-shield text-red-400 mt-1 mr-2"></i> Defender for
-                        Cloud</li>
-                    <li class="flex items-start"><i class="fas fa-file-contract text-red-400 mt-1 mr-2"></i> Microsoft
-                        Purview (Compliance, DLP)</li>
-                    <li class="flex items-start"><i class="fas fa-biohazard text-red-400 mt-1 mr-2"></i> Seguridad
-                        Post-Incidente</li>
-                    <li class="flex items-start"><i class="fas fa-vault text-red-400 mt-1 mr-2"></i> Hardening & Zero
-                        Trust Architecture</li>
-                </ul>
-            </div>
 
-            <div class="premium-border p-8 rounded-2xl glow-blue transition-transform hover:scale-[1.02]">
-                <div class="flex items-center mb-6">
-                    <i class="fas fa-file-invoice-dollar text-4xl text-green-500 mr-4"></i>
-                    <h2 class="text-2xl font-bold text-white">Licenciamiento & SAM</h2>
+                <!-- Seguridad Microsoft -->
+                <div class="premium-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=400&fit=crop" alt="Cybersecurity and Protection">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i data-lucide="shield"></i>
+                            </div>
+                            <div class="card-title-group">
+                                <h3>Seguridad Microsoft</h3>
+                                <p class="card-subtitle">Protección integral con Microsoft Defender</p>
+                            </div>
+                        </div>
+                        <ul class="service-features">
+                            <li>Microsoft Defender (Endpoint, Servers, M365)</li>
+                            <li>Defender for Cloud</li>
+                            <li>Microsoft Purview (compliance, DLP)</li>
+                            <li>Seguridad post-incidente</li>
+                            <li>Hardening y Zero Trust Architecture</li>
+                        </ul>
+                    </div>
                 </div>
-                <ul class="space-y-3 text-gray-300">
-                    <li class="flex items-start"><i class="fas fa-chart-line text-green-400 mt-1 mr-2"></i> Optimización
-                        de Licencias</li>
-                    <li class="flex items-start"><i class="fas fa-search text-green-400 mt-1 mr-2"></i> Auditorías de
-                        Cumplimiento</li>
-                    <li class="flex items-start"><i class="fas fa-arrow-up text-green-400 mt-1 mr-2"></i> Transición
-                        Estratégica E3 → E5</li>
-                    <li class="flex items-start"><i class="fas fa-balance-scale text-green-400 mt-1 mr-2"></i>
-                        Estrategia CAPEX vs OPEX</li>
-                    <li class="flex items-start"><i class="fas fa-clipboard-check text-green-400 mt-1 mr-2"></i>
-                        Asesoría Pre-Auditoría (SAM Readiness)</li>
-                </ul>
-            </div>
-        </section>
 
-        <section
-            class="mt-20 bg-blue-900 bg-opacity-20 border border-blue-500 border-dashed p-10 rounded-3xl text-center">
-            <h3 class="text-3xl font-bold mb-4">¿Preparado para una auditoría o migración?</h3>
-            <p class="text-gray-400 mb-8 max-w-xl mx-auto">Nuestros expertos revisan su tenant para asegurar que cada
-                centavo invertido en Microsoft esté optimizado y protegido.</p>
-            <button
-                class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-10 rounded-full transition-all shadow-lg shadow-blue-500/50">
-                Agendar Consultoría SAM
-            </button>
-        </section>
+                <!-- Licenciamiento Microsoft -->
+                <div class="premium-card licensing-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=400&fit=crop" alt="Business Strategy and Licensing">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i data-lucide="file-text"></i>
+                            </div>
+                            <div class="card-title-group">
+                                <h3>Licenciamiento Microsoft</h3>
+                                <p class="card-subtitle">Optimización estratégica de inversión en licencias</p>
+                            </div>
+                        </div>
+                        <ul class="service-features">
+                            <li>Optimización de licencias</li>
+                            <li>Auditorías de cumplimiento</li>
+                            <li>Transición E3 → E5</li>
+                            <li>Estrategia CAPEX vs OPEX</li>
+                            <li>Asesoría pre-auditoría (SAM readiness)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- </main> -->
+
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-intro">
+                <span class="section-label">VENTAJAS COMPETITIVAS</span>
+                <h2>Por qué elegirnos como tu partner Microsoft</h2>
+                <p>Experiencia comprobada, metodologías de clase mundial y compromiso con tu éxito empresarial.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <h3>Experiencia Certificada</h3>
+                    <p>Equipo con certificaciones Microsoft avanzadas y experiencia en implementaciones enterprise de gran escala.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                    <h3>ROI Comprobado</h3>
+                    <p>Optimización de costos que reduce hasta un 40% el gasto en licencias y reduce significativamente los costos operativos en cloud.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i data-lucide="lock"></i>
+                    </div>
+                    <h3>Seguridad First</h3>
+                    <p>Arquitecturas Zero Trust que protegen tu información crítica y cumplen con estándares regulatorios internacionales.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i data-lucide="headphones"></i>
+                    </div>
+                    <h3>Soporte 24/7</h3>
+                    <p>Equipo técnico disponible en tu zona horaria con SLAs empresariales y respuesta rápida ante incidentes críticos.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i data-lucide="git-branch"></i>
+                    </div>
+                    <h3>Enfoque Híbrido</h3>
+                    <p>Especialistas en integrar ambientes on-premise con Azure, garantizando continuidad y transición sin disrupciones.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i data-lucide="target"></i>
+                    </div>
+                    <h3>Resultados Medibles</h3>
+                    <p>Métricas claras, reportes ejecutivos y seguimiento continuo para demostrar el valor de tu inversión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="cta-section">
+        <div class="container cta-content">
+            <h2>Transforma tu Infraestructura Microsoft</h2>
+            <p>Agenda una consultoría estratégica sin costo. Evaluaremos tu ecosistema actual y diseñaremos una hoja de ruta personalizada para maximizar tu inversión en Microsoft.</p>
+            
+            <div class="cta-buttons">
+                <a href="index.html#contacto" class="btn-cta btn-cta-primary">
+                    <i data-lucide="calendar-check"></i>
+                    Agendar Consultoría Gratuita
+                </a>
+                <a href="index.html" class="btn-cta btn-cta-secondary">
+                    <i data-lucide="arrow-left"></i>
+                    Ver Todos los Servicios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo-placeholder">EBS</div>
+                    <span class="brand-text">Costa Rica EBS</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="index.html#servicios">Servicios</a>
+                    <a href="index.html#industrias">Industrias</a>
+                    <a href="index.html#whycrebs">Por qué EBS</a>
+                    <a href="index.html#contacto">Contacto</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2023 Costa Rica Enterprise Business Solutions. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/TUNUMEROAQUI" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i data-lucide="phone"></i>
+    </a>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, { 
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Observe all cards and sections
+        document.querySelectorAll('.premium-card, .benefit-card, .section-intro').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add animation delay to cards
+        document.querySelectorAll('.premium-card').forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
+
+        document.querySelectorAll('.benefit-card').forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
+
+        // Re-initialize Lucide icons after page load
+        window.addEventListener('load', () => {
+            lucide.createIcons();
+        });
+    </script>
 </body>
 
 </html>
