@@ -18,7 +18,9 @@
         <div class="container header-content">
             <div class="brand-container">
                 <div class="logo-placeholder">EBS</div>
-                <span class="brand-text">CR Enterprise Business Solutions</span>
+                <!-- <span class="brand-text">CR</span> -->
+                <!-- <span class="logo-text-main">Costa Rica EBS</span> -->
+                <!-- <span class="logo-text-sub">Enterprise Business Solutions</span> -->
             </div>
 
             <nav class="main-nav">
@@ -36,6 +38,7 @@
                     <li><a href="#industrias" id="Industrias">Industrias</a></li>
                     <li><a href="#whycrebs" id="PorqueEBS">Por qué EBS</a></li>
                     <li><a href="#contacto" id="Contacto">Contacto</a></li>
+                    <li><a href="terminos-condiciones.html" id="Contacto">Términos y condiciones</a></li>
                 </ul>
             </nav>
         </div>
@@ -388,7 +391,8 @@
 
                 <div class="contact-form-container">
                     <div id="formMessage" class="form-message"></div>
-                    <form id="contactForm" class="modern-form">
+                    <form id="contactForm" class="modern-form"
+                        action="https://formsubmit.co/a3d1c5730e37431b357984f2e358241c" method="POST">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Nombre Completo</label>
@@ -416,12 +420,13 @@
                             <label for="service">Servicio de Interés</label>
                             <select id="service" name="service" required>
                                 <option value="" disabled selected>Seleccione una solución</option>
-                                <option value="core">Infraestructura IT Principal</option>
-                                <option value="dc">Centro de Datos & Disaster Recovery</option>
-                                <option value="msft">Microsoft & Azure</option>
-                                <option value="sec">Ciberseguridad</option>
-                                <option value="solar">Soluciones de Energía Solar</option>
-                                <option value="managed">Servicios Gestionados</option>
+                                <option value="Infraestructura IT Principal">Infraestructura IT Principal</option>
+                                <option value="Centro de Datos & Disaster Recovery">Centro de Datos & Disaster Recovery
+                                </option>
+                                <option value="Microsoft & Azure">Microsoft & Azure</option>
+                                <option value="Ciberseguridad">Ciberseguridad</option>
+                                <option value="Soluciones de Energía Solar">Soluciones de Energía Solar</option>
+                                <option value="Servicios Gestionados">Servicios Gestionados</option>
                             </select>
                         </div>
 
@@ -435,6 +440,9 @@
                             <span>Enviar Solicitud</span>
                             <i data-lucide="arrow-right"></i>
                         </button>
+
+                        <input type="hidden" name="_next" value="http://127.0.0.1:5502/index.html#contacto">
+                        <input type="hidden" name="_captcha" value="false">
                     </form>
                 </div>
             </div>
@@ -532,7 +540,7 @@
         const formMessage = document.getElementById('formMessage');
 
         contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
+            /*e.preventDefault();*/
 
             // Get form data
             const formData = new FormData(this);
@@ -558,7 +566,7 @@
             showMessage('¡Gracias por tu solicitud! Nuestro equipo se contactará contigo pronto.', 'success');
 
             // Reset form
-            this.reset();
+            // this.reset();
 
             // Hide message after 5 seconds
             setTimeout(() => {

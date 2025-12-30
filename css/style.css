@@ -130,6 +130,21 @@ header {
   letter-spacing: -0.5px;
 }
 
+.logo-text-main {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--primary-dark);
+  line-height: 1.2;
+}
+
+.logo-text-sub {
+  font-size: 0.5rem;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 nav ul {
   display: flex;
   gap: 32px;
@@ -860,6 +875,14 @@ h1 {
 
   .contact-form-container {
     padding: 28px;
+  }
+
+  .logo-text-main {
+    font-size: 1rem;
+  }
+
+  .logo-text-sub {
+    font-size: 0.65rem;
   }
 }
 
