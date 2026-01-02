@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Diseño Web y Desarrollo de Software - Soluciones tecnológicas personalizadas por Costa Rica EBS">
+    <title>Diseño Web & Desarrollo de Software | Costa Rica EBS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --text-primary: #0a0f1c;
+            --text-secondary: #3a4256;
+            --text-tertiary: #6b7280;
+            --bg-primary: #f8fafc;
+            --bg-secondary: #f1f5f9;
+            --bg-tertiary: #e2e8f0;
+            --accent-blue: #0078d4;
+            --accent-blue-light: #50e6ff;
+            --accent-blue-dark: #005a9e;
+            --accent-purple: #7c3aed;
+            --accent-green: #10b981;
+            --accent-orange: #f59e0b;
+            --accent-pink: #ec4899;
+            --accent-cyan: #06b6d4;
+            --shadow-xs: 0 1px 2px 0 rgba(10, 15, 28, 0.1);
+            --shadow-sm: 0 1px 3px 1px rgba(10, 15, 28, 0.1);
+            --shadow-md: 0 4px 6px -1px rgba(10, 15, 28, 0.1), 0 2px 4px -1px rgba(10, 15, 28, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(10, 15, 28, 0.1), 0 4px 6px -2px rgba(10, 15, 28, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(10, 15, 28, 0.1), 0 10px 10px -5px rgba(10, 15, 28, 0.04);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-main: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+            --font-mono: "JetBrains Mono", monospace;
+            --max-width: 1440px;
+            --header-height: 72px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-main);
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 48px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 64px;
+            }
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            height: var(--header-height);
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .logo-placeholder {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-family: var(--font-mono);
+            font-size: 18px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .brand-text {
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text-sub {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .header-cta {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .btn-header {
+            padding: 10px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 0.9375rem;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--accent-cyan);
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-blue);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--bg-tertiary);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        @media (max-width: 1024px) {
+            .brand-text {
+                font-size: 1.125rem;
+            }
+
+            .header-cta {
+                display: none;
+            }
+        }
+
+        /* Hero Section */
+        .hero-webdev {
+            padding: 140px 0 100px;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.95) 0%, rgba(0, 120, 212, 0.95) 100%),
+                url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&h=1080&fit=crop') center/cover;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+
+        .hero-webdev::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: radial-gradient(circle at 80% 50%, rgba(124, 58, 237, 0.2) 0%, transparent 60%);
+            z-index: 0;
+        }
+
+        .hero-webdev::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(to bottom, transparent, var(--bg-primary));
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .webdev-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+            font-family: var(--font-mono);
+        }
+
+        .hero-webdev h1 {
+            font-size: 3.75rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: white;
+            letter-spacing: -1.5px;
+        }
+
+        .hero-webdev p {
+            font-size: 1.375rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 720px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .tech-tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tech-tag {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: var(--radius-md);
+            font-size: 0.875rem;
+            font-family: var(--font-mono);
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .hero-webdev {
+                padding: 100px 0 80px;
+            }
+
+            .hero-webdev h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-webdev p {
+                font-size: 1.125rem;
+            }
+
+            .logo-text-sub {
+                font-size: 0.65rem;
+            }
+        }
+
+        /* Services Section */
+        .services-webdev {
+            padding: 100px 0;
+            background: var(--bg-primary);
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+
+        .section-label {
+            display: inline-block;
+            background: rgba(6, 182, 212, 0.1);
+            color: var(--accent-cyan);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        .section-intro h2 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            letter-spacing: -1px;
+        }
+
+        .section-intro p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Service Cards */
+        .webdev-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .webdev-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: 0;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .webdev-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue));
+            z-index: 2;
+        }
+
+        .webdev-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .webdev-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 48px;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .card-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 8px 16px rgba(6, 182, 212, 0.3);
+        }
+
+        .card-icon i {
+            color: white;
+            width: 32px;
+            height: 32px;
+        }
+
+        .card-title-group h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .card-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.5;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .service-features li {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--bg-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .service-features li:last-child {
+            border-bottom: none;
+        }
+
+        .service-features li::before {
+            content: "✓";
+            color: var(--accent-green);
+            font-weight: 700;
+            font-size: 1.125rem;
+            flex-shrink: 0;
+        }
+
+        .service-features li:hover {
+            color: var(--text-primary);
+        }
+
+        /* Tech Stack Section */
+        .tech-stack-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .tech-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .tech-category {
+            background: var(--bg-primary);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        .tech-category:hover {
+            border-color: var(--accent-cyan);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .tech-category-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tech-category-icon i {
+            color: white;
+            width: 28px;
+            height: 28px;
+        }
+
+        .tech-category h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .tech-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tech-list li {
+            padding: 8px 0;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            font-family: var(--font-mono);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tech-list li::before {
+            content: "▸";
+            color: var(--accent-cyan);
+            font-weight: 700;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 60%);
+            z-index: 0;
+        }
+
+        .process-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2rem;
+            font-weight: 700;
+            box-shadow: 0 8px 16px rgba(6, 182, 212, 0.3);
+        }
+
+        .process-step h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .process-step p {
+            font-size: 0.9375rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.95) 0%, rgba(0, 120, 212, 0.95) 100%),
+                url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop') center/cover;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(124, 58, 237, 0.15) 0%, transparent 60%);
+            z-index: 0;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .cta-content p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta {
+            padding: 18px 36px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 1.0625rem;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-cta-primary {
+            background: white;
+            color: var(--accent-cyan);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-cta-primary:hover {
+            background: var(--accent-purple);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-cta-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-primary);
+            padding: 60px 0 40px;
+            color: white;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .copyright {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 3000;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .webdev-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-categories {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 32px;
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-webdev {
+                padding: 80px 0;
+            }
+
+            .section-intro h2 {
+                font-size: 2.25rem;
+            }
+
+            .webdev-card .card-content {
+                padding: 36px 28px;
+            }
+
+            .card-image {
+                height: 200px;
+            }
+
+            .card-header {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .cta-section {
+                padding: 80px 0;
+            }
+
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-cta {
+                justify-content: center;
+            }
+
+            .tech-stack-section,
+            .process-section {
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .tech-tags {
+                gap: 8px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Focus styles */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--accent-cyan);
+            outline-offset: 2px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="brand-container">
+                <div class="logo-placeholder">EBS</div>
+                <!-- <span class="brand-text">Costa Rica EBS</span> -->
+                <span class="logo-text-sub">Enterprise Business Solutions</span>
+            </div>
+
+            <div class="header-cta">
+                <a href="index.html" class="btn-header btn-secondary">
+                    <i data-lucide="arrow-left"></i>
+                    Inicio
+                </a>
+                <a href="#contacto" class="btn-header btn-primary">
+                    <i data-lucide="code"></i>
+                    Iniciar Proyecto
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-webdev">
+        <div class="container hero-content">
+            <div class="webdev-badge">
+                <i data-lucide="code-2"></i>
+                DESARROLLO & DISEÑO WEB
+            </div>
+            <h1>Soluciones Web Empresariales</h1>
+            <p>Diseñamos y desarrollamos aplicaciones web robustas, sitios responsivos y sistemas empresariales
+                escalables. Desde la estrategia digital hasta el deployment y mantenimiento continuo.</p>
+
+            <div class="tech-tags">
+                <span class="tech-tag">Angular 18+</span>
+                <span class="tech-tag">Java 8+</span>
+                <span class="tech-tag">Spring Boot 3</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">HTML5/CSS3</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-webdev">
+        <div class="container">
+            <div class="section-intro">
+                <span class="section-label">SERVICIOS COMPLETOS</span>
+                <h2>Desarrollo Web de Principio a Fin</h2>
+                <p>Desde la conceptualización hasta el lanzamiento y más allá. Creamos experiencias digitales que
+                    impulsan tu negocio.</p>
+            </div>
+
+            <div class="webdev-grid">
+                <!-- Diseño y Desarrollo Web -->
+                <div class="webdev-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=400&fit=crop"
+                            alt="Web Design">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i data-lucide="layout"></i>
+                            </div>
+                            <div class="card-title-group">
+                                <h3>Diseño y Desarrollo Web</h3>
+                                <p class="card-subtitle">Sitios responsivos y e-commerce personalizados</p>
+                            </div>
+                        </div>
+                        <ul class="service-features">
+                            <li>Diseño UI/UX centrado en el usuario</li>
+                            <li>Sitios informativos y comerciales (e-commerce)</li>
+                            <li>Desarrollo responsive para todos los dispositivos</li>
+                            <li>Branding e identidad visual completa</li>
+                            <li>Optimización SEO técnica y de contenido</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Estrategia Digital -->
+                <div class="webdev-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
+                            alt="Digital Strategy">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i data-lucide="target"></i>
+                            </div>
+                            <div class="card-title-group">
+                                <h3>Estrategia Digital</h3>
+                                <p class="card-subtitle">Consultoría y planificación estratégica</p>
+                            </div>
+                        </div>
+                        <ul class="service-features">
+                            <li>Definición de objetivos y KPIs</li>
+                            <li>Análisis de competencia y mercado</li>
+                            <li>Arquitectura de información</li>
+                            <li>Planificación de proyecto y roadmap</li>
+                            <li>Marketing digital complementario</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Desarrollo de Software -->
+                <div class="webdev-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop"
+                            alt="Software Development">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i data-lucide="code-2"></i>
+                            </div>
+                            <div class="card-title-group">
+                                <h3>Desarrollo de Software</h3>
+                                <p class="card-subtitle">Aplicaciones empresariales robustas y escalables</p>
+                            </div>
+                        </div>
+                        <ul class="service-features">
+                            <li>Sistemas escalables con Angular 18+ y Spring Boot 3</li>
+                            <li>Análisis y modelado de procesos con UML</li>
+                            <li>Reportería avanzada y dashboards ejecutivos</li>
+                            <li>Automatización de procesos contables/financieros</li>
+                            <li>Integración con sistemas legacy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Mantenimiento y Soporte -->
+                <div class="webdev-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=400&fit=crop"
+                            alt="Support and Maintenance">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i data-lucide="wrench"></i>
+                            </div>
+                            <div class="card-title-group">
+                                <h3>Mantenimiento y Soporte</h3>
+                                <p class="card-subtitle">Soporte continuo y actualizaciones</p>
+                            </div>
+                        </div>
+                        <ul class="service-features">
+                            <li>Actualizaciones de seguridad periódicas</li>
+                            <li>Respaldos automáticos y recuperación</li>
+                            <li>Corrección de errores y bugs</li>
+                            <li>Soporte técnico continuo</li>
+                            <li>Monitoreo de performance y uptime</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-stack-section">
+        <div class="container">
+            <div class="section-intro">
+                <span class="section-label">TECNOLOGÍAS</span>
+                <h2>Stack Tecnológico Enterprise</h2>
+                <p>Utilizamos las herramientas y frameworks más robustos de la industria para garantizar soluciones de
+                    calidad.</p>
+            </div>
+
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <div class="tech-category-icon">
+                        <i data-lucide="monitor"></i>
+                    </div>
+                    <h3>Frontend</h3>
+                    <ul class="tech-list">
+                        <li>HTML5, CSS3, JavaScript</li>
+                        <li>Angular 18+</li>
+                        <li>TypeScript</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+
+                <div class="tech-category">
+                    <div class="tech-category-icon">
+                        <i data-lucide="server"></i>
+                    </div>
+                    <h3>Backend</h3>
+                    <ul class="tech-list">
+                        <li>Java 8+</li>
+                        <li>Spring Boot 3</li>
+                        <li>RESTful APIs</li>
+                        <li>Microservicios</li>
+                    </ul>
+                </div>
+
+                <div class="tech-category">
+                    <div class="tech-category-icon">
+                        <i data-lucide="database"></i>
+                    </div>
+                    <h3>Bases de Datos</h3>
+                    <ul class="tech-list">
+                        <li>PostgreSQL</li>
+                        <li>Oracle Database</li>
+                        <li>IBM DB2</li>
+                        <li>SQL Server</li>
+                    </ul>
+                </div>
+
+                <div class="tech-category">
+                    <div class="tech-category-icon">
+                        <i data-lucide="box"></i>
+                    </div>
+                    <h3>Servidores</h3>
+                    <ul class="tech-list">
+                        <li>GlassFish Server</li>
+                        <li>Apache TomEE</li>
+                        <li>WebSphere</li>
+                    </ul>
+                </div>
+
+                <div class="tech-category">
+                    <div class="tech-category-icon">
+                        <i data-lucide="git-branch"></i>
+                    </div>
+                    <h3>Control de Versiones</h3>
+                    <ul class="tech-list">
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>GitLab</li>
+                    </ul>
+                </div>
+
+                <div class="tech-category">
+                    <div class="tech-category-icon">
+                        <i data-lucide="settings"></i>
+                    </div>
+                    <h3>IDE & Herramientas</h3>
+                    <ul class="tech-list">
+                        <li>Visual Studio Code</li>
+                        <li>IntelliJ IDEA</li>
+                        <li>Eclipse</li>
+                        <li>NetBeans</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <div class="container process-content">
+            <div class="section-intro">
+                <span class="section-label"
+                    style="background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan);">METODOLOGÍA ÁGIL</span>
+                <h2 style="color: white;">Nuestro Proceso de Desarrollo</h2>
+                <p style="color: rgba(255, 255, 255, 0.8);">Implementamos metodologías Scrum para garantizar entregas
+                    incrementales y comunicación constante.</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Descubrimiento</h3>
+                    <p>Análisis de necesidades, definición de objetivos y arquitectura de información.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Diseño</h3>
+                    <p>Wireframes, mockups y prototipos interactivos validados con el cliente.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Desarrollo</h3>
+                    <p>Sprints iterativos con entregas incrementales y revisiones constantes.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Testing</h3>
+                    <p>Pruebas exhaustivas de funcionalidad, performance y seguridad.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h3>Deployment</h3>
+                    <p>Lanzamiento controlado con monitoreo y soporte inmediato.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <h3>Mantenimiento</h3>
+                    <p>Soporte continuo, actualizaciones y optimizaciones post-lanzamiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="cta-section">
+        <div class="container cta-content">
+            <h2>Transformemos tu Visión en Realidad Digital</h2>
+            <p>Agenda una consulta gratuita. Analizaremos tus necesidades y diseñaremos una solución tecnológica a
+                medida que impulse tu negocio.</p>
+
+            <div class="cta-buttons">
+                <a href="index.html#contacto" class="btn-cta btn-cta-primary">
+                    <i data-lucide="calendar"></i>
+                    Iniciar Proyecto
+                </a>
+                <a href="index.html" class="btn-cta btn-cta-secondary">
+                    <i data-lucide="arrow-left"></i>
+                    Ver Todos los Servicios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo-placeholder">EBS</div>
+                    <span class="brand-text">Costa Rica EBS</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="index.html#servicios">Servicios</a>
+                    <a href="microsoft-azure.html">Microsoft</a>
+                    <a href="datacenter-solutions.html">Data Center</a>
+                    <a href="cybersecurity.html">Ciberseguridad</a>
+                    <a href="index.html#industrias">Industrias</a>
+                    <a href="https://costaricaebs.com/product-category/it-solutions/microsoft/"
+                        target="_blank">Solar</a>
+                    <a href="index.html#whycrebs">Por qué EBS</a>
+                    <a href="index.html#contacto">Contacto</a>
+                    <a href="term-cond.html">Términos y condiciones</a>
+                    <a href="terminos-condiciones.html">Términos y condiciones</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 Costa Rica Enterprise Business Solutions. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/50672792650" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i data-lucide="phone"></i>
+    </a>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Observe all cards and sections
+        document.querySelectorAll('.webdev-card, .tech-category, .process-step, .section-intro').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add animation delay to cards
+        document.querySelectorAll('.webdev-card').forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
+
+        document.querySelectorAll('.tech-category').forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.05}s`;
+        });
+
+        document.querySelectorAll('.process-step').forEach((step, index) => {
+            step.style.animationDelay = `${index * 0.08}s`;
+        });
+
+        // Re-initialize Lucide icons after page load
+        window.addEventListener('load', () => {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Términos y Condiciones - Costa Rica Enterprise Business Solutions">
+    <title>Términos y Condiciones | Costa Rica EBS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --text-primary: #0a0f1c;
+            --text-secondary: #3a4256;
+            --text-tertiary: #6b7280;
+            --bg-primary: #f8fafc;
+            --bg-secondary: #f1f5f9;
+            --bg-tertiary: #e2e8f0;
+            --accent-blue: #4f46e5;
+            --accent-blue-dark: #4338ca;
+            --accent-purple: #7c3aed;
+            --accent-green: #10b981;
+            --shadow-sm: 0 1px 3px 1px rgba(10, 15, 28, 0.1);
+            --shadow-md: 0 4px 6px -1px rgba(10, 15, 28, 0.1), 0 2px 4px -1px rgba(10, 15, 28, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(10, 15, 28, 0.1), 0 4px 6px -2px rgba(10, 15, 28, 0.05);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-main: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+            --max-width: 1440px;
+            --header-height: 72px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-main);
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 48px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 64px;
+            }
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            height: var(--header-height);
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-placeholder {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 18px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .brand-text {
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text-sub {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .btn-back {
+            padding: 10px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 0.9375rem;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--bg-tertiary);
+        }
+
+        .btn-back:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        @media (max-width: 768px) {
+            .brand-text {
+                font-size: 1.125rem;
+            }
+
+            .logo-text-sub {
+                font-size: 0.65rem;
+            }
+        }
+
+        /* Hero Section */
+        .terms-hero {
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .terms-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .terms-hero p {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .last-updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            margin-top: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .terms-hero {
+                padding: 80px 0 40px;
+            }
+
+            .terms-hero h1 {
+                font-size: 2.25rem;
+            }
+        }
+
+        /* Content Section */
+        .terms-content {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .terms-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .terms-section {
+            margin-bottom: 48px;
+        }
+
+        .terms-section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--accent-blue);
+            display: inline-block;
+        }
+
+        .terms-section h3 {
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 32px 0 16px;
+        }
+
+        .terms-section p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .terms-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0;
+        }
+
+        .terms-section ul li {
+            padding: 12px 0 12px 32px;
+            position: relative;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .terms-section ul li::before {
+            content: "•";
+            position: absolute;
+            left: 12px;
+            color: var(--accent-blue);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .highlight-box {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent-blue);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            margin: 24px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            color: white;
+            padding: 48px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .contact-box h3 {
+            font-size: 1.75rem;
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .contact-box p {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 24px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-primary);
+            padding: 60px 0 40px;
+            color: white;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .copyright {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 3000;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .terms-content {
+                padding: 60px 0;
+            }
+
+            .contact-box {
+                padding: 32px 24px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="brand-container">
+                <div class="logo-placeholder">EBS</div>
+                <!-- <span class="brand-text">Costa Rica EBS</span> -->
+                <span class="logo-text-sub">Enterprise Business Solutions</span>
+            </div>
+            <a href="index.html" class="btn-back">
+                <i data-lucide="arrow-left"></i>
+                Volver al inicio
+            </a>
+        </div>
+    </header>
+
+    <section class="terms-hero">
+        <div class="container">
+            <h1>Términos y Condiciones</h1>
+            <p>Por favor, lea detenidamente estos términos antes de utilizar nuestros servicios</p>
+            <div class="last-updated">
+                <i data-lucide="calendar"></i>
+                Última actualización: Enero 2024
+            </div>
+        </div>
+    </section>
+
+    <section class="terms-content">
+        <div class="container">
+            <div class="terms-wrapper">
+
+                <div class="highlight-box">
+                    <p><strong>Bienvenidos a www.costaricaebs.com.</strong> Estos Términos y Condiciones Generales se
+                        aplicarán para la navegación del Sitio de Internet www.costaricaebs.com y los servicios
+                        ofrecidos en este sitio Web.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>1. Generalidades</h2>
+
+                    <h3>1.1 Objetivo</h3>
+                    <p>Establecer los términos y condiciones que se publicarán en www.costaricaebs.com para mantener el
+                        estándar de transparencia frente al cliente.</p>
+
+                    <h3>1.2 Alcance</h3>
+                    <p>El presente documento es aplicable a las operaciones de Costa Rica Enterprise Business Solutions
+                        S.A. en Costa Rica, y en sus plataformas de comercio electrónico.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>2. Pedidos</h2>
+                    <p>El sitio Web puede recibir todo tipo de pedido de cualquier parte del mundo. Cualquier persona
+                        puede realizar la orden, siempre y cuando posea una tarjeta de débito o crédito válida y sea de
+                        su propia pertenencia. El usuario es responsable del uso que dé a sus tarjetas a través del
+                        sitio web www.costaricaebs.com.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>3. Estados de Pedido</h2>
+                    <p>Se cuenta con 6 estados de pedido, pagados con tarjetas de crédito o débito:</p>
+                    <ul>
+                        <li><strong>Pendiente:</strong> Todo pedido que ingrese correctamente tendrá este estado hasta
+                            ser revisado y aprobado por el banco.</li>
+                        <li><strong>Verificación de datos Credomatic:</strong> Estado de transición del pedido donde el
+                            banco está verificando el pago del pedido.</li>
+                        <li><strong>Procesando:</strong> Todo pedido que ingrese correctamente tendrá este estado hasta
+                            ser revisado y aprobado por el banco.</li>
+                        <li><strong>Facturado:</strong> Este estado lo obtiene el pedido cuando la transacción ha sido
+                            revisada y aprobada por el banco.</li>
+                        <li><strong>Completado:</strong> Cuando el pedido ha sido enviado a la dirección indicada por el
+                            cliente.</li>
+                        <li><strong>Cancelado/Cerrado:</strong> Cuando el pedido es rechazado.</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>4. Servicio al Cliente</h2>
+                    <p>Para cualquier duda, comentario o consulta nos puede contactar en:</p>
+                    <ul>
+                        <li>Correo electrónico: <strong>contacto@costaricaebs.com</strong></li>
+                        <li>Chat en línea WhatsApp disponible en www.costaricaebs.com</li>
+                        <li>Redes sociales: Facebook e Instagram</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>5. Privacidad</h2>
+                    <p>Toda la información que provee el cliente al momento de registrarse o realizar una compra será
+                        tratada con absoluta confidencialidad y privacidad.</p>
+
+                    <p>www.costaricaebs.com se limita a resguardar la siguiente información del cliente:</p>
+                    <ul>
+                        <li><strong>Información Personal:</strong> nombre, cédula, dirección física, número de teléfono
+                            y dirección de e-mail.</li>
+                        <li><strong>Información no personalizada identificable:</strong> dirección IP, tipo de
+                            navegador, nombre de dominio y paginaciones específicas del sitio Web.</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>6. Políticas de Compra</h2>
+                    <p>Todo usuario podrá comprar la misma variedad de productos disponibles en el sitio Web.</p>
+
+                    <div class="highlight-box">
+                        <p><strong>Límites de compra:</strong></p>
+                        <ul>
+                            <li>Monto máximo diario: ₡2.500.000 (o equivalente en dólares)</li>
+                            <li>Monto máximo por transacción: ₡800.000 (o equivalente en dólares)</li>
+                            <li>Monto máximo mensual: ₡10.000.000 (o equivalente en dólares)</li>
+                        </ul>
+                    </div>
+
+                    <p>Estos montos pueden variar con previa autorización de www.costaricaebs.com con la respectiva
+                        revisión de seguridad.</p>
+
+                    <p>Nos reservamos el derecho de rechazar cualquier pedido o de restringir las cantidades de
+                        cualquier pedido sin explicar los motivos, lo cual se notificará por medio de correo electrónico
+                        o llamada telefónica.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>7. Precios</h2>
+                    <p>Los precios son exclusivamente para compras en www.costaricaebs.com, están sujetos a cambios sin
+                        previo aviso, incluyen todos los impuestos de venta según normativa vigente en Costa Rica y no
+                        incluyen los gastos de envío, los cuales pueden variar según el cantón seleccionado en la
+                        dirección de entrega.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>8. Métodos de Pago</h2>
+                    <p>Todas las formas de pago están sujetas a verificación y autorización. Las formas de pago
+                        autorizadas son:</p>
+
+                    <h3>Tarjetas de Crédito y Débito</h3>
+                    <p>Aceptamos: Visa, Mastercard, American Express, JCB, Diners Club y Discover.</p>
+                    <p>Costa Rica Enterprise Business Solutions S.A. se desliga del manejo y uso de tarjetas de crédito
+                        robadas debido a que nuestro portal no puede negar la venta cuando el banco emisor ha autorizado
+                        la transacción.</p>
+                    <p><strong>Nota:</strong> Existe una tarifa de $1.00, o su equivalente en moneda local, para la
+                        respectiva verificación y confirmación de información.</p>
+
+                    <h3>Certificados de Regalo</h3>
+                    <p>Los Certificados de Regalo se podrán adquirir y canjear únicamente a través de
+                        www.costaricaebs.com y serán válidos en Costa Rica.</p>
+                    <ul>
+                        <li>Denominaciones: ₡10.000, ₡20.000, ₡30.000, ₡40.000, ₡50.000 y ₡100.000 (o equivalentes en
+                            dólares)</li>
+                        <li>Vigencia: 6 meses desde la fecha de compra</li>
+                        <li>No reembolsables en efectivo</li>
+                        <li>Usables en totalidad o parcialmente</li>
+                    </ul>
+
+                    <h3>Pago en Sucursal</h3>
+                    <p>Los clientes pueden realizar su pago en efectivo en nuestros puntos de venta. Las órdenes de pago
+                        en sucursal tienen un tiempo máximo de 4 días para formalizarse, pasado ese tiempo se procede a
+                        cancelar de forma automática.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>9. Cancelaciones</h2>
+                    <p>Cualquier persona puede cancelar su compra antes que le sea entregado el producto enviando un
+                        correo electrónico a <strong>contacto@costaricaebs.com</strong> o llamando al número de teléfono
+                        de atención al cliente: <strong>+(506)7279-2650</strong> manifestando su intención de cancelar
+                        la orden de compra y solicitando la devolución del dinero.</p>
+
+                    <p>En caso de que el artículo comprado no esté disponible por falta de existencias en el mercado, el
+                        cliente será notificado y podrá decidir si desea cambiar su compra o cancelarla para que sea
+                        reintegrado el dinero en su totalidad.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>10. Envío y Retiro en Tienda</h2>
+
+                    <h3>Retiro en Sucursal</h3>
+                    <p>Los artículos pueden ser retirados en cualquiera de nuestras tiendas sin cargos por envío. El
+                        Call Center le indicará al cliente cuándo retirar en la tienda especificada, durante los
+                        siguientes 5 días hábiles luego de verificada la información de pago con el banco emisor.</p>
+
+                    <h3>Envío a Domicilio</h3>
+                    <p>Entregamos en todo el territorio nacional o internacional con acceso adecuado vía terrestre. El
+                        tiempo de entrega es de 6 a 30 días hábiles luego de verificada la información de pago con el
+                        banco emisor.</p>
+
+                    <p>Al momento de la entrega, se solicitará documento de identidad y se deberán firmar 3 documentos:
+                        entrega de artículo, factura de compra y boucher de la tarjeta.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>11. Devoluciones y Cambios</h2>
+                    <p>El cliente tiene <strong>48 horas</strong> a partir de la entrega del producto para coordinar la
+                        devolución del dinero o cambio del producto, siempre y cuando el producto esté sin uso y en
+                        excelentes condiciones tal y como fue entregado (empaque y accesorios).</p>
+
+                    <p>Contacte a: <strong>contacto@costaricaebs.com</strong> o llame al
+                        <strong>+(506)7279-2650</strong>
+                    </p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>12. Garantía de Fábrica</h2>
+                    <p>Cada artículo tiene asignado por defecto un tiempo de garantía de fábrica. El procedimiento será
+                        evaluado por un taller autorizado para constatar el estado del artículo con el fin de determinar
+                        si se puede hacer valer la garantía de fábrica.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>13. Reintegro a Tarjeta</h2>
+                    <p>Una vez autorizado el proceso de reintegro a tarjeta de crédito o débito, se solicitará al banco
+                        el reintegro al tarjetahabiente del pago efectuado. El tiempo de reintegro puede variar según el
+                        banco emisor de la tarjeta.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>14. Moneda</h2>
+                    <p>Los precios en el sitio Web serán desplegados en colones, los cuales podrán convertirse a dólares
+                        estadounidenses tomando como base el tipo de cambio del día de la transacción.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>15. Promociones</h2>
+                    <p>Las promociones presentadas en el sitio Web serán exclusivamente para compras efectuadas por ese
+                        medio. Los códigos promocionales serán alfanuméricos y se podrán utilizar una sola vez en la
+                        orden electrónica.</p>
+
+                    <p>www.costaricaebs.com puede enviar correos electrónicos con ofertas promocionales. Si no desea
+                        recibir dicha información, puede notificar vía correo electrónico.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>16. Disponibilidad de Productos</h2>
+                    <p>En los casos que no se cuente con existencia de productos se le notificará al cliente por medio
+                        de correo electrónico. El color y las imágenes de los productos pueden variar dependiendo del
+                        equipo de cómputo.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>17. Documentos de Compras</h2>
+                    <p>El comprobante de compra será enviado al cliente vía correo electrónico.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>18. Conformidad del Usuario</h2>
+                    <p>Se constituye un acuerdo legal entre cualquier usuario y www.costaricaebs.com. El cliente, antes
+                        de solicitar algún servicio, debe haber revisado, entendido y acordado estos Términos y
+                        Condiciones.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>19. Información Adicional</h2>
+
+                    <h3>Recomendaciones a clientes:</h3>
+                    <ul>
+                        <li>Desconecte siempre la sesión del navegador después de acceder a zonas de seguridad</li>
+                        <li>Nunca proporcionaremos información personal mediante correo electrónico</li>
+                        <li>Verifique la autenticidad de vínculos en: contacto@costaricaebs.com</li>
+                        <li>No dejamos la computadora sin atención durante una sesión en línea</li>
+                    </ul>
+
+                    <h3>Información de Seguridad SSL SHA-256 bits:</h3>
+                    <ul>
+                        <li>Expedido al dominio: www.costaricaebs.com</li>
+                        <li>Propietario: Costa Rica Enterprise Business Solutions S.A.</li>
+                        <li>Ubicación: CONCASA de Alajuela, Costa Rica</li>
+                        <li>Válido hasta: 12/1/2024</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>20. Protección de Información y Gráfica</h2>
+                    <p>Todos los nombres comerciales, encabezados de páginas, gráficos, textos, logos, botones, iconos,
+                        imágenes, audio, código y software usado en este sitio Web están protegidos por la legislación
+                        y/o se encuentra bajo licencia de Costa Rica Enterprise Business Solutions S.A.</p>
+
+                    <p>Se prohíbe cualquier uso, incluyendo la reproducción, modificación, distribución, transmisión,
+                        exhibición o impresión, de los distintivos comerciales registrados, salvo que se cuente con
+                        permiso escrito de la sociedad titular de los derechos.</p>
+                </div>
+
+                <div class="contact-box">
+                    <h3>¿Tiene preguntas sobre nuestros términos?</h3>
+                    <p>Estamos aquí para ayudarle. Contáctenos a través de cualquiera de estos medios:</p>
+
+                    <div class="contact-info">
+                        <a href="mailto:contacto@costaricaebs.com" class="contact-item">
+                            <i data-lucide="mail"></i>
+                            contacto@costaricaebs.com
+                        </a>
+                        <a href="tel:+50672792650" class="contact-item">
+                            <i data-lucide="phone"></i>
+                            +(506) 7279-2650
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo-placeholder">EBS</div>
+                    <span class="brand-text">Costa Rica EBS</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="index.html#servicios">Servicios</a>
+                    <a href="microsoft-azure.html">Microsoft</a>
+                    <a href="datacenter-solutions.html">Data Center</a>
+                    <a href="cybersecurity.html">Ciberseguridad</a>
+                    <a href="diseno-web.html">Diseño Web</a>
+                    <a href="index.html#industrias">Industrias</a>
+                    <a href="https://costaricaebs.com/product-category/it-solutions/microsoft/"
+                        target="_blank">Solar</a>
+                    <a href="index.html#whycrebs">Por qué EBS</a>
+                    <a href="index.html#contacto">Contacto</a>
+                    <!-- <a href="term-cond.html">Términos y condiciones</a> -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 Costa Rica Enterprise Business Solutions. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/50672792650" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i data-lucide="phone"></i>
+    </a>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
