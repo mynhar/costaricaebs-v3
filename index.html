@@ -18,30 +18,27 @@
         <div class="container header-content">
             <div class="brand-container">
                 <div class="logo-placeholder">EBS</div>
-                <!-- <span class="brand-text">CR</span> -->
-                <!-- <span class="logo-text-main">Costa Rica EBS</span> -->
-                <!-- <span class="logo-text-sub">Enterprise Business Solutions</span> -->
             </div>
 
             <nav class="main-nav">
-                <button class="menu-toggle" aria-label="Toggle menu">
+                <button class="menu-toggle" aria-label="Abrir menú">
                     <i data-lucide="menu"></i>
                 </button>
+                <div class="nav-overlay"></div>
                 <ul class="nav-menu">
-                    <li><a href="#home" class="active" id="Inicio">Inicio</a></li>
-                    <li><a href="#servicios" id="Servicios">Servicios</a></li>
-                    <li><a href="microsoft-azure.html" id="Microsoft">Microsoft</a></li>
-                    <li><a href="data-center.html" id="Datos">Centro de Datos</a></li>
-                    <li><a href="ciberseguridad.html" id="Ciberseguridad">Ciberseguridad</a></li>
-                    <li><a href="diseno-web.html" id="diseno-web">Diseño Web</a></li>
-                    <li><a href="https://costaricaebs.com/product-category/it-solutions/microsoft/" target="_blank"
-                            id="Solar">Solar</a></li>
-                    <li><a href="#industrias" id="Industrias">Industrias</a></li>
-                    <li><a href="#whycrebs" id="PorqueEBS">Por qué EBS</a></li>
-                    <li><a href="#contacto" id="Contacto">Contacto</a></li>
-                    <li><a href="term-cond.html" id="condiciones">Términos</a></li>
-                    <li><a href="terminos-condiciones.html" id="terminos">Condiciones</a></li>
-
+                    <li style="--i:1"><a href="#home" class="active">Inicio</a></li>
+                    <li style="--i:2"><a href="#servicios">Servicios</a></li>
+                    <li style="--i:3"><a href="microsoft-azure.html">Microsoft</a></li>
+                    <li style="--i:4"><a href="data-center.html">Centro de Datos</a></li>
+                    <li style="--i:5"><a href="ciberseguridad.html">Ciberseguridad</a></li>
+                    <li style="--i:6"><a href="diseno-web.html">Diseño Web</a></li>
+                    <li style="--i:7"><a href="https://costaricaebs.com/product-category/it-solutions/microsoft/"
+                            target="_blank">Solar</a></li>
+                    <li style="--i:8"><a href="#industrias">Industrias</a></li>
+                    <li style="--i:9"><a href="#whycrebs">Por qué EBS</a></li>
+                    <li style="--i:10"><a href="#contacto">Contacto</a></li>
+                    <li style="--i:11"><a href="term-cond.html">Términos</a></li>
+                    <li style="--i:11"><a href="terminos-condiciones.html">Condiciones</a></li>
                 </ul>
             </nav>
         </div>
@@ -251,7 +248,7 @@
 
             <div id="managed" class="ecosystem-grid">
                 <div class="service-card">
-                    <h3><i data-lucide="briefcase"></i> Servicios Gestionados (MRR – piensa como CEO)</h3>
+                    <h3><i data-lucide="briefcase"></i> Servicios Gestionados</h3>
                     <ul class="service-list">
                         <li>Managed Infrastructure Services</li>
                         <li>Managed Backup & DR</li>
@@ -430,6 +427,8 @@
                                 <option value="Ciberseguridad">Ciberseguridad</option>
                                 <option value="Soluciones de Energía Solar">Soluciones de Energía Solar</option>
                                 <option value="Servicios Gestionados">Servicios Gestionados</option>
+                                <option value="Diseño Web. Soluciones Web Empresariales">Diseño Web. Soluciones Web
+                                    Empresariales</option>
                             </select>
                         </div>
 
@@ -444,7 +443,7 @@
                             <i data-lucide="arrow-right"></i>
                         </button>
 
-                        <input type="hidden" name="_next" value="http://127.0.0.1:5502/index.html#contacto">
+                        <input type="hidden" name="_next" value="https://costaricaebs.com/gracias.html">
                         <input type="hidden" name="_captcha" value="false">
                     </form>
                 </div>
@@ -466,11 +465,10 @@
                 <a href="diseno-web.html">Diseño Web</a>
                 <a href="https://costaricaebs.com/product-category/it-solutions/microsoft/" target="_blank">Solar</a>
                 <a href="#industrias">Industrias</a>
-                <a href="diseno-web.html">Diseño Web</a>
                 <a href="#whycrebs">Por qué EBS</a>
                 <a href="#contacto">Contacto</a>
-                <a href="term-cond.html">Términos y condiciones</a>
-                <a href="terminos-condiciones.html">Términos y condiciones</a>
+                <a href="term-cond.html">Términos</a>
+                <a href="terminos-condiciones.html">Condiciones</a>
             </div>
             <p class="copyright">© 2026 Costa Rica Enterprise Business Solutions. Todos los derechos reservados.</p>
         </div>
@@ -481,149 +479,116 @@
     </a>
 
     <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
+        (function () {
+            'use strict';
 
-        // Mobile menu toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-
-        menuToggle.addEventListener('click', function () {
-            navMenu.classList.toggle('active');
-            document.body.classList.toggle('no-scroll');
-
-            const icon = this.querySelector('i');
-            icon.setAttribute('data-lucide', navMenu.classList.contains('active') ? 'x' : 'menu');
+            // Initialize Lucide icons
             lucide.createIcons();
-        });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', function (event) {
-            const nav = document.querySelector('.main-nav');
-            if (!nav.contains(event.target)) {
+            // Cache DOM elements
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const navOverlay = document.querySelector('.nav-overlay');
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
+
+            // Menu functions
+            const closeMenu = () => {
                 navMenu.classList.remove('active');
+                navOverlay.classList.remove('active');
                 document.body.classList.remove('no-scroll');
                 menuToggle.querySelector('i').setAttribute('data-lucide', 'menu');
                 lucide.createIcons();
-            }
-        });
+            };
 
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', function () {
-                if (window.innerWidth <= 1024) {
-                    navMenu.classList.remove('active');
-                    document.body.classList.remove('no-scroll');
-                    menuToggle.querySelector('i').setAttribute('data-lucide', 'menu');
-                    lucide.createIcons();
+            const toggleMenu = () => {
+                const isActive = navMenu.classList.toggle('active');
+                navOverlay.classList.toggle('active');
+                document.body.classList.toggle('no-scroll');
+                menuToggle.querySelector('i').setAttribute('data-lucide', isActive ? 'x' : 'menu');
+                lucide.createIcons();
+            };
+
+            // Menu event listeners
+            menuToggle.addEventListener('click', toggleMenu);
+            navOverlay.addEventListener('click', closeMenu);
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.main-nav') && navMenu.classList.contains('active')) {
+                    closeMenu();
                 }
             });
-        });
 
-        // Active navigation highlighting
-        document.querySelectorAll('header .nav-menu a').forEach(link => {
-            link.addEventListener('click', function (e) {
-                document.querySelectorAll('header .nav-menu a').forEach(a => a.classList.remove('active'));
-                this.classList.add('active');
+            // Close menu on link click (mobile)
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 1024) closeMenu();
+                });
             });
-        });
 
-        // Services Navigation
-        function showTab(evt, tabId) {
-            document.querySelectorAll('.ecosystem-grid').forEach(g => g.classList.remove('active'));
-            document.querySelectorAll('.nav-pill').forEach(p => p.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-            evt.currentTarget.classList.add('active');
-
-            // Smooth scroll to services
-            document.getElementById('servicios').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            // Close menu on ESC key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navMenu.classList.contains('active')) closeMenu();
             });
-        }
 
-        // Enhanced Form submission handler
-        const contactForm = document.getElementById('contactForm');
-        const formMessage = document.getElementById('formMessage');
-
-        contactForm.addEventListener('submit', function (e) {
-            /*e.preventDefault();*/
-
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-
-            // Basic validation
-            if (!data.name || !data.company || !data.email || !data.service) {
-                showMessage('Por favor completa todos los campos requeridos.', 'error');
-                return;
-            }
-
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(data.email)) {
-                showMessage('Por favor ingresa un correo electrónico válido.', 'error');
-                return;
-            }
-
-            // Simulate form submission (replace with actual backend call)
-            console.log('Form submitted:', data);
-
-            // Show success message
-            showMessage('¡Gracias por tu solicitud! Nuestro equipo se contactará contigo pronto.', 'success');
-
-            // Reset form
-            // this.reset();
-
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 5000);
-        });
-
-        function showMessage(message, type) {
-            formMessage.textContent = message;
-            formMessage.className = `form-message ${type}`;
-            formMessage.style.display = 'flex';
-
-            // Scroll to message
-            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-
-        // Add intersection observer for animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                }
+            // Active navigation highlighting
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', function () {
+                    document.querySelectorAll('.nav-menu a').forEach(a => a.classList.remove('active'));
+                    this.classList.add('active');
+                });
             });
-        }, { threshold: 0.1 });
 
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
+            // Services navigation
+            window.showTab = (evt, tabId) => {
+                document.querySelectorAll('.ecosystem-grid').forEach(g => g.classList.remove('active'));
+                document.querySelectorAll('.nav-pill').forEach(p => p.classList.remove('active'));
+                document.getElementById(tabId).classList.add('active');
+                evt.currentTarget.classList.add('active');
+                document.getElementById('servicios').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            };
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#' && href.length > 1) {
+            // Form validation
+            const showMessage = (message, type) => {
+                formMessage.textContent = message;
+                formMessage.className = `form-message ${type}`;
+                formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            };
+
+            contactForm.addEventListener('submit', function (e) {
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!data.name || !data.company || !data.email || !data.service) {
                     e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
+                    showMessage('Por favor completa todos los campos requeridos.', 'error');
+                    return;
+                }
+
+                if (!emailRegex.test(data.email)) {
+                    e.preventDefault();
+                    showMessage('Por favor ingresa un correo electrónico válido.', 'error');
+                    return;
                 }
             });
-        });
 
-        // Re-initialize Lucide icons after any dynamic content changes
-        setTimeout(() => {
-            lucide.createIcons();
-        }, 100);
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            // Re-initialize Lucide icons after delay
+            setTimeout(() => lucide.createIcons(), 100);
+        })();
     </script>
 </body>
 
