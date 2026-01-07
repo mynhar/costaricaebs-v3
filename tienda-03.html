@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Costa Rica EBS - Tienda Online de Soluciones Solares, Paneles, Inversores y Baterías">
+    <title>Costa Rica EBS | Tienda de Energía Solar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --text-primary: #0a0f1c;
+            --text-secondary: #3a4256;
+            --text-tertiary: #6b7280;
+            --bg-primary: #f8fafc;
+            --bg-secondary: #f1f5f9;
+            --accent-solar: #f59e0b;
+            --accent-solar-dark: #d97706;
+            --accent-green: #10b981;
+            --accent-red: #dc2626;
+            --accent-blue: #3b82f6;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px rgba(0,0,0,0.1);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --header-height: 72px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body.no-scroll {
+            overflow: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 clamp(16px, 4vw, 64px);
+        }
+
+        /* Header Optimizado */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            height: var(--header-height);
+        }
+
+        .header-content {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            height: 100%;
+            gap: 20px;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .logo-placeholder {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, var(--accent-solar), var(--accent-solar-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .brand-text {
+            font-size: clamp(0.875rem, 2vw, 1.125rem);
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        /* Navigation Desktop */
+        .main-nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: clamp(12px, 2vw, 24px);
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            padding: 8px 4px;
+            transition: var(--transition);
+            border-bottom: 2px solid transparent;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-solar);
+        }
+
+        .nav-menu a.active {
+            color: var(--accent-solar);
+            border-bottom-color: var(--accent-solar);
+        }
+
+        /* Header Actions */
+        .header-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .cart-btn {
+            position: relative;
+            background: var(--accent-solar);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            transition: var(--transition);
+        }
+
+        .cart-btn:hover {
+            background: var(--accent-solar-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: var(--accent-red);
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        /* ========== MENÚ MÓVIL MEJORADO ========== */
+        @media (max-width: 1024px) {
+            .header-content {
+                grid-template-columns: auto 1fr auto;
+            }
+
+            .main-nav {
+                grid-column: 1 / -1;
+                order: 3;
+            }
+
+            .menu-toggle {
+                display: flex;
+                background: none;
+                border: none;
+                color: var(--text-primary);
+                cursor: pointer;
+                width: 44px;
+                height: 44px;
+                align-items: center;
+                justify-content: center;
+                border-radius: var(--radius-md);
+                transition: var(--transition);
+                position: relative;
+                z-index: 1002;
+            }
+
+            .menu-toggle:hover {
+                background: var(--bg-secondary);
+            }
+
+            .menu-toggle:active {
+                transform: scale(0.95);
+            }
+
+            /* Overlay mejorado */
+            .nav-overlay {
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.6);
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease, visibility 0.3s ease;
+                z-index: 998;
+                backdrop-filter: blur(2px);
+            }
+
+            .nav-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            /* Panel lateral mejorado */
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: min(340px, 90vw);
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 0;
+                box-shadow: -8px 0 32px rgba(0, 0, 0, 0.2);
+                transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+                overflow-y: auto;
+                z-index: 999;
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            /* Header del menú móvil mejorado */
+            .mobile-menu-header {
+                padding: 24px;
+                background: linear-gradient(135deg, var(--accent-solar), var(--accent-solar-dark));
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: sticky;
+                top: 0;
+                z-index: 1;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .mobile-menu-title {
+                font-size: 1.375rem;
+                font-weight: 800;
+                color: white;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .close-menu {
+                width: 40px;
+                height: 40px;
+                background: rgba(255, 255, 255, 0.2);
+                border: none;
+                border-radius: 50%;
+                color: white;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+                backdrop-filter: blur(10px);
+            }
+
+            .close-menu:hover {
+                background: rgba(255, 255, 255, 0.3);
+                transform: rotate(90deg);
+            }
+
+            .close-menu:active {
+                transform: rotate(90deg) scale(0.9);
+            }
+
+            /* Items del menú mejorados */
+            .nav-menu li {
+                width: 100%;
+                border-bottom: 1px solid var(--bg-secondary);
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            .nav-menu.active li {
+                animation: slideInMenu 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            }
+
+            /* Delays escalonados optimizados */
+            .nav-menu.active li:nth-child(2) { animation-delay: 0.05s; }
+            .nav-menu.active li:nth-child(3) { animation-delay: 0.08s; }
+            .nav-menu.active li:nth-child(4) { animation-delay: 0.11s; }
+            .nav-menu.active li:nth-child(5) { animation-delay: 0.14s; }
+            .nav-menu.active li:nth-child(6) { animation-delay: 0.17s; }
+            .nav-menu.active li:nth-child(7) { animation-delay: 0.20s; }
+            .nav-menu.active li:nth-child(8) { animation-delay: 0.23s; }
+            .nav-menu.active li:nth-child(9) { animation-delay: 0.26s; }
+            .nav-menu.active li:nth-child(10) { animation-delay: 0.29s; }
+
+            @keyframes slideInMenu {
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            .nav-menu a {
+                padding: 20px 24px;
+                font-size: 1.0625rem;
+                font-weight: 600;
+                width: 100%;
+                border-bottom: none;
+                border-left: 4px solid transparent;
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                transition: all 0.25s ease;
+                position: relative;
+            }
+
+            /* Indicador visual mejorado */
+            .nav-menu a::before {
+                content: "";
+                width: 8px;
+                height: 8px;
+                background: var(--accent-solar);
+                border-radius: 50%;
+                opacity: 0;
+                transition: all 0.25s ease;
+                box-shadow: 0 0 8px var(--accent-solar);
+            }
+
+            .nav-menu a::after {
+                content: "";
+                position: absolute;
+                right: 24px;
+                width: 20px;
+                height: 20px;
+                background: var(--bg-secondary);
+                border-radius: 50%;
+                opacity: 0;
+                transition: all 0.25s ease;
+            }
+
+            .nav-menu a:hover,
+            .nav-menu a.active {
+                background: linear-gradient(90deg, rgba(245, 158, 11, 0.1), transparent);
+                border-left-color: var(--accent-solar);
+                color: var(--accent-solar);
+                padding-left: 32px;
+            }
+
+            .nav-menu a:hover::before,
+            .nav-menu a.active::before {
+                opacity: 1;
+            }
+
+            .nav-menu a:hover::after {
+                opacity: 1;
+                transform: translateX(-8px);
+            }
+
+            .nav-menu a:active {
+                background: rgba(245, 158, 11, 0.15);
+                transform: scale(0.98);
+            }
+
+            /* Scroll suave en menú */
+            .nav-menu::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            .nav-menu::-webkit-scrollbar-track {
+                background: var(--bg-secondary);
+            }
+
+            .nav-menu::-webkit-scrollbar-thumb {
+                background: var(--accent-solar);
+                border-radius: 3px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-menu {
+                width: 100%;
+            }
+
+            .cart-btn span:not(.cart-count) {
+                display: none;
+            }
+
+            .cart-btn {
+                padding: 10px;
+                width: 44px;
+                justify-content: center;
+            }
+        }
+
+        /* Hero Section Optimizado */
+        .hero {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.95), rgba(217, 119, 6, 0.95)),
+                        url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1600&q=80') center/cover;
+            color: white;
+            padding: clamp(80px, 15vw, 140px) 0 clamp(60px, 12vw, 100px);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 75% 50%, rgba(255,255,255,0.1), transparent);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 6vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--accent-solar);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--accent-solar);
+        }
+
+        .hero-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-feature {
+            text-align: center;
+        }
+
+        .hero-feature-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-feature h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .hero-feature p {
+            font-size: 0.9375rem;
+            opacity: 0.9;
+        }
+
+        /* Categories Optimizado */
+        .categories {
+            padding: clamp(60px, 12vw, 100px) 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(1.75rem, 5vw, 2.75rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .section-title p {
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+            gap: 32px;
+        }
+
+        .category-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--accent-solar);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .category-card:hover .category-image {
+            transform: scale(1.05);
+        }
+
+        .category-content {
+            padding: 28px;
+            text-align: center;
+        }
+
+        .category-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .category-content p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .category-count {
+            color: var(--accent-solar);
+            font-weight: 600;
+            font-size: 0.9375rem;
+        }
+
+        /* Products Optimizado */
+        .products {
+            padding: clamp(60px, 12vw, 100px) 0;
+            background: var(--bg-primary);
+        }
+
+        .product-filters {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 2px solid #e5e7eb;
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--text-secondary);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--accent-solar);
+            color: white;
+            border-color: var(--accent-solar);
+            transform: translateY(-2px);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 32px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .product-image-container {
+            position: relative;
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            background: #f3f4f6;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--accent-green);
+            color: white;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            box-shadow: var(--shadow-md);
+        }
+
+        .product-badge.sale { background: var(--accent-red); }
+        .product-badge.new { background: var(--accent-blue); }
+
+        .wishlist-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: white;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .wishlist-btn:hover {
+            background: var(--accent-solar);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            padding: 24px;
+        }
+
+        .product-category {
+            color: var(--accent-solar);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .product-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
+        .product-description {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .product-specs {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .spec-badge {
+            background: var(--bg-primary);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8125rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .product-price {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price-current {
+            font-size: 1.875rem;
+            font-weight: 800;
+            color: var(--accent-solar);
+        }
+
+        .price-original {
+            font-size: 1rem;
+            color: var(--text-tertiary);
+            text-decoration: line-through;
+        }
+
+        .add-to-cart-btn {
+            background: var(--accent-solar);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .add-to-cart-btn:hover {
+            background: var(--accent-solar-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Features Optimizado */
+        .features {
+            padding: clamp(60px, 12vw, 100px) 0;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+            gap: 48px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-solar), var(--accent-solar-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            color: white;
+            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+        }
+
+        .feature-item h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .feature-item p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Footer Optimizado */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 60px 0 24px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: white;
+            padding-left: 8px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* WhatsApp Optimizado */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+            z-index: 997;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.15) rotate(10deg);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Responsive Final */
+        @media (max-width: 768px) {
+            .hero-features {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus Visible */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--accent-solar);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="brand-container" onclick="window.location.href='#home'">
+                <div class="logo-placeholder">☀️</div>
+                <span class="brand-text">Costa Rica EBS Solar</span>
+            </div>
+
+            <nav class="main-nav">
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="nav-overlay" id="navOverlay"></div>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="mobile-menu-header">
+                        <span class="mobile-menu-title">
+                            <i data-lucide="sun"></i> Menú
+                        </span>
+                        <button class="close-menu" id="closeMenu" aria-label="Cerrar menú">
+                            <i data-lucide="x"></i>
+                        </button>
+                    </li>
+                    <li><a href="#home" class="active">Inicio</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#paneles">Paneles</a></li>
+                    <li><a href="#inversores">Inversores</a></li>
+                    <li><a href="#baterias">Baterías</a></li>
+                    <li><a href="#kits">Kits</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cart-btn" id="cartBtn" onclick="App.viewCart()">
+                    <i data-lucide="shopping-cart"></i>
+                    <span>Carrito</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <span class="hero-badge">🌞 ENERGÍA LIMPIA Y SOSTENIBLE</span>
+            <h1>Soluciones Solares para Tu Empresa o Hogar</h1>
+            <p>Ahorra hasta 80% en tu factura eléctrica con nuestros sistemas fotovoltaicos de última generación</p>
+            <div class="cta-buttons">
+                <a href="#productos" class="btn btn-primary">
+                    <i data-lucide="shopping-bag"></i> Ver Productos
+                </a>
+                <a href="#contacto" class="btn btn-secondary">
+                    <i data-lucide="calculator"></i> Cotizar Sistema
+                </a>
+            </div>
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">
+                        <i data-lucide="shield-check" size="32"></i>
+                    </div>
+                    <h3>Garantía 25 Años</h3>
+                    <p>En todos los paneles solares</p>
+                </div>
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">
+                        <i data-lucide="truck" size="32"></i>
+                    </div>
+                    <h3>Envío Gratis</h3>
+                    <p>A toda Costa Rica</p>
+                </div>
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">
+                        <i data-lucide="wrench" size="32"></i>
+                    </div>
+                    <h3>Instalación Profesional</h3>
+                    <p>Incluida en kits completos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="categorias" class="categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Categorías de Productos</h2>
+                <p>Encuentra la solución solar perfecta para tus necesidades</p>
+            </div>
+            <div class="category-grid">
+                <div class="category-card" onclick="App.filterProducts('paneles')">
+                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=600&q=80" alt="Paneles Solares" class="category-image" loading="lazy">
+                    <div class="category-content">
+                        <h3>Paneles Solares</h3>
+                        <p>Monocristalinos y policristalinos de alta eficiencia para máxima generación</p>
+                        <span class="category-count">15 productos disponibles</span>
+                    </div>
+                </div>
+                <div class="category-card" onclick="App.filterProducts('inversores')">
+                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80" alt="Inversores" class="category-image" loading="lazy">
+                    <div class="category-content">
+                        <h3>Inversores</h3>
+                        <p>Conversión eficiente de energía DC a AC con tecnología MPPT avanzada</p>
+                        <span class="category-count">10 productos disponibles</span>
+                    </div>
+                </div>
+                <div class="category-card" onclick="App.filterProducts('baterias')">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Baterías" class="category-image" loading="lazy">
+                    <div class="category-content">
+                        <h3>Baterías de Litio</h3>
+                        <p>Almacenamiento de energía de alta densidad y larga vida útil</p>
+                        <span class="category-count">8 productos disponibles</span>
+                    </div>
+                </div>
+                <div class="category-card" onclick="App.filterProducts('kits')">
+                    <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&q=80" alt="Kits Completos" class="category-image" loading="lazy">
+                    <div class="category-content">
+                        <h3>Kits Completos</h3>
+                        <p>Soluciones llave en mano con instalación profesional incluida</p>
+                        <span class="category-count">12 productos disponibles</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="productos" class="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Productos Destacados</h2>
+                <p>Los sistemas solares más vendidos y mejor calificados de Costa Rica</p>
+            </div>
+            
+            <div class="product-filters">
+                <button class="filter-btn active" onclick="App.filterProducts('todos')">Todos</button>
+                <button class="filter-btn" onclick="App.filterProducts('paneles')">Paneles</button>
+                <button class="filter-btn" onclick="App.filterProducts('inversores')">Inversores</button>
+                <button class="filter-btn" onclick="App.filterProducts('baterias')">Baterías</button>
+                <button class="filter-btn" onclick="App.filterProducts('kits')">Kits</button>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card" data-category="paneles">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80" alt="Panel Solar 550W" class="product-image" loading="lazy">
+                        <span class="product-badge">Más Vendido</span>
+                        <button class="wishlist-btn" onclick="App.toggleWishlist(this)"><i data-lucide="heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Panel Solar</div>
+                        <h3 class="product-name">Panel Monocristalino 550W Tier 1</h3>
+                        <p class="product-description">Panel solar de alta eficiencia con células PERC monocristalinas de última generación</p>
+                        <div class="product-specs">
+                            <span class="spec-badge">550W</span>
+                            <span class="spec-badge">21.5% Eficiencia</span>
+                            <span class="spec-badge">25 años garantía</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$285</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="App.addToCart('Panel Monocristalino 550W', 285)">
+                                <i data-lucide="shopping-cart"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="inversores">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80" alt="Inversor 5kW" class="product-image" loading="lazy">
+                        <span class="product-badge new">Nuevo</span>
+                        <button class="wishlist-btn" onclick="App.toggleWishlist(this)"><i data-lucide="heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Inversor</div>
+                        <h3 class="product-name">Inversor Híbrido 5kW MPPT</h3>
+                        <p class="product-description">Inversor inteligente con gestión de baterías, MPPT dual y monitoreo WiFi</p>
+                        <div class="product-specs">
+                            <span class="spec-badge">5kW</span>
+                            <span class="spec-badge">MPPT Dual</span>
+                            <span class="spec-badge">WiFi + APP</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$1,450</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="App.addToCart('Inversor Híbrido 5kW', 1450)">
+                                <i data-lucide="shopping-cart"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="baterias">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Batería 5kWh" class="product-image" loading="lazy">
+                        <span class="product-badge sale">Oferta</span>
+                        <button class="wishlist-btn" onclick="App.toggleWishlist(this)"><i data-lucide="heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Batería</div>
+                        <h3 class="product-name">Batería Litio LiFePO4 5.12kWh</h3>
+                        <p class="product-description">Batería de alta densidad energética con tecnología LiFePO4 de larga vida</p>
+                        <div class="product-specs">
+                            <span class="spec-badge">5.12kWh</span>
+                            <span class="spec-badge">6000+ ciclos</span>
+                            <span class="spec-badge">10 años</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$2,890</span>
+                                <span class="price-original">$3,200</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="App.addToCart('Batería LiFePO4 5.12kWh', 2890)">
+                                <i data-lucide="shopping-cart"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="kits">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&q=80" alt="Kit 6kW" class="product-image" loading="lazy">
+                        <span class="product-badge sale">-15% OFF</span>
+                        <button class="wishlist-btn" onclick="App.toggleWishlist(this)"><i data-lucide="heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Kit Completo</div>
+                        <h3 class="product-name">Kit Solar Residencial 6kW On-Grid</h3>
+                        <p class="product-description">Sistema completo para hogar: 11 paneles 550W, inversor 6kW, estructura completa</p>
+                        <div class="product-specs">
+                            <span class="spec-badge">6kW</span>
+                            <span class="spec-badge">11 paneles</span>
+                            <span class="spec-badge">Instalación incluida</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$6,850</span>
+                                <span class="price-original">$8,050</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="App.addToCart('Kit Solar 6kW', 6850)">
+                                <i data-lucide="shopping-cart"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="paneles">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=600&q=80" alt="Panel Bifacial" class="product-image" loading="lazy">
+                        <button class="wishlist-btn" onclick="App.toggleWishlist(this)"><i data-lucide="heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Panel Solar</div>
+                        <h3 class="product-name">Panel Bifacial 600W Premium</h3>
+                        <p class="product-description">Tecnología bifacial para máxima captación de energía por ambas caras del panel</p>
+                        <div class="product-specs">
+                            <span class="spec-badge">600W</span>
+                            <span class="spec-badge">Bifacial</span>
+                            <span class="spec-badge">30 años</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$345</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="App.addToCart('Panel Bifacial 600W', 345)">
+                                <i data-lucide="shopping-cart"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="inversores">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80" alt="Microinversor" class="product-image" loading="lazy">
+                        <button class="wishlist-btn" onclick="App.toggleWishlist(this)"><i data-lucide="heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Inversor</div>
+                        <h3 class="product-name">Microinversor 400W Modular</h3>
+                        <p class="product-description">Inversor modular para optimización independiente por cada panel solar</p>
+                        <div class="product-specs">
+                            <span class="spec-badge">400W</span>
+                            <span class="spec-badge">Modular</span>
+                            <span class="spec-badge">25 años</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$185</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="App.addToCart('Microinversor 400W', 185)">
+                                <i data-lucide="shopping-cart"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="kits">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&q=80" alt="Kit Comercial" class="product-image" loading="lazy">
+                        <span class="product-badge">Empresarial</span>
+                        <button class="wishlist-btn" onclick="App.toggleWishlist(this)"><i data-lucide="heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Kit Empresarial</div>
+                        <h3 class="product-name">Kit Solar Comercial 20kW Trifásico</h3>
+                        <p class="product-description">Sistema trifásico para empresas con monitoreo 24/7 y gestión inteligente</p>
+                        <div class="product-specs">
+                            <span class="spec-badge">20kW</span>
+                            <span class="spec-badge">Trifásico</span>
+                            <span class="spec-badge">Monitoreo 24/7</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$19,500</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="App.addToCart('Kit Comercial 20kW', 19500)">
+                                <i data-lucide="shopping-cart"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="baterias">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Batería Rack" class="product-image" loading="lazy">
+                        <button class="wishlist-btn" onclick="App.toggleWishlist(this)"><i data-lucide="heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Batería</div>
+                        <h3 class="product-name">Batería Rack 10kWh Escalable</h3>
+                        <p class="product-description">Sistema de baterías apilables tipo rack para instalaciones comerciales</p>
+                        <div class="product-specs">
+                            <span class="spec-badge">10kWh</span>
+                            <span class="spec-badge">Escalable</span>
+                            <span class="spec-badge">Rack mount</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$5,450</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="App.addToCart('Batería Rack 10kWh', 5450)">
+                                <i data-lucide="shopping-cart"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Por Qué Comprar Con Nosotros?</h2>
+                <p>Beneficios exclusivos para nuestros clientes en Costa Rica</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i data-lucide="truck" size="40"></i>
+                    </div>
+                    <h3>Envío Nacional Gratis</h3>
+                    <p>Enviamos a toda Costa Rica sin costo adicional en compras mayores a $500</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i data-lucide="shield-check" size="40"></i>
+                    </div>
+                    <h3>Garantía Extendida</h3>
+                    <p>Hasta 25 años de garantía en paneles y 10 años en inversores seleccionados</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i data-lucide="wrench" size="40"></i>
+                    </div>
+                    <h3>Instalación Profesional</h3>
+                    <p>Equipo técnico certificado con más de 500 instalaciones exitosas</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i data-lucide="credit-card" size="40"></i>
+                    </div>
+                    <h3>Financiamiento Flexible</h3>
+                    <p>Planes de pago hasta 36 meses sin intereses con tarjetas participantes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Costa Rica EBS Solar</h3>
+                    <p>Líderes en soluciones de energía solar fotovoltaica en Costa Rica desde 2015. Más de 500 clientes satisfechos.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Productos</h3>
+                    <ul>
+                        <li><a href="#paneles">Paneles Solares</a></li>
+                        <li><a href="#inversores">Inversores</a></li>
+                        <li><a href="#baterias">Baterías de Litio</a></li>
+                        <li><a href="#kits">Kits Completos</a></li>
+                        <li><a href="#accesorios">Accesorios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#proyectos">Proyectos Realizados</a></li>
+                        <li><a href="#blog">Blog Solar</a></li>
+                        <li><a href="#faqs">Preguntas Frecuentes</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="tel:+50672792650">📞 +506 7279-2650</a></li>
+                        <li><a href="mailto:solar@costaricaebs.com">✉️ solar@costaricaebs.com</a></li>
+                        <li>📍 San Rafael de Heredia, Costa Rica</li>
+                        <li>🕐 Lun-Vie: 8AM-6PM | Sáb: 9AM-1PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Costa Rica Enterprise Business Solutions. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/50672792650?text=Hola%2C%20estoy%20interesado%20en%20sistemas%20solares%20fotovoltaicos" 
+       class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i data-lucide="message-circle" size="28"></i>
+    </a>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // App Module (IIFE Pattern)
+        const App = (() => {
+            'use strict';
+
+            // State
+            let cart = [];
+            
+            // DOM Cache
+            const DOM = {
+                menuToggle: document.getElementById('menuToggle'),
+                navMenu: document.getElementById('navMenu'),
+                navOverlay: document.getElementById('navOverlay'),
+                closeMenu: document.getElementById('closeMenu'),
+                cartCount: document.getElementById('cartCount'),
+                navLinks: document.querySelectorAll('.nav-menu a'),
+                filterBtns: document.querySelectorAll('.filter-btn'),
+                productCards: document.querySelectorAll('.product-card')
+            };
+
+            // Menu Functions
+            const Menu = {
+                open() {
+                    DOM.navMenu.classList.add('active');
+                    DOM.navOverlay.classList.add('active');
+                    document.body.classList.add('no-scroll');
+                    lucide.createIcons();
+                },
+
+                close() {
+                    DOM.navMenu.classList.remove('active');
+                    DOM.navOverlay.classList.remove('active');
+                    document.body.classList.remove('no-scroll');
+                }
+            };
+
+            // Cart Functions
+            const Cart = {
+                add(productName, price) {
+                    cart.push({ name: productName, price: price });
+                    this.updateCount();
+                    this.animateCounter();
+                    this.showNotification(productName, price);
+                },
+
+                updateCount() {
+                    DOM.cartCount.textContent = cart.length;
+                },
+
+                animateCounter() {
+                    DOM.cartCount.style.transform = 'scale(1.5)';
+                    setTimeout(() => {
+                        DOM.cartCount.style.transform = 'scale(1)';
+                    }, 300);
+                },
+
+                showNotification(productName, price) {
+                    alert(`✅ ${productName} agregado al carrito\nPrecio: $${price.toLocaleString()}\n\nTotal en carrito: ${cart.length} producto(s)`);
+                },
+
+                view() {
+                    if (cart.length === 0) {
+                        alert('🛒 Tu carrito está vacío\n\n¡Explora nuestros productos y agrega algunos al carrito!');
+                        return;
+                    }
+                    
+                    const total = cart.reduce((sum, item) => sum + item.price, 0);
+                    let cartDetails = '🛒 TU CARRITO:\n\n';
+                    
+                    cart.forEach((item, index) => {
+                        cartDetails += `${index + 1}. ${item.name}\n   $${item.price.toLocaleString()}\n\n`;
+                    });
+                    
+                    cartDetails += `━━━━━━━━━━━━━━━━\nTOTAL: $${total.toLocaleString()}\n\n¿Deseas proceder al checkout?`;
+                    
+                    if (confirm(cartDetails)) {
+                        const products = cart.map(i => i.name).join(', ');
+                        window.location.href = `https://wa.me/50672792650?text=Hola%2C%20quiero%20realizar%20una%20compra.%20Mi%20carrito:%0A${encodeURIComponent(products)}`;
+                    }
+                }
+            };
+
+            // Product Functions
+            const Products = {
+                filter(category) {
+                    // Update active button
+                    DOM.filterBtns.forEach(btn => btn.classList.remove('active'));
+                    event.target.classList.add('active');
+                    
+                    // Filter products
+                    DOM.productCards.forEach(card => {
+                        const cardCategory = card.dataset.category;
+                        if (category === 'todos' || cardCategory === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+
+                    // Scroll to products
+                    document.getElementById('productos').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            };
+
+            // Wishlist Functions
+            const Wishlist = {
+                toggle(button) {
+                    const isActive = button.classList.toggle('active');
+                    button.style.color = isActive ? '#dc2626' : '';
+                    alert(isActive ? '❤️ Agregado a favoritos' : '🤍 Eliminado de favoritos');
+                }
+            };
+
+            // Navigation Functions
+            const Navigation = {
+                setActive(link) {
+                    DOM.navLinks.forEach(a => a.classList.remove('active'));
+                    link.classList.add('active');
+                }
+            };
+
+            // Event Listeners
+            const Events = {
+                init() {
+                    // Menu events
+                    DOM.menuToggle.addEventListener('click', Menu.open);
+                    DOM.closeMenu.addEventListener('click', Menu.close);
+                    DOM.navOverlay.addEventListener('click', Menu.close);
+
+                    // Close menu on link click (mobile)
+                    DOM.navLinks.forEach(link => {
+                        link.addEventListener('click', () => {
+                            if (window.innerWidth <= 1024) Menu.close();
+                            Navigation.setActive(link);
+                        });
+                    });
+
+                    // Close menu on ESC key
+                    document.addEventListener('keydown', (e) => {
+                        if (e.key === 'Escape' && DOM.navMenu.classList.contains('active')) {
+                            Menu.close();
+                        }
+                    });
+
+                    // Smooth scroll
+                    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                        anchor.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            const target = document.querySelector(this.getAttribute('href'));
+                            if (target) {
+                                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        });
+                    });
+                }
+            };
+
+            // Public API
+            return {
+                init() {
+                    Events.init();
+                    setTimeout(() => lucide.createIcons(), 100);
+                },
+                addToCart: (name, price) => Cart.add(name, price),
+                viewCart: () => Cart.view(),
+                filterProducts: (category) => Products.filter(category),
+                toggleWishlist: (button) => Wishlist.toggle(button)
+            };
+        })();
+
+        // Initialize App
+        document.addEventListener('DOMContentLoaded', () => {
+            App.init();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Costa Rica EBS - Tienda de Soluciones Solares, Paneles, Inversores y Baterías">
+    <title>Costa Rica EBS Solar | Tienda de Energía Solar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary: #f59e0b;
+            --primary-dark: #d97706;
+            --secondary: #10b981;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background: var(--primary);
+            color: white;
+            padding: 8px 0;
+            font-size: 0.875rem;
+        }
+
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-top-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-top-links a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .header-main {
+            padding: 16px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            color: var(--text-gray);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .search-box {
+            position: relative;
+            width: 250px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px 40px 10px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: var(--radius);
+            font-size: 0.9375rem;
+        }
+
+        .search-box button {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-gray);
+        }
+
+        .cart-btn {
+            position: relative;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: var(--radius);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cart-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #dc2626;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.95), rgba(217, 119, 6, 0.95)),
+                url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1600&q=80') center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 48px;
+            flex-wrap: wrap;
+        }
+
+        .hero-feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-feature-icon {
+            background: rgba(255, 255, 255, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+
+        .hero-feature h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .hero-feature p {
+            font-size: 0.9375rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* Categories Section */
+        .categories {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+
+        .section-title p {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .category-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: var(--radius);
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .category-content {
+            padding: 24px;
+            text-align: center;
+        }
+
+        .category-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .category-content p {
+            color: var(--text-gray);
+            margin-bottom: 16px;
+        }
+
+        .category-count {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .product-filters {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 2px solid #e5e7eb;
+            padding: 12px 24px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--text-dark);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .product-image-container {
+            position: relative;
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            background: #f3f4f6;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--secondary);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .product-badge.sale {
+            background: #dc2626;
+        }
+
+        .product-badge.new {
+            background: #3b82f6;
+        }
+
+        .wishlist-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .wishlist-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .product-info {
+            padding: 24px;
+        }
+
+        .product-category {
+            color: var(--primary);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .product-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        .product-description {
+            color: var(--text-gray);
+            font-size: 0.9375rem;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .product-specs {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .spec-badge {
+            background: var(--bg-light);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8125rem;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .product-price {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price-current {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .price-original {
+            font-size: 1rem;
+            color: var(--text-gray);
+            text-decoration: line-through;
+        }
+
+        .add-to-cart-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .add-to-cart-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Features */
+        .features {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 48px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            color: white;
+        }
+
+        .feature-item h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .feature-item p {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 32px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .testimonial-rating {
+            color: #fbbf24;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-text {
+            color: var(--text-gray);
+            margin-bottom: 24px;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .author-info h4 {
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .author-info p {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+        }
+
+        /* Newsletter */
+        .newsletter {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .newsletter p {
+            font-size: 1.125rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            gap: 12px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 16px 20px;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            background: var(--text-dark);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background: #374151;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 60px 0 24px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: white;
+            padding-left: 8px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .hero-features {
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.125rem;
+            }
+
+            .categories,
+            .products,
+            .features,
+            .testimonials,
+            .newsletter {
+                padding: 60px 0;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-links">
+                    <a href="tel:+50672792650"><i data-lucide="phone"></i> +506 7279-2650</a>
+                    <a href="mailto:solar@costaricaebs.com"><i data-lucide="mail"></i> solar@costaricaebs.com</a>
+                </div>
+                <div>
+                    <span>🇨🇷 Envío gratis en Costa Rica</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="header-content">
+                    <a href="#" class="logo">
+                        <div class="logo-img">☀️</div>
+                        <div class="logo-text">
+                            <h1>Costa Rica EBS</h1>
+                            <p>Soluciones Solares</p>
+                        </div>
+                    </a>
+
+                    <nav>
+                        <ul>
+                            <li><a href="index.html" class="active">Inicio</a></li>
+                            <li><a href="#categorias">Categorías</a></li>
+                            <li><a href="#productos">Productos</a></li>
+                            <li><a href="#nosotros">Nosotros</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="header-actions">
+                        <div class="search-box">
+                            <input type="text" placeholder="Buscar productos...">
+                            <button><i data-lucide="search"></i></button>
+                        </div>
+                        <button class="cart-btn" onclick="alert('Carrito - Próximamente')">
+                            <i data-lucide="shopping-cart"></i> Carrito
+                            <span class="cart-count">0</span>
+                        </button>
+                        <button class="menu-toggle"><i data-lucide="menu"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Energía Solar para tu Empresa o Hogar</h1>
+                <p>Ahorra hasta 80% en tu factura eléctrica con nuestros sistemas fotovoltaicos</p>
+                <div class="cta-buttons">
+                    <a href="#productos" class="btn btn-primary">
+                        <i data-lucide="shopping-bag"></i> Ver Productos
+                    </a>
+                    <a href="#contacto" class="btn btn-secondary">
+                        <i data-lucide="calculator"></i> Cotizar Sistema
+                    </a>
+                </div>
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon"><i data-lucide="shield-check"></i></div>
+                        <h3>Garantía 25 Años</h3>
+                        <p>En todos los paneles</p>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon"><i data-lucide="truck"></i></div>
+                        <h3>Envío Gratis</h3>
+                        <p>A toda Costa Rica</p>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon"><i data-lucide="wrench"></i></div>
+                        <h3>Instalación Pro</h3>
+                        <p>Incluida en kits</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categorias" class="categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Categorías de Productos</h2>
+                <p>Encuentra la solución solar perfecta para tus necesidades</p>
+            </div>
+            <div class="category-grid">
+                <div class="category-card" onclick="filterProducts('paneles')">
+                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=600&q=80"
+                        alt="Paneles Solares" class="category-image">
+                    <div class="category-content">
+                        <h3>Paneles Solares</h3>
+                        <p>Monocristalinos y policristalinos de alta eficiencia</p>
+                        <span class="category-count">12 productos</span>
+                    </div>
+                </div>
+                <div class="category-card" onclick="filterProducts('inversores')">
+                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80" alt="Inversores"
+                        class="category-image">
+                    <div class="category-content">
+                        <h3>Inversores</h3>
+                        <p>Conversión eficiente de energía DC a AC</p>
+                        <span class="category-count">8 productos</span>
+                    </div>
+                </div>
+                <div class="category-card" onclick="filterProducts('baterias')">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Baterías"
+                        class="category-image">
+                    <div class="category-content">
+                        <h3>Baterías</h3>
+                        <p>Almacenamiento de energía de litio</p>
+                        <span class="category-count">6 productos</span>
+                    </div>
+                </div>
+                <div class="category-card" onclick="filterProducts('kits')">
+                    <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&q=80"
+                        alt="Kits Completos" class="category-image">
+                    <div class="category-content">
+                        <h3>Kits Completos</h3>
+                        <p>Soluciones llave en mano para instalación</p>
+                        <span class="category-count">10 productos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="productos" class="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Productos Destacados</h2>
+                <p>Los sistemas solares más vendidos y mejor calificados</p>
+            </div>
+
+            <div class="product-filters">
+                <button class="filter-btn active" onclick="filterProducts('todos')">Todos</button>
+                <button class="filter-btn" onclick="filterProducts('paneles')">Paneles</button>
+                <button class="filter-btn" onclick="filterProducts('inversores')">Inversores</button>
+                <button class="filter-btn" onclick="filterProducts('baterias')">Baterías</button>
+                <button class="filter-btn" onclick="filterProducts('kits')">Kits</button>
+            </div>
+
+            <div class="product-grid">
+                <!-- Panel Solar 1 -->
+                <div class="product-card" data-category="paneles">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80"
+                            alt="Panel Monocristalino 550W" class="product-image">
+                        <span class="product-badge">Más Vendido</span>
+                        <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Panel Solar</div>
+                        <h3 class="product-name">Panel Monocristalino 550W Tier 1</h3>
+                        <p class="product-description">Panel solar de alta eficiencia con células PERC monocristalinas
+                            de última generación</p>
+                        <div class="product-specs">
+                            <span class="spec-badge">550W</span>
+                            <span class="spec-badge">21.5% Eficiencia</span>
+                            <span class="spec-badge">25 años garantía</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$285</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('Panel 550W', 285)">
+                                <i data-lucide="shopping-cart"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inversor 1 -->
+                <div class="product-card" data-category="inversores">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80"
+                            alt="Inversor Híbrido 5kW" class="product-image">
+                        <span class="product-badge new">Nuevo</span>
+                        <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Inversor</div>
+                        <h3 class="product-name">Inversor Híbrido 5kW MPPT</h3>
+                        <p class="product-description">Inversor inteligente con gestión de baterías, MPPT dual y
+                            monitoreo WiFi</p>
+                        <div class="product-specs">
+                            <span class="spec-badge">5kW</span>
+                            <span class="spec-badge">MPPT Dual</span>
+                            <span class="spec-badge">WiFi + APP</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$1,450</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('Inversor 5kW', 1450)">
+                                <i data-lucide="shopping-cart"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Batería 1 -->
+                <div class="product-card" data-category="baterias">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+                            alt="Batería Litio 5.12kWh" class="product-image">
+                        <span class="product-badge">Oferta</span>
+                        <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Batería</div>
+                        <h3 class="product-name">Batería Litio LiFePO4 5.12kWh</h3>
+                        <p class="product-description">Batería de alta densidad energética con tecnología LiFePO4 de
+                            larga vida útil</p>
+                        <div class="product-specs">
+                            <span class="spec-badge">5.12kWh</span>
+                            <span class="spec-badge">6000+ ciclos</span>
+                            <span class="spec-badge">10 años</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$2,890</span>
+                                <span class="price-original">$3,200</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('Batería 5.12kWh', 2890)">
+                                <i data-lucide="shopping-cart"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kit Residencial -->
+                <div class="product-card" data-category="kits">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&q=80"
+                            alt="Kit Residencial 6kW" class="product-image">
+                        <span class="product-badge sale">-15%</span>
+                        <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Kit Completo</div>
+                        <h3 class="product-name">Kit Solar Residencial 6kW On-Grid</h3>
+                        <p class="product-description">Sistema completo para hogar: 11 paneles 550W, inversor 6kW,
+                            estructura y cableado</p>
+                        <div class="product-specs">
+                            <span class="spec-badge">6kW</span>
+                            <span class="spec-badge">11 paneles</span>
+                            <span class="spec-badge">Instalación incluida</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$6,850</span>
+                                <span class="price-original">$8,050</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('Kit 6kW', 6850)">
+                                <i data-lucide="shopping-cart"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel Solar 2 -->
+                <div class="product-card" data-category="paneles">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=600&q=80"
+                            alt="Panel Bifacial 600W" class="product-image">
+                        <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Panel Solar</div>
+                        <h3 class="product-name">Panel Bifacial 600W Premium</h3>
+                        <p class="product-description">Tecnología bifacial para máxima captación de energía por ambas
+                            caras</p>
+                        <div class="product-specs">
+                            <span class="spec-badge">600W</span>
+                            <span class="spec-badge">Bifacial</span>
+                            <span class="spec-badge">30 años</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$345</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('Panel Bifacial 600W', 345)">
+                                <i data-lucide="shopping-cart"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inversor 2 -->
+                <div class="product-card" data-category="inversores">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80"
+                            alt="Microinversor" class="product-image">
+                        <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Inversor</div>
+                        <h3 class="product-name">Microinversor 400W Modular</h3>
+                        <p class="product-description">Inversor modular para optimización independiente por panel solar
+                        </p>
+                        <div class="product-specs">
+                            <span class="spec-badge">400W</span>
+                            <span class="spec-badge">Modular</span>
+                            <span class="spec-badge">25 años</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$185</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('Microinversor 400W', 185)">
+                                <i data-lucide="shopping-cart"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kit Comercial -->
+                <div class="product-card" data-category="kits">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&q=80"
+                            alt="Kit Comercial" class="product-image">
+                        <span class="product-badge">Empresarial</span>
+                        <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Kit Empresarial</div>
+                        <h3 class="product-name">Kit Solar Comercial 20kW Trifásico</h3>
+                        <p class="product-description">Sistema trifásico para empresas con monitoreo 24/7 y gestión
+                            inteligente</p>
+                        <div class="product-specs">
+                            <span class="spec-badge">20kW</span>
+                            <span class="spec-badge">Trifásico</span>
+                            <span class="spec-badge">Monitoreo 24/7</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$19,500</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('Kit 20kW', 19500)">
+                                <i data-lucide="shopping-cart"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Batería 2 -->
+                <div class="product-card" data-category="baterias">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+                            alt="Batería Rack" class="product-image">
+                        <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Batería</div>
+                        <h3 class="product-name">Batería Rack 10kWh Escalable</h3>
+                        <p class="product-description">Sistema de baterías apilables tipo rack para instalaciones
+                            comerciales</p>
+                        <div class="product-specs">
+                            <span class="spec-badge">10kWh</span>
+                            <span class="spec-badge">Escalable</span>
+                            <span class="spec-badge">Rack mount</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$5,450</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('Batería 10kWh', 5450)">
+                                <i data-lucide="shopping-cart"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Por Qué Comprar Con Nosotros?</h2>
+                <p>Beneficios exclusivos para nuestros clientes</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i data-lucide="truck" size="40"></i>
+                    </div>
+                    <h3>Envío Nacional Gratis</h3>
+                    <p>Enviamos a toda Costa Rica sin costo adicional en compras mayores a $500</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i data-lucide="shield-check" size="40"></i>
+                    </div>
+                    <h3>Garantía Extendida</h3>
+                    <p>Hasta 25 años de garantía en paneles y 10 años en inversores seleccionados</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i data-lucide="wrench" size="40"></i>
+                    </div>
+                    <h3>Instalación Profesional</h3>
+                    <p>Equipo técnico certificado con más de 500 instalaciones exitosas</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i data-lucide="credit-card" size="40"></i>
+                    </div>
+                    <h3>Financiamiento</h3>
+                    <p>Planes de pago flexibles hasta 36 meses sin intereses</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lo Que Dicen Nuestros Clientes</h2>
+                <p>Más de 500 clientes satisfechos en Costa Rica</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p class="testimonial-text">"Excelente servicio desde la cotización hasta la instalación. Mi factura
+                        eléctrica se redujo en un 75%. Totalmente recomendado."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <h4>María Rodríguez</h4>
+                            <p>San José, Costa Rica</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p class="testimonial-text">"Instalaron un sistema de 10kW en mi empresa. El retorno de inversión
+                        fue en menos de 3 años. Personal muy profesional."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CP</div>
+                        <div class="author-info">
+                            <h4>Carlos Pérez</h4>
+                            <p>Heredia, Costa Rica</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p class="testimonial-text">"La mejor decisión para mi hogar. Productos de calidad y el mejor precio
+                        del mercado. El soporte post-venta es excelente."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LG</div>
+                        <div class="author-info">
+                            <h4>Laura Gómez</h4>
+                            <p>Cartago, Costa Rica</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Recibe Ofertas Exclusivas</h2>
+            <p>Suscríbete a nuestro boletín y obtén 10% de descuento en tu primera compra</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Costa Rica EBS Solar</h3>
+                    <p>Líderes en soluciones de energía solar fotovoltaica en Costa Rica desde 2015</p>
+                    <div class="social-links">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Productos</h3>
+                    <ul>
+                        <li><a href="#paneles">Paneles Solares</a></li>
+                        <li><a href="#inversores">Inversores</a></li>
+                        <li><a href="#baterias">Baterías</a></li>
+                        <li><a href="#kits">Kits Completos</a></li>
+                        <li><a href="#accesorios">Accesorios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#blog">Blog Solar</a></li>
+                        <li><a href="#faqs">Preguntas Frecuentes</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="tel:+50672792650">📞 +506 7279-2650</a></li>
+                        <li><a href="mailto:solar@costaricaebs.com">✉️ solar@costaricaebs.com</a></li>
+                        <li>📍 San Rafael de Heredia, Costa Rica</li>
+                        <li>🕐 Lun-Vie: 8AM-6PM</li>
+                        <li>🕐 Sáb: 9AM-1PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Costa Rica Enterprise Business Solutions. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/50672792650?text=Hola%2C%20estoy%20interesado%20en%20sistemas%20solares"
+        class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i data-lucide="message-circle" size="28"></i>
+    </a>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Filter products
+        function filterProducts(category) {
+            const cards = document.querySelectorAll('.product-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            cards.forEach(card => {
+                if (category === 'todos' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                    setTimeout(() => card.style.opacity = '1', 10);
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => card.style.display = 'none', 300);
+                }
+            });
+        }
+
+        // Add to cart
+        function addToCart(productName, price) {
+            const cartCount = document.querySelector('.cart-count');
+            const currentCount = parseInt(cartCount.textContent);
+            cartCount.textContent = currentCount + 1;
+
+            // Animation
+            cartCount.style.transform = 'scale(1.4)';
+            setTimeout(() => {
+                cartCount.style.transform = 'scale(1)';
+            }, 300);
+
+            // Alert
+            alert(`✅ ${productName} agregado al carrito\nPrecio: $${price.toLocaleString()}`);
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Search functionality
+        document.querySelector('.search-box input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                alert('Búsqueda: ' + this.value);
+            }
+        });
+    </script>
+</body>
+
+</html>

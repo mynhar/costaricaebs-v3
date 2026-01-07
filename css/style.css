@@ -11,7 +11,8 @@
   --accent-red: #ef4444;
   --accent-green: #10b981;
   --accent-purple: #7c3aed;
-  --accent-solar: #f59e0b;
+  /* --accent-solar: #f59e0b; */
+  --accent-solar: #10b981;
   --shadow-sm: 0 1px 3px 1px rgba(10, 15, 28, 0.1);
   --shadow-md: 0 4px 6px -1px rgba(10, 15, 28, 0.1),
     0 2px 4px -1px rgba(10, 15, 28, 0.06);

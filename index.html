@@ -32,7 +32,7 @@
                     <li style="--i:4"><a href="data-center.html">Centro de Datos</a></li>
                     <li style="--i:5"><a href="ciberseguridad.html">Ciberseguridad</a></li>
                     <li style="--i:6"><a href="diseno-web.html">Diseño Web</a></li>
-                    <li style="--i:6"><a href="tienda-solar.html">Solar</a></li>
+                    <!-- <li style="--i:6"><a href="tienda-solar.html">Solar</a></li> -->
                     <!-- <li style="--i:7"><a href="https://costaricaebs.com/product-category/it-solutions/microsoft/"
                             target="_blank">Solar</a></li> -->
                     <li style="--i:8"><a href="#industrias">Industrias</a></li>
@@ -117,7 +117,6 @@
                     <ul class="service-list">
                         <li>Hyper-V Clusters (Windows Server 2022/2025)</li>
                         <li>Azure Stack HCI</li>
-                        <li>VMware (assessment, optimización, salida ordenada)</li>
                         <li>Alta disponibilidad y clustering</li>
                     </ul>
                 </div>
@@ -126,7 +125,7 @@
                     <ul class="service-list">
                         <li>Arquitecturas SAN / HCI</li>
                         <li>Azure File Sync</li>
-                        <li>Backup empresarial (Veeam, Arcserve, Azure Backup)</li>
+                        <li>Backup empresarial (Azure Backup)</li>
                         <li>Backup inmutable y ransomware-ready</li>
                         <li>Retención legal y compliance</li>
                     </ul>
@@ -175,11 +174,9 @@
                         <li>Hardening y Zero Trust Architecture</li>
                     </ul>
                 </div>
-                <div class="service-card"
-                    style="border-top-color: var(--accent-solar); background: rgba(245, 158, 11, 0.05);">
-                    <h3 style="color:var(--accent-solar)">
-                        <i data-lucide="arrow-right-circle"></i> Licenciamiento Microsoft
-                    </h3>
+                <div class="service-card">
+
+                <h3><i data-lucide="arrow-right-circle"></i> Licenciamiento Microsoft</h3>
                     <ul class="service-list">
                         <li>Optimización de licencias</li>
                         <li>Auditorías de cumplimiento</li>
@@ -196,8 +193,7 @@
                     <ul class="service-list">
                         <li>Security Assessments</li>
                         <li>Post-breach remediation</li>
-                        <li>Hardening de Active Directory</li>
-                        <li>Purple Knight / herramientas equivalentes</li>
+                        <li>Hardening de Active Directory</li>                        
                         <li>Seguridad híbrida (on-prem + cloud)</li>
                     </ul>
                 </div>
@@ -213,8 +209,8 @@
             </div>
 
             <div id="solar" class="ecosystem-grid">
-                <div class="service-card"
-                    style="border-top-color: var(--accent-solar); background: rgba(245, 158, 11, 0.05);">
+                <div class="service-card">
+                    <!-- style="border-top-color: var(--accent-solar); background: rgba(245, 158, 11, 0.05);" -->
                     <h3 style="color:var(--accent-solar)">
                         <i data-lucide="sun"></i> Respaldo Energético para Data Centers
                     </h3>
@@ -397,23 +393,22 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Nombre Completo</label>
-                                <input type="text" id="name" name="name" placeholder="Ej: Juan Pérez" required>
+                                <input type="text" id="name" name="name" required>
                             </div>
                             <div class="form-group">
                                 <label for="company">Empresa</label>
-                                <input type="text" id="company" name="company" placeholder="Nombre de tu organización"
-                                    required>
+                                <input type="text" id="company" name="company" required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="email">Correo Corporativo</label>
-                                <input type="email" id="email" name="email" placeholder="jperez@empresa.com" required>
+                                <input type="email" id="email" name="email" required>
                             </div>
                             <div class="form-group">
                                 <label for="phone">Teléfono</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+506 5555-2650">
+                                <input type="tel" id="phone" name="phone">
                             </div>
                         </div>
 
@@ -435,8 +430,8 @@
 
                         <div class="form-group">
                             <label for="message">Detalles del Proyecto</label>
-                            <textarea id="message" name="message" rows="4"
-                                placeholder="¿En qué podemos ayudarte?"></textarea>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                                <!-- placeholder="¿En qué podemos ayudarte?" -->
                         </div>
 
                         <button type="submit" class="primary-btn">
