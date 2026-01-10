@@ -11,13 +11,17 @@
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./img/logo-beta2-70-1.gif">
 </head>
 
 <body>
     <header>
         <div class="container header-content">
             <div class="brand-container">
-                <div class="logo-placeholder">EBS</div>
+                <div class="logo-placeholder">
+                    <img src="./img/logo-beta2-70-1.gif" width="56" height="55" alt="Costa Rica EBS">
+                </div>
+                <span class="logo-text-sub">Enterprise Business Solutions</span>
             </div>
 
             <nav class="main-nav">
@@ -32,14 +36,13 @@
                     <li style="--i:4"><a href="data-center.html">Centro de Datos</a></li>
                     <li style="--i:5"><a href="ciberseguridad.html">Ciberseguridad</a></li>
                     <li style="--i:6"><a href="diseno-web.html">Diseño Web</a></li>
-                    <!-- <li style="--i:6"><a href="tienda-solar.html">Solar</a></li> -->
+                    <li style="--i:6"><a href="tienda-solar.html">Solar</a></li>
                     <!-- <li style="--i:7"><a href="https://costaricaebs.com/product-category/it-solutions/microsoft/"
                             target="_blank">Solar</a></li> -->
                     <li style="--i:8"><a href="#industrias">Industrias</a></li>
                     <li style="--i:9"><a href="#whycrebs">Por qué EBS</a></li>
                     <li style="--i:10"><a href="#contacto">Contacto</a></li>
-                    <li style="--i:11"><a href="term-cond.html">Términos</a></li>
-                    <li style="--i:11"><a href="terminos-condiciones.html">Condiciones</a></li>
+                    <li style="--i:11"><a href="term-cond.html">Términos y Condiciones</a></li>
                 </ul>
             </nav>
         </div>
@@ -176,7 +179,7 @@
                 </div>
                 <div class="service-card">
 
-                <h3><i data-lucide="arrow-right-circle"></i> Licenciamiento Microsoft</h3>
+                    <h3><i data-lucide="arrow-right-circle"></i> Licenciamiento Microsoft</h3>
                     <ul class="service-list">
                         <li>Optimización de licencias</li>
                         <li>Auditorías de cumplimiento</li>
@@ -193,7 +196,7 @@
                     <ul class="service-list">
                         <li>Security Assessments</li>
                         <li>Post-breach remediation</li>
-                        <li>Hardening de Active Directory</li>                        
+                        <li>Hardening de Active Directory</li>
                         <li>Seguridad híbrida (on-prem + cloud)</li>
                     </ul>
                 </div>
@@ -209,7 +212,7 @@
             </div>
 
             <div id="solar" class="ecosystem-grid">
-                <div class="service-card">
+                <div class="service-card" style="border-top-color: var(--accent-solar);">
                     <!-- style="border-top-color: var(--accent-solar); background: rgba(245, 158, 11, 0.05);" -->
                     <h3 style="color:var(--accent-solar)">
                         <i data-lucide="sun"></i> Respaldo Energético para Data Centers
@@ -373,7 +376,7 @@
                             <div class="info-icon"><i data-lucide="phone"></i></div>
                             <div>
                                 <span>Llámanos</span>
-                                <strong>+506 7279-2650</strong>
+                                <strong>+506 2101-2374</strong>
                             </div>
                         </div>
                         <div class="info-item">
@@ -388,27 +391,26 @@
 
                 <div class="contact-form-container">
                     <div id="formMessage" class="form-message"></div>
-                    <form id="contactForm" class="modern-form"
-                        action="https://formsubmit.co/a3d1c5730e37431b357984f2e358241c" method="POST">
+                    <form id="contactForm" class="modern-form" action="enviar.php" method="POST">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Nombre Completo</label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="name" maxlength="50" required>
                             </div>
                             <div class="form-group">
                                 <label for="company">Empresa</label>
-                                <input type="text" id="company" name="company" required>
+                                <input type="text" id="company" name="company" maxlength="50" required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="email">Correo Corporativo</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" maxlength="50" required>
                             </div>
                             <div class="form-group">
                                 <label for="phone">Teléfono</label>
-                                <input type="tel" id="phone" name="phone">
+                                <input type="tel" id="phone" name="phone" maxlength="30" required>
                             </div>
                         </div>
 
@@ -417,7 +419,8 @@
                             <select id="service" name="service" required>
                                 <option value="" disabled selected>Seleccione una solución</option>
                                 <option value="Infraestructura IT Principal">Infraestructura IT Principal</option>
-                                <option value="Centro de Datos & Disaster Recovery">Centro de Datos & Disaster Recovery
+                                <option value="Centro de Datos & Disaster Recovery">Centro de Datos & Disaster
+                                    Recovery
                                 </option>
                                 <option value="Microsoft & Azure">Microsoft & Azure</option>
                                 <option value="Ciberseguridad">Ciberseguridad</option>
@@ -430,8 +433,8 @@
 
                         <div class="form-group">
                             <label for="message">Detalles del Proyecto</label>
-                            <textarea id="message" name="message" rows="4"></textarea>
-                                <!-- placeholder="¿En qué podemos ayudarte?" -->
+                            <textarea id="message" name="message" rows="16" maxlength="983" required></textarea>
+                            <!-- placeholder="¿En qué podemos ayudarte?" -->
                         </div>
 
                         <button type="submit" class="primary-btn">
@@ -439,8 +442,8 @@
                             <i data-lucide="arrow-right"></i>
                         </button>
 
-                        <input type="hidden" name="_next" value="https://costaricaebs.com/gracias.html">
-                        <input type="hidden" name="_captcha" value="false">
+                        <!-- <input type="hidden" name="_next" value="https://costaricaebs.com/">
+                        <input type="hidden" name="_captcha" value="false"> -->
                     </form>
                 </div>
             </div>
@@ -450,7 +453,9 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-logo">
-                <div class="logo-placeholder">EBS</div>
+                <div class="logo-placeholder">
+                    <img src="./img/logo-beta2-70-1.gif" width="56" height="55" alt="Costa Rica EBS">
+                </div>
             </div>
             <div class="footer-links">
                 <a href="#home">Inicio</a>
@@ -464,8 +469,7 @@
                 <a href="#industrias">Industrias</a>
                 <a href="#whycrebs">Por qué EBS</a>
                 <a href="#contacto">Contacto</a>
-                <a href="term-cond.html">Términos</a>
-                <a href="terminos-condiciones.html">Condiciones</a>
+                <a href="term-cond.html">Términos y Condiciones</a>
             </div>
             <p class="copyright">© 2026 Costa Rica Enterprise Business Solutions. Todos los derechos reservados.</p>
         </div>
@@ -476,6 +480,15 @@
     </a>
 
     <script>
+
+        // Mostrar mensaje de confirmación
+        window.addEventListener('load', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('mensaje') === 'enviado') {
+                alert('¡Gracias! Tu mensaje ha sido enviado correctamente.');
+            }
+        });
+
         (function () {
             'use strict';
 
@@ -553,23 +566,40 @@
                 formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             };
 
-            contactForm.addEventListener('submit', function (e) {
-                const formData = new FormData(this);
-                const data = Object.fromEntries(formData);
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            // contactForm.addEventListener('submit', function (e) {
+            //     console.log('=== INICIO VALIDACIÓN ===');
 
-                if (!data.name || !data.company || !data.email || !data.service) {
-                    e.preventDefault();
-                    showMessage('Por favor completa todos los campos requeridos.', 'error');
-                    return;
-                }
+            //     const name = document.getElementById('name').value.trim();
+            //     const company = document.getElementById('company').value.trim();
+            //     const email = document.getElementById('email').value.trim();
+            //     const service = document.getElementById('service').value;
+            //     const message = document.getElementById('message').value;
 
-                if (!emailRegex.test(data.email)) {
-                    e.preventDefault();
-                    showMessage('Por favor ingresa un correo electrónico válido.', 'error');
-                    return;
-                }
-            });
+            //     console.log('Nombre:', name);
+            //     console.log('Empresa:', company);
+            //     console.log('Email:', email);
+            //     console.log('Servicio:', service);
+            //     console.log('Mensaje longitud:', message.length);
+            //     console.log('Mensaje líneas:', message.split('\n').length);
+
+            //     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            //     if (!name || !company || !email || !service) {
+            //         e.preventDefault();
+            //         console.log('ERROR: Campos vacíos');
+            //         showMessage('Por favor completa todos los campos requeridos.', 'error');
+            //         return;
+            //     }
+
+            //     if (!emailRegex.test(email)) {
+            //         e.preventDefault();
+            //         console.log('ERROR: Email inválido');
+            //         showMessage('Por favor ingresa un correo electrónico válido.', 'error');
+            //         return;
+            //     }
+
+            //     console.log('✓ Validación pasó - formulario se enviará');
+            // });
 
             // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test Formulario</title>
+</head>
+
+<body>
+    <h1>Formulario de Prueba</h1>
+
+
+    <!-- <form id="contactForm" class="modern-form" action="https://formsubmit.co/e3f9431977c725ecd39abec73cd0504f" method="POST"> -->
+    <!-- <form id="contactForm" class="modern-form" action="https://formsubmit.co/hmbonilla@gmail.com" method="POST"> -->
+    <form id="contactForm" class="modern-form" action="https://formsubmit.co/a3d1c5730e37431b357984f2e358241c" method="POST">
+
+        <!-- <form action="https://formspree.io/f/xnjneevb" method="POST"> -->
+
+        <label>Nombre:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Mensaje:</label><br>
+        <textarea name="message" rows="20" cols="50" required maxlength="465"></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+
+        <input type="hidden" name="_next" value="http://127.0.0.1:5502/gracias.html">
+        <input type="hidden" name="_captcha" value="false">
+    </form>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function (e) {
+            const mensaje = document.querySelector('textarea').value;
+            console.log('Longitud del mensaje:', mensaje.length, 'caracteres');
+            console.log('Tamaño aproximado:', (new Blob([mensaje]).size), 'bytes');
+        });
+    </script>
+</body>
+
+</html>
