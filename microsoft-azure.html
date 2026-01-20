@@ -2,359 +2,448 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Soluciones Microsoft Premium - Azure, Microsoft 365, Seguridad y Licenciamiento por Costa Rica EBS">
-    <title>Costa Rica EBS | Microsoft Azure</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap"
-        rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="./css/microsoft-azure.css">
-    <link rel="icon" type="image/x-icon" href="./img/logo-beta2-70-1.gif">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags Optimizados -->
+  <title>Microsoft Azure Costa Rica | Consultoría Cloud y Microsoft 365</title>
+  <meta name="description"
+    content="Expertos en Microsoft Azure, Microsoft 365 y seguridad cloud en Costa Rica. Migración a Azure, Entra ID, Defender y optimización de licencias Microsoft con ROI comprobado.">
+  <meta name="keywords"
+    content="Microsoft Azure Costa Rica, Azure cloud, Microsoft 365, Entra ID, Azure migration, Microsoft Defender, licenciamiento Microsoft, Azure consulting, cloud migration Costa Rica">
+  <meta name="author" content="Costa Rica Enterprise Business Solutions">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.costaricaebs.com/microsoft-azure.html">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Microsoft Azure Costa Rica | Consultoría Cloud y Microsoft 365">
+  <meta property="og:description"
+    content="Soluciones Microsoft Premium: Azure, Microsoft 365, Seguridad y Licenciamiento. 15+ años de experiencia, ROI comprobado y soporte 24/7.">
+  <meta property="og:image" content="https://www.costaricaebs.com/img/microsoft-azure-banner.jpg">
+  <meta property="og:url" content="https://www.costaricaebs.com/microsoft-azure.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CR">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Microsoft Azure Costa Rica | Consultoría Cloud">
+  <meta name="twitter:description"
+    content="Expertos en Azure, Microsoft 365 y seguridad cloud. Migración, optimización y soporte empresarial.">
+  <meta name="twitter:image" content="https://www.costaricaebs.com/img/microsoft-azure-banner.jpg">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Microsoft Azure y Cloud Services",
+      "provider": {
+        "@type": "Organization",
+        "name": "Costa Rica Enterprise Business Solutions",
+        "url": "https://www.costaricaebs.com"
+      },
+      "description": "Servicios profesionales de Microsoft Azure, Microsoft 365, seguridad cloud y optimización de licencias",
+      "serviceType": "Cloud Computing Consulting",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Costa Rica"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Enterprise Businesses"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "offerCount": "4",
+        "offers": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Microsoft Azure Cloud Infrastructure",
+              "description": "Diseño de Landing Zones, Azure IaaS/PaaS, Azure Arc, Cost Management"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Microsoft 365 y Entra ID",
+              "description": "Identidad moderna, migración M365, Conditional Access, Zero Trust"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Seguridad Microsoft",
+              "description": "Microsoft Defender, Defender for Cloud, Purview, Zero Trust Architecture"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Licenciamiento Microsoft",
+              "description": "Optimización de licencias, auditorías, estrategia CAPEX vs OPEX"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="./css/microsoft-azure.css">
+  <link rel="icon" type="image/x-icon" href="./img/logo-costa-rica-ebs.gif">
 </head>
 
 <body>
-    <header>
-        <div class="container header-content">
-            <div class="brand-container">
-                <div class="logo-placeholder">
-                    <img src="./img/logo-beta2-70-1.gif" width="56" height="55" alt="Costa Rica EBS">
-                </div>
-                <!-- <span class="brand-text">CR Enterprise Business Solutions</span> -->
-                <span class="logo-text-sub"> Enterprise Business Solutions</span>
-            </div>
-
-            <div class="header-cta">
-                <a href="index.html" class="btn-header btn-secondary">
-                    <i data-lucide="arrow-left"></i>
-                    Inicio
-                </a>
-                <a href="#contacto" class="btn-header btn-primary">
-                    <i data-lucide="calendar"></i>
-                    Agendar Consulta
-                </a>
-            </div>
+  <header>
+    <nav class="container header-content" aria-label="Navegación principal">
+      <div class="brand-container">
+        <div class="logo-placeholder">
+          <img src="./img/logo-costa-rica-ebs.gif" width="56" height="55"
+            alt="Logo Costa Rica EBS - Microsoft Azure Partner">
         </div>
-    </header>
+        <span class="logo-text-sub">Enterprise Business Solutions</span>
+      </div>
 
+      <div class="header-cta">
+        <a href="index.html" class="btn-header btn-secondary" aria-label="Volver a página de inicio">
+          <i data-lucide="arrow-left"></i>
+          Inicio
+        </a>
+        <a href="#contacto" class="btn-header btn-primary" aria-label="Agendar consulta de Microsoft Azure">
+          <i data-lucide="calendar"></i>
+          Agendar Consulta
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
     <section class="hero-microsoft">
-        <div class="container hero-content">
-            <div class="microsoft-badge">
-                <i data-lucide="award"></i>
-                MICROSOFT PARTNER SOLUTIONS
-            </div>
-            <h1>Soluciones Microsoft Premium</h1>
-            <p>Transformamos tu ecosistema empresarial con arquitecturas Microsoft de clase mundial. Azure, Microsoft
-                365, Seguridad y Licenciamiento optimizado para maximizar tu inversión.</p>
-
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">15+</span>
-                    <span class="stat-label">Años de Experiencia</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Proyectos Exitosos</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">99.9%</span>
-                    <span class="stat-label">SLA Garantizado</span>
-                </div>
-            </div>
+      <div class="container hero-content">
+        <div class="microsoft-badge">
+          <i data-lucide="award"></i>
+          MICROSOFT PARTNER SOLUTIONS
         </div>
+        <h1>Microsoft Azure y Cloud Services en Costa Rica</h1>
+        <p>Transformamos tu ecosistema empresarial con arquitecturas Microsoft Azure de clase mundial. Migración cloud,
+          Microsoft 365, seguridad Defender y optimización de licencias para maximizar tu ROI tecnológico.</p>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Años de Experiencia Microsoft</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Proyectos Azure Exitosos</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">99.9%</span>
+            <span class="stat-label">SLA Garantizado</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="services-premium">
-        <div class="container">
-            <div class="section-intro">
-                <span class="section-label">SERVICIOS PREMIUM</span>
-                <h2>Ecosistema Microsoft Integral</h2>
-                <p>Soluciones empresariales completas que abarcan toda la plataforma Microsoft, desde infraestructura
-                    cloud hasta seguridad y optimización de licencias.</p>
-            </div>
-
-            <div class="premium-grid">
-                <!-- Microsoft Azure -->
-                <div class="premium-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop"
-                            alt="Microsoft Azure Cloud Infrastructure">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <i data-lucide="cloud"></i>
-                            </div>
-                            <div class="card-title-group">
-                                <h3>Microsoft Azure</h3>
-                                <p class="card-subtitle">Infraestructura cloud empresarial escalable y resiliente</p>
-                            </div>
-                        </div>
-                        <ul class="service-features">
-                            <li>Diseño de Landing Zones</li>
-                            <li>Azure IaaS / PaaS</li>
-                            <li>Azure Arc (servers, SQL, governance)</li>
-                            <li>Cost Management & FinOps</li>
-                            <li>Azure Bastion, VPN, ExpressRoute</li>
-                            <li>Azure Virtual Desktop (AVD)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Microsoft 365 & Entra ID -->
-                <div class="premium-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
-                            alt="Microsoft 365 Collaboration">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <i data-lucide="users"></i>
-                            </div>
-                            <div class="card-title-group">
-                                <h3>Microsoft 365 & Entra ID</h3>
-                                <p class="card-subtitle">Identidad moderna y productividad corporativa</p>
-                            </div>
-                        </div>
-                        <ul class="service-features">
-                            <li>Entra ID (Azure AD) diseño y hardening</li>
-                            <li>Migración y optimización Microsoft 365</li>
-                            <li>Identidad híbrida</li>
-                            <li>Conditional Access & Zero Trust</li>
-                            <li>Autopilot & Modern Workplace</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Seguridad Microsoft -->
-                <div class="premium-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=400&fit=crop"
-                            alt="Cybersecurity and Protection">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <i data-lucide="shield"></i>
-                            </div>
-                            <div class="card-title-group">
-                                <h3>Seguridad Microsoft</h3>
-                                <p class="card-subtitle">Protección integral con Microsoft Defender</p>
-                            </div>
-                        </div>
-                        <ul class="service-features">
-                            <li>Microsoft Defender (Endpoint, Servers, M365)</li>
-                            <li>Defender for Cloud</li>
-                            <li>Microsoft Purview (compliance, DLP)</li>
-                            <li>Seguridad post-incidente</li>
-                            <li>Hardening y Zero Trust Architecture</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Licenciamiento Microsoft -->
-                <div class="premium-card licensing-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=400&fit=crop"
-                            alt="Business Strategy and Licensing">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <i data-lucide="file-text"></i>
-                            </div>
-                            <div class="card-title-group">
-                                <h3>Licenciamiento Microsoft</h3>
-                                <p class="card-subtitle">Optimización estratégica de inversión en licencias</p>
-                            </div>
-                        </div>
-                        <ul class="service-features">
-                            <li>Optimización de licencias</li>
-                            <li>Auditorías de cumplimiento</li>
-                            <li>Transición E3 → E5</li>
-                            <li>Estrategia CAPEX vs OPEX</li>
-                            <li>Asesoría pre-auditoría (SAM readiness)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-label">SERVICIOS MICROSOFT PREMIUM</span>
+          <h2>Ecosistema Microsoft Azure Integral</h2>
+          <p>Soluciones empresariales completas que abarcan toda la plataforma Microsoft: infraestructura cloud Azure,
+            Microsoft 365, seguridad Defender y optimización estratégica de licencias.</p>
         </div>
+
+        <div class="premium-grid">
+          <!-- Microsoft Azure -->
+          <article class="premium-card">
+            <div class="card-image">
+              <img src="./img/microsoft-azure-cloud-infrastructure.jpg"
+                alt="Microsoft Azure Cloud - Infraestructura empresarial escalable y resiliente" loading="lazy">
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i data-lucide="cloud"></i>
+                </div>
+                <div class="card-title-group">
+                  <h3>Microsoft Azure Cloud</h3>
+                  <p class="card-subtitle">Infraestructura cloud empresarial escalable, resiliente y optimizada para
+                    costos</p>
+                </div>
+              </div>
+              <ul class="service-features">
+                <li>Diseño de Azure Landing Zones empresariales</li>
+                <li>Servicios Azure IaaS y PaaS (VMs, App Services, Databases)</li>
+                <li>Azure Arc para gestión híbrida multi-cloud</li>
+                <li>Cost Management y FinOps para optimización de gastos</li>
+                <li>Azure Bastion, VPN Gateway y ExpressRoute</li>
+                <li>Azure Virtual Desktop (AVD) para trabajo remoto seguro</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Microsoft 365 & Entra ID -->
+          <article class="premium-card">
+            <div class="card-image">
+              <img src="./img/microsoft-365-collaboration-workspace.jpg"
+                alt="Microsoft 365 y Entra ID - Colaboración empresarial moderna" loading="lazy">
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i data-lucide="users"></i>
+                </div>
+                <div class="card-title-group">
+                  <h3>Microsoft 365 y Entra ID</h3>
+                  <p class="card-subtitle">Identidad moderna, colaboración empresarial y productividad corporativa</p>
+                </div>
+              </div>
+              <ul class="service-features">
+                <li>Diseño y hardening de Microsoft Entra ID (Azure AD)</li>
+                <li>Migración y optimización de Microsoft 365 (Exchange, SharePoint, Teams)</li>
+                <li>Identidad híbrida con sincronización on-premise</li>
+                <li>Conditional Access y arquitectura Zero Trust</li>
+                <li>Windows Autopilot y Modern Workplace deployment</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Seguridad Microsoft -->
+          <article class="premium-card">
+            <div class="card-image">
+              <img src="./img/microsoft-defender-cybersecurity.jpg"
+                alt="Microsoft Defender - Ciberseguridad y protección empresarial" loading="lazy">
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i data-lucide="shield"></i>
+                </div>
+                <div class="card-title-group">
+                  <h3>Seguridad Microsoft Defender</h3>
+                  <p class="card-subtitle">Protección integral empresarial con Microsoft Defender y Zero Trust</p>
+                </div>
+              </div>
+              <ul class="service-features">
+                <li>Microsoft Defender for Endpoint, Servers y Microsoft 365</li>
+                <li>Microsoft Defender for Cloud (protección multi-cloud)</li>
+                <li>Microsoft Purview para compliance, DLP y gobernanza de datos</li>
+                <li>Remediación post-incidente y respuesta a amenazas</li>
+                <li>Implementación de Zero Trust Architecture</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Licenciamiento Microsoft -->
+          <article class="premium-card licensing-card">
+            <div class="card-image">
+              <img src="./img/microsoft-licensing-optimization.jpg"
+                alt="Licenciamiento Microsoft - Optimización estratégica de inversión" loading="lazy">
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i data-lucide="file-text"></i>
+                </div>
+                <div class="card-title-group">
+                  <h3>Licenciamiento Microsoft</h3>
+                  <p class="card-subtitle">Optimización estratégica de inversión en licencias Microsoft y SAM</p>
+                </div>
+              </div>
+              <ul class="service-features">
+                <li>Optimización de licencias Microsoft (reducción de costos hasta 40%)</li>
+                <li>Auditorías de cumplimiento y preparación SAM</li>
+                <li>Estrategia de transición E3 a E5</li>
+                <li>Análisis CAPEX vs OPEX para licenciamiento</li>
+                <li>Asesoría pre-auditoría (SAM readiness y compliance)</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section class="benefits-section">
-        <div class="container">
-            <div class="section-intro">
-                <span class="section-label">VENTAJAS COMPETITIVAS</span>
-                <h2>Por qué elegirnos como tu partner Microsoft</h2>
-                <p>Experiencia comprobada, metodologías de clase mundial y compromiso con tu éxito empresarial.</p>
-            </div>
-
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i data-lucide="award"></i>
-                    </div>
-                    <h3>Experiencia Certificada</h3>
-                    <p>Equipo con certificaciones Microsoft avanzadas y experiencia en implementaciones enterprise de
-                        gran escala.</p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i data-lucide="trending-up"></i>
-                    </div>
-                    <h3>ROI Comprobado</h3>
-                    <p>Optimización de costos que reduce hasta un 40% el gasto en licencias y reduce significativamente
-                        los costos operativos en cloud.</p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i data-lucide="lock"></i>
-                    </div>
-                    <h3>Seguridad First</h3>
-                    <p>Arquitecturas Zero Trust que protegen tu información crítica y cumplen con estándares
-                        regulatorios internacionales.</p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i data-lucide="headphones"></i>
-                    </div>
-                    <h3>Soporte 24/7</h3>
-                    <p>Equipo técnico disponible en tu zona horaria con SLAs empresariales y respuesta rápida ante
-                        incidentes críticos.</p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i data-lucide="git-branch"></i>
-                    </div>
-                    <h3>Enfoque Híbrido</h3>
-                    <p>Especialistas en integrar ambientes on-premise con Azure, garantizando continuidad y transición
-                        sin disrupciones.</p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i data-lucide="target"></i>
-                    </div>
-                    <h3>Resultados Medibles</h3>
-                    <p>Métricas claras, reportes ejecutivos y seguimiento continuo para demostrar el valor de tu
-                        inversión.</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-label">VENTAJAS COMPETITIVAS</span>
+          <h2>Por Qué Elegir Costa Rica EBS como Partner Microsoft</h2>
+          <p>Experiencia comprobada en implementaciones Microsoft Azure, metodologías enterprise y compromiso total con
+            el éxito de tu transformación digital.</p>
         </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <div class="benefit-icon">
+              <i data-lucide="award"></i>
+            </div>
+            <h3>Certificaciones Microsoft</h3>
+            <p>Equipo con certificaciones Microsoft avanzadas (Azure Solutions Architect, Security Engineer) y
+              experiencia en implementaciones enterprise Fortune 500.</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">
+              <i data-lucide="trending-up"></i>
+            </div>
+            <h3>ROI Comprobado en Azure</h3>
+            <p>Optimización de costos cloud que reduce hasta 40% el gasto en licencias Microsoft y disminuye
+              significativamente los costos operativos en Azure.</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">
+              <i data-lucide="lock"></i>
+            </div>
+            <h3>Seguridad Zero Trust</h3>
+            <p>Arquitecturas Microsoft Zero Trust que protegen información crítica empresarial y cumplen estándares
+              regulatorios internacionales (GDPR, SOC 2).</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">
+              <i data-lucide="headphones"></i>
+            </div>
+            <h3>Soporte Microsoft 24/7</h3>
+            <p>Equipo técnico Microsoft disponible en tu zona horaria con SLAs empresariales y respuesta rápida ante
+              incidentes críticos en Azure.</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">
+              <i data-lucide="git-branch"></i>
+            </div>
+            <h3>Especialistas en Híbrido</h3>
+            <p>Expertos en integrar ambientes on-premise con Microsoft Azure, garantizando continuidad operacional y
+              transición sin disrupciones de negocio.</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">
+              <i data-lucide="target"></i>
+            </div>
+            <h3>Resultados Medibles Azure</h3>
+            <p>Métricas claras de performance Azure, reportes ejecutivos de FinOps y seguimiento continuo para demostrar
+              el valor de tu inversión Microsoft.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section id="contacto" class="cta-section">
-        <div class="container cta-content">
-            <h2>Transforma tu Infraestructura Microsoft</h2>
-            <p>Agenda una consultoría estratégica sin costo. Evaluaremos tu ecosistema actual y diseñaremos una hoja de
-                ruta personalizada para maximizar tu inversión en Microsoft.</p>
+      <div class="container cta-content">
+        <h2>Transforma tu Infraestructura con Microsoft Azure</h2>
+        <p>Agenda una consultoría estratégica de Microsoft Azure sin costo. Evaluaremos tu ecosistema actual Microsoft,
+          identificaremos oportunidades de optimización y diseñaremos una hoja de ruta personalizada para maximizar tu
+          inversión en la nube.</p>
 
-            <div class="cta-buttons">
-                <a href="index.html#contacto" class="btn-cta btn-cta-primary">
-                    <i data-lucide="calendar-check"></i>
-                    Agendar Consultoría Gratuita
-                </a>
-                <a href="index.html" class="btn-cta btn-cta-secondary">
-                    <i data-lucide="arrow-left"></i>
-                    Ver Todos los Servicios
-                </a>
-            </div>
+        <div class="cta-buttons">
+          <a href="index.html#contacto" class="btn-cta btn-cta-primary"
+            aria-label="Agendar consultoría gratuita de Azure">
+            <i data-lucide="calendar-check"></i>
+            Agendar Consultoría Azure Gratuita
+          </a>
+          <a href="index.html" class="btn-cta btn-cta-secondary" aria-label="Ver todos nuestros servicios IT">
+            <i data-lucide="arrow-left"></i>
+            Ver Todos los Servicios IT
+          </a>
         </div>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo-placeholder">
-                        <img src="./img/logo-beta2-70-1.gif" width="56" height="55" alt="Costa Rica EBS">
-                    </div>
-                    <!-- <span class="brand-text">Costa Rica EBS</span> -->
-                </div>
-                <div class="footer-links">
-                    <a href="index.html">Inicio</a>
-                    <a href="index.html#servicios">Servicios</a>
-                    <!-- <a href="microsoft-azure.html">Microsoft</a> -->
-                    <a href="data-center.html">Data Center</a>
-                    <a href="ciberseguridad.html">Ciberseguridad</a>
-                    <a href="diseno-web.html">Diseño Web</a>
-                    <!-- <a href="tienda-solar.html">Solar</a> -->
-                    <a href="index.html#industrias">Industrias</a>
-                    <!-- <a href="https://costaricaebs.com/product-category/it-solutions/microsoft/"
-                        target="_blank">Solar</a> -->
-                    <a href="index.html#whycrebs">Por qué EBS</a>
-                    <a href="index.html#contacto">Contacto</a>
-                    <a href="term-cond.html">Términos y condiciones</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p class="copyright">© 2026 Costa Rica Enterprise Business Solutions. Todos los derechos reservados.</p>
-            </div>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo-placeholder">
+            <img src="./img/logo-costa-rica-ebs.gif" width="56" height="55" alt="Costa Rica EBS Logo">
+          </div>
         </div>
-    </footer>
+        <nav class="footer-links" aria-label="Navegación del pie de página">
+          <a href="index.html">Inicio</a>
+          <a href="index.html#servicios">Servicios</a>
+          <a href="data-center.html">Data Center</a>
+          <a href="ciberseguridad.html">Ciberseguridad</a>
+          <a href="diseno-web.html">Diseño Web</a>
+          <a href="index.html#industrias">Industrias</a>
+          <a href="index.html#whycrebs">Por qué EBS</a>
+          <a href="index.html#contacto">Contacto</a>
+          <a href="term-cond.html">Términos y condiciones</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 Costa Rica Enterprise Business Solutions. Todos los derechos reservados. Microsoft
+          Azure Partner.</p>
+      </div>
+    </div>
+  </footer>
 
-    <a href="https://wa.me/50672792650" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
-        <i data-lucide="phone"></i>
-    </a>
+  <a href="https://wa.me/50672792650" class="whatsapp-float" target="_blank" rel="noopener"
+    aria-label="Contactar por WhatsApp para consultas de Azure">
+    <i data-lucide="phone"></i>
+  </a>
 
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#' && href.length > 1) {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                }
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href.length > 1) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
             });
-        });
+          }
+        }
+      });
+    });
 
-        // Intersection Observer for animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
 
-        // Observe all cards and sections
-        document.querySelectorAll('.premium-card, .benefit-card, .section-intro').forEach(el => {
-            observer.observe(el);
-        });
+    // Observe all cards and sections
+    document.querySelectorAll('.premium-card, .benefit-card, .section-intro').forEach(el => {
+      observer.observe(el);
+    });
 
-        // Add animation delay to cards
-        document.querySelectorAll('.premium-card').forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.1}s`;
-        });
+    // Add animation delay to cards
+    document.querySelectorAll('.premium-card').forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.1}s`;
+    });
 
-        document.querySelectorAll('.benefit-card').forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.1}s`;
-        });
+    document.querySelectorAll('.benefit-card').forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.1}s`;
+    });
 
-        // Re-initialize Lucide icons after page load
-        window.addEventListener('load', () => {
-            lucide.createIcons();
-        });
-    </script>
+    // Re-initialize Lucide icons after page load
+    window.addEventListener('load', () => {
+      lucide.createIcons();
+    });
+  </script>
 </body>
 
 </html>

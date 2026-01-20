@@ -2,367 +2,456 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Ciberseguridad Enterprise - Security Assessments, Hardening y Operación de Seguridad por Costa Rica EBS">
-    <title>Costa Rica EBS | Ciberseguridad Enterprise</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap"
-        rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="./css/ciberseguridad.css">
-    <link rel="icon" type="image/x-icon" href="./img/logo-beta2-70-1.gif">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags Optimizados -->
+  <title>Ciberseguridad Costa Rica | Security Assessment y Zero Trust</title>
+  <meta name="description"
+    content="Servicios de ciberseguridad empresarial en Costa Rica: security assessment, hardening AD, Microsoft Defender, Zero Trust, respuesta a incidentes 24/7. SOC monitoring proactivo.">
+  <meta name="keywords"
+    content="ciberseguridad Costa Rica, security assessment, hardening Active Directory, Microsoft Defender, Zero Trust, respuesta incidentes, SOC monitoring, pentesting, vulnerabilidades">
+  <meta name="author" content="Costa Rica Enterprise Business Solutions">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.costaricaebs.com/ciberseguridad.html">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Ciberseguridad Costa Rica | Security Assessment y Zero Trust">
+  <meta property="og:description"
+    content="Protección proactiva empresarial: security assessments, hardening, Microsoft Defender y respuesta a incidentes con SOC 24/7.">
+  <meta property="og:image" content="https://www.costaricaebs.com/img/ciberseguridad-enterprise.jpg">
+  <meta property="og:url" content="https://www.costaricaebs.com/ciberseguridad.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CR">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ciberseguridad Costa Rica | Security Assessment">
+  <meta name="twitter:description"
+    content="Servicios empresariales de ciberseguridad: assessments, hardening, Zero Trust y respuesta a incidentes 24/7.">
+  <meta name="twitter:image" content="https://www.costaricaebs.com/img/ciberseguridad-enterprise.jpg">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Ciberseguridad Enterprise y Security Operations",
+      "provider": {
+        "@type": "Organization",
+        "name": "Costa Rica Enterprise Business Solutions",
+        "url": "https://www.costaricaebs.com"
+      },
+      "description": "Servicios profesionales de ciberseguridad: security assessments, hardening, operación de seguridad 24/7 y respuesta a incidentes",
+      "serviceType": "Cybersecurity Services",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Costa Rica"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "offerCount": "2",
+        "offers": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Servicios de Seguridad y Assessment",
+              "description": "Security assessments, post-breach remediation, hardening de Active Directory, seguridad híbrida"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Operación de Seguridad 24/7",
+              "description": "Onboarding Microsoft Defender, SIEM/XDR, tuning de alertas, políticas de seguridad"
+            }
+          }
+        ]
+      },
+      "serviceOutput": {
+        "@type": "ServiceLevel",
+        "name": "SOC Monitoring 24/7",
+        "description": "Respuesta en <15min, monitoreo continuo, Zero Trust architecture"
+      }
+    }
+    </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="./css/ciberseguridad.css">
+  <link rel="icon" type="image/x-icon" href="./img/logo-costa-rica-ebs.gif">
 </head>
 
 <body>
-    <header>
-        <div class="container header-content">
-            <div class="brand-container">
-                <div class="logo-placeholder">
-                    <img src="./img/logo-beta2-70-1.gif" width="56" height="55" alt="Costa Rica EBS">
-                </div>
-                <!-- <span class="brand-text">CR Enterprise Business Solutions</span> -->
-                <span class="logo-text-sub">Enterprise Business Solutions</span>
-            </div>
-
-            <div class="header-cta">
-                <a href="index.html" class="btn-header btn-secondary">
-                    <i data-lucide="arrow-left"></i>
-                    Inicio
-                </a>
-                <a href="#contacto" class="btn-header btn-primary">
-                    <i data-lucide="shield-alert"></i>
-                    Assessment Gratuito
-                </a>
-            </div>
+  <header>
+    <nav class="container header-content" aria-label="Navegación principal">
+      <div class="brand-container">
+        <div class="logo-placeholder">
+          <img src="./img/logo-costa-rica-ebs.gif" width="56" height="55"
+            alt="Logo Costa Rica EBS - Ciberseguridad Enterprise">
         </div>
-    </header>
+        <span class="logo-text-sub">Enterprise Business Solutions</span>
+      </div>
 
+      <div class="header-cta">
+        <a href="index.html" class="btn-header btn-secondary" aria-label="Volver a página de inicio">
+          <i data-lucide="arrow-left"></i>
+          Inicio
+        </a>
+        <a href="#contacto" class="btn-header btn-primary" aria-label="Solicitar security assessment gratuito">
+          <i data-lucide="shield-alert"></i>
+          Assessment Gratuito
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
     <section class="hero-security">
-        <div class="container hero-content">
-            <div class="security-badge">
-                <i data-lucide="shield-check"></i>
-                CIBERSEGURIDAD ENTERPRISE
-            </div>
-            <h1>Protección Proactiva & Respuesta a Incidentes</h1>
-            <p>Defendemos tu infraestructura crítica con security assessments, hardening avanzado y operación de
-                seguridad 24/7. Prevención, detección y respuesta ante amenazas sofisticadas.</p>
-
-            <div class="threat-stats">
-                <div class="threat-item">
-                    <span class="threat-number">&lt;15min</span>
-                    <span class="threat-label">Tiempo de Respuesta</span>
-                </div>
-                <div class="threat-item">
-                    <span class="threat-number">24/7</span>
-                    <span class="threat-label">SOC Monitoring</span>
-                </div>
-                <div class="threat-item">
-                    <span class="threat-number">Zero Trust</span>
-                    <span class="threat-label">Architecture</span>
-                </div>
-            </div>
+      <div class="container hero-content">
+        <div class="security-badge">
+          <i data-lucide="shield-check"></i>
+          CIBERSEGURIDAD ENTERPRISE
         </div>
+        <h1>Ciberseguridad Empresarial y Respuesta a Incidentes en Costa Rica</h1>
+        <p>Defendemos tu infraestructura crítica empresarial con security assessments proactivos, hardening avanzado de
+          Active Directory, Microsoft Defender y operación de seguridad SOC 24/7. Prevención, detección temprana y
+          respuesta inmediata ante amenazas sofisticadas y ataques ransomware.</p>
+
+        <div class="threat-stats">
+          <div class="threat-item">
+            <span class="threat-number">&lt;15min</span>
+            <span class="threat-label">Tiempo de Respuesta a Incidentes</span>
+          </div>
+          <div class="threat-item">
+            <span class="threat-number">24/7</span>
+            <span class="threat-label">SOC Monitoring Proactivo</span>
+          </div>
+          <div class="threat-item">
+            <span class="threat-number">Zero Trust</span>
+            <span class="threat-label">Security Architecture</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="services-security">
-        <div class="container">
-            <div class="section-intro">
-                <span class="section-label">SERVICIOS ESPECIALIZADOS</span>
-                <h2>Ciberseguridad Integral</h2>
-                <p>Desde evaluaciones de vulnerabilidades hasta operación continua de seguridad. Protegemos ambientes
-                    híbridos con metodologías enterprise y herramientas de vanguardia.</p>
-            </div>
-
-            <div class="security-grid">
-                <!-- Servicios de Seguridad -->
-                <div class="security-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=400&fit=crop"
-                            alt="Security Assessment">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <i data-lucide="search"></i>
-                            </div>
-                            <div class="card-title-group">
-                                <h3>Servicios de Seguridad</h3>
-                                <p class="card-subtitle">Evaluaciones profundas y remediación de vulnerabilidades</p>
-                            </div>
-                        </div>
-                        <ul class="service-features">
-                            <li>Security Assessments</li>
-                            <li>Post-breach remediation</li>
-                            <li>Hardening de Active Directory</li>
-                            <li>Purple Knight / herramientas equivalentes</li>
-                            <li>Seguridad híbrida (on-prem + cloud)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Operación de Seguridad -->
-                <div class="security-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=400&fit=crop"
-                            alt="Security Operations">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <i data-lucide="shield"></i>
-                            </div>
-                            <div class="card-title-group">
-                                <h3>Operación de Seguridad</h3>
-                                <p class="card-subtitle">Monitoreo continuo y respuesta ante amenazas</p>
-                            </div>
-                        </div>
-                        <ul class="service-features">
-                            <li>Onboarding a Microsoft Defender</li>
-                            <li>Alertas, tuning y reducción de ruido</li>
-                            <li>Integración SIEM / XDR</li>
-                            <li>Políticas y gobernanza de seguridad</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-label">SERVICIOS ESPECIALIZADOS DE CIBERSEGURIDAD</span>
+          <h2>Protección Integral Empresarial</h2>
+          <p>Desde evaluaciones de vulnerabilidades y pentesting hasta operación continua de seguridad SOC 24/7.
+            Protegemos ambientes híbridos on-premise y cloud con metodologías enterprise, herramientas de vanguardia y
+            frameworks de seguridad internacionales.</p>
         </div>
+
+        <div class="security-grid">
+          <!-- Servicios de Seguridad -->
+          <article class="security-card">
+            <div class="card-image">
+              <img src="./img/security-assessment-pentesting.jpg"
+                alt="Security Assessment y Pentesting - Evaluación de Vulnerabilidades Empresarial" loading="lazy">
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i data-lucide="search"></i>
+                </div>
+                <div class="card-title-group">
+                  <h3>Security Assessment y Pentesting</h3>
+                  <p class="card-subtitle">Evaluaciones profundas de seguridad y remediación de vulnerabilidades
+                    críticas</p>
+                </div>
+              </div>
+              <ul class="service-features">
+                <li>Security Assessments empresariales y auditorías de seguridad</li>
+                <li>Post-breach remediation y respuesta a incidentes de seguridad</li>
+                <li>Hardening avanzado de Active Directory y Entra ID</li>
+                <li>Purple Knight y herramientas de evaluación AD equivalentes</li>
+                <li>Seguridad híbrida integrada (on-premise + cloud Azure)</li>
+                <li>Pentesting ético y evaluación de vulnerabilidades (vulnerability assessment)</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Operación de Seguridad -->
+          <article class="security-card">
+            <div class="card-image">
+              <img src="./img/soc-monitoring-operations.jpg"
+                alt="SOC Monitoring 24/7 - Operación de Seguridad y Microsoft Defender" loading="lazy">
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i data-lucide="shield"></i>
+                </div>
+                <div class="card-title-group">
+                  <h3>Operación de Seguridad SOC 24/7</h3>
+                  <p class="card-subtitle">Monitoreo continuo de seguridad y respuesta inmediata ante amenazas</p>
+                </div>
+              </div>
+              <ul class="service-features">
+                <li>Onboarding completo a Microsoft Defender (Endpoint, Servers, Cloud)</li>
+                <li>Gestión de alertas de seguridad, tuning y reducción de falsos positivos</li>
+                <li>Integración SIEM / XDR para correlación de eventos de seguridad</li>
+                <li>Políticas de seguridad empresarial y gobernanza Zero Trust</li>
+                <li>Monitoreo proactivo 24/7 de amenazas y comportamiento anómalo</li>
+                <li>Incident response y remediación rápida de brechas de seguridad</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section class="threat-section">
-        <div class="container threat-content">
-            <div class="section-intro">
-                <span class="section-label"
-                    style="background: rgba(251, 191, 36, 0.2); color: var(--accent-yellow);">PANORAMA DE
-                    AMENAZAS</span>
-                <h2 style="color: white;">Protección Contra Amenazas Actuales</h2>
-                <p style="color: rgba(255, 255, 255, 0.8);">Defendemos tu organización contra las amenazas más críticas
-                    del panorama actual.</p>
-            </div>
-
-            <div class="threat-grid">
-                <div class="threat-card">
-                    <div class="threat-card-icon">
-                        <i data-lucide="lock"></i>
-                    </div>
-                    <h3>Ransomware</h3>
-                    <p>Backup inmutable, segmentación de red y respuesta rápida ante ataques de cifrado.</p>
-                </div>
-
-                <div class="threat-card">
-                    <div class="threat-card-icon">
-                        <i data-lucide="user-x"></i>
-                    </div>
-                    <h3>Compromiso de Identidad</h3>
-                    <p>MFA obligatorio, Conditional Access y hardening de Active Directory.</p>
-                </div>
-
-                <div class="threat-card">
-                    <div class="threat-card-icon">
-                        <i data-lucide="mail"></i>
-                    </div>
-                    <h3>Phishing & BEC</h3>
-                    <p>Protección avanzada de correo, análisis de comportamiento y training de usuarios.</p>
-                </div>
-
-                <div class="threat-card">
-                    <div class="threat-card-icon">
-                        <i data-lucide="bug"></i>
-                    </div>
-                    <h3>Vulnerabilidades Zero-Day</h3>
-                    <p>Patch management automatizado y mitigaciones preventivas.</p>
-                </div>
-
-                <div class="threat-card">
-                    <div class="threat-card-icon">
-                        <i data-lucide="activity"></i>
-                    </div>
-                    <h3>Amenazas Internas</h3>
-                    <p>DLP, monitoreo de privilegios y análisis de comportamiento anómalo.</p>
-                </div>
-
-                <div class="threat-card">
-                    <div class="threat-card-icon">
-                        <i data-lucide="cloud-off"></i>
-                    </div>
-                    <h3>Ataques a Cloud</h3>
-                    <p>Hardening de Azure/M365, CSPM y monitoreo continuo de configuraciones.</p>
-                </div>
-            </div>
+      <div class="container threat-content">
+        <div class="section-intro">
+          <span class="section-label" style="background: rgba(251, 191, 36, 0.2); color: var(--accent-yellow);">PANORAMA
+            DE AMENAZAS CIBERNÉTICAS</span>
+          <h2 style="color: white;">Protección Contra Amenazas Críticas Actuales</h2>
+          <p style="color: rgba(255, 255, 255, 0.8);">Defendemos tu organización contra las ciberamenazas más críticas y
+            sofisticadas del panorama actual de seguridad empresarial.</p>
         </div>
+
+        <div class="threat-grid">
+          <article class="threat-card">
+            <div class="threat-card-icon">
+              <i data-lucide="lock"></i>
+            </div>
+            <h3>Ransomware y Extorsión</h3>
+            <p>Backup inmutable anti-ransomware, segmentación de red empresarial, Zero Trust y respuesta rápida ante
+              ataques de cifrado y extorsión.</p>
+          </article>
+
+          <article class="threat-card">
+            <div class="threat-card-icon">
+              <i data-lucide="user-x"></i>
+            </div>
+            <h3>Compromiso de Identidad</h3>
+            <p>MFA obligatorio empresarial, Conditional Access inteligente, hardening de Active Directory y protección
+              de cuentas privilegiadas.</p>
+          </article>
+
+          <article class="threat-card">
+            <div class="threat-card-icon">
+              <i data-lucide="mail"></i>
+            </div>
+            <h3>Phishing y BEC</h3>
+            <p>Protección avanzada de correo electrónico, análisis de comportamiento de usuarios, anti-phishing y
+              training de concientización en seguridad.</p>
+          </article>
+
+          <article class="threat-card">
+            <div class="threat-card-icon">
+              <i data-lucide="bug"></i>
+            </div>
+            <h3>Vulnerabilidades Zero-Day</h3>
+            <p>Patch management automatizado enterprise, actualizaciones críticas de seguridad y mitigaciones
+              preventivas ante exploits.</p>
+          </article>
+
+          <article class="threat-card">
+            <div class="threat-card-icon">
+              <i data-lucide="activity"></i>
+            </div>
+            <h3>Amenazas Internas</h3>
+            <p>DLP (Data Loss Prevention), monitoreo de usuarios privilegiados, análisis de comportamiento anómalo y
+              protección de datos sensibles.</p>
+          </article>
+
+          <article class="threat-card">
+            <div class="threat-card-icon">
+              <i data-lucide="cloud-off"></i>
+            </div>
+            <h3>Ataques a Cloud</h3>
+            <p>Hardening de Azure y Microsoft 365, CSPM (Cloud Security Posture Management) y monitoreo continuo de
+              configuraciones cloud.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section class="why-security-section">
-        <div class="container">
-            <div class="section-intro">
-                <span class="section-label">NUESTRO ENFOQUE</span>
-                <h2>Seguridad Proactiva & Estratégica</h2>
-                <p>No solo respondemos a incidentes, prevenimos que ocurran mediante arquitectura defensiva y monitoreo
-                    continuo.</p>
-            </div>
-
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i data-lucide="eye"></i>
-                    </div>
-                    <h3>Visibilidad Total</h3>
-                    <p>SIEM/XDR integrado que correlaciona eventos on-prem y cloud en tiempo real.</p>
-                </div>
-
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i data-lucide="zap"></i>
-                    </div>
-                    <h3>Respuesta Rápida</h3>
-                    <p>Equipo de incident response con experiencia en post-breach y forensics.</p>
-                </div>
-
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i data-lucide="lock"></i>
-                    </div>
-                    <h3>Zero Trust</h3>
-                    <p>Implementación de arquitecturas Zero Trust con microsegmentación y MFA adaptativo.</p>
-                </div>
-
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i data-lucide="file-check"></i>
-                    </div>
-                    <h3>Compliance Ready</h3>
-                    <p>Frameworks de seguridad alineados con ISO 27001, NIST, SOC 2 y regulaciones locales.</p>
-                </div>
-
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i data-lucide="users"></i>
-                    </div>
-                    <h3>Hardening Experto</h3>
-                    <p>Especialistas en fortificación de AD, Azure AD/Entra ID y ambientes híbridos.</p>
-                </div>
-
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i data-lucide="trending-up"></i>
-                    </div>
-                    <h3>Mejora Continua</h3>
-                    <p>Tuning constante de alertas, reducción de falsos positivos y optimización de reglas.</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-label">NUESTRO ENFOQUE DE CIBERSEGURIDAD</span>
+          <h2>Seguridad Proactiva y Estratégica</h2>
+          <p>No solo respondemos a incidentes de seguridad, prevenimos que ocurran mediante arquitectura defensiva Zero
+            Trust, hardening proactivo y monitoreo continuo SOC 24/7.</p>
         </div>
+
+        <div class="why-grid">
+          <article class="why-card">
+            <div class="why-icon">
+              <i data-lucide="eye"></i>
+            </div>
+            <h3>Visibilidad Total de Seguridad</h3>
+            <p>SIEM/XDR integrado que correlaciona eventos de seguridad on-premise y cloud en tiempo real para detección
+              temprana de amenazas.</p>
+          </article>
+
+          <article class="why-card">
+            <div class="why-icon">
+              <i data-lucide="zap"></i>
+            </div>
+            <h3>Respuesta Rápida a Incidentes</h3>
+            <p>Equipo experto de incident response con experiencia comprobada en post-breach remediation, forensics
+              digital y contención de amenazas.</p>
+          </article>
+
+          <article class="why-card">
+            <div class="why-icon">
+              <i data-lucide="lock"></i>
+            </div>
+            <h3>Arquitectura Zero Trust</h3>
+            <p>Implementación de arquitecturas Zero Trust empresariales con microsegmentación de red, MFA adaptativo y
+              least privilege access.</p>
+          </article>
+
+          <article class="why-card">
+            <div class="why-icon">
+              <i data-lucide="file-check"></i>
+            </div>
+            <h3>Compliance y Frameworks</h3>
+            <p>Frameworks de seguridad alineados con ISO 27001, NIST Cybersecurity Framework, SOC 2, PCI-DSS y
+              regulaciones locales de protección de datos.</p>
+          </article>
+
+          <article class="why-card">
+            <div class="why-icon">
+              <i data-lucide="users"></i>
+            </div>
+            <h3>Hardening Especializado</h3>
+            <p>Especialistas en fortificación avanzada de Active Directory, Azure AD/Entra ID, ambientes híbridos y
+              protección de identidades empresariales.</p>
+          </article>
+
+          <article class="why-card">
+            <div class="why-icon">
+              <i data-lucide="trending-up"></i>
+            </div>
+            <h3>Mejora Continua SOC</h3>
+            <p>Tuning constante de alertas de seguridad, reducción inteligente de falsos positivos y optimización
+              continua de reglas de detección.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section id="contacto" class="cta-section">
-        <div class="container cta-content">
-            <h2>Security Assessment Gratuito</h2>
-            <p>Evaluamos tu postura de seguridad actual: vulnerabilidades críticas, configuraciones inseguras y brechas
-                en tu defensa. Recibe un reporte ejecutivo con recomendaciones priorizadas.</p>
+      <div class="container cta-content">
+        <h2>Security Assessment Empresarial Gratuito</h2>
+        <p>Evaluamos tu postura de seguridad actual: vulnerabilidades críticas, configuraciones inseguras de Active
+          Directory y Azure, brechas en tu defensa perimetral y oportunidades de hardening. Recibe un reporte ejecutivo
+          detallado con recomendaciones priorizadas por riesgo.</p>
 
-            <div class="cta-buttons">
-                <a href="index.html#contacto" class="btn-cta btn-cta-primary">
-                    <i data-lucide="shield-check"></i>
-                    Solicitar Assessment
-                </a>
-                <a href="index.html" class="btn-cta btn-cta-secondary">
-                    <i data-lucide="arrow-left"></i>
-                    Ver Todos los Servicios
-                </a>
-            </div>
+        <div class="cta-buttons">
+          <a href="index.html#contacto" class="btn-cta btn-cta-primary"
+            aria-label="Solicitar security assessment gratuito">
+            <i data-lucide="shield-check"></i>
+            Solicitar Security Assessment
+          </a>
+          <a href="index.html" class="btn-cta btn-cta-secondary" aria-label="Ver todos nuestros servicios IT">
+            <i data-lucide="arrow-left"></i>
+            Ver Todos los Servicios IT
+          </a>
         </div>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo-placeholder">
-                        <img src="./img/logo-beta2-70-1.gif" width="56" height="55" alt="Costa Rica EBS">
-                    </div>
-                    <span class="brand-text">Costa Rica EBS</span>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html">Inicio</a>
-                    <a href="index.html#servicios">Servicios</a>
-                    <a href="microsoft-azure.html">Microsoft</a>
-                    <a href="data-center.html">Data Center</a>
-                    <!-- <a href="ciberseguridad.html">Ciberseguridad</a> -->
-                    <a href="diseno-web.html">Diseño Web</a>
-                    <!-- <a href="tienda-solar.html">Solar</a> -->
-                    <a href="index.html#industrias">Industrias</a>
-                    <!-- <a href="https://costaricaebs.com/product-category/it-solutions/microsoft/"
-                        target="_blank">Solar</a> -->
-                    <a href="index.html#whycrebs">Por qué EBS</a>
-                    <a href="index.html#contacto">Contacto</a>
-                    <a href="term-cond.html">Términos y condiciones</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p class="copyright">© 2026 Costa Rica Enterprise Business Solutions. Todos los derechos reservados.</p>
-            </div>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo-placeholder">
+            <img src="./img/logo-costa-rica-ebs.gif" width="56" height="55" alt="Costa Rica EBS Logo">
+          </div>
         </div>
-    </footer>
+        <nav class="footer-links" aria-label="Navegación del pie de página">
+          <a href="index.html">Inicio</a>
+          <a href="index.html#servicios">Servicios</a>
+          <a href="microsoft-azure.html">Microsoft Azure</a>
+          <a href="data-center.html">Data Center</a>
+          <a href="diseno-web.html">Diseño Web</a>
+          <a href="index.html#industrias">Industrias</a>
+          <a href="index.html#whycrebs">Por qué EBS</a>
+          <a href="index.html#contacto">Contacto</a>
+          <a href="term-cond.html">Términos y condiciones</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 Costa Rica Enterprise Business Solutions. Todos los derechos reservados.
+          Ciberseguridad Enterprise.</p>
+      </div>
+    </div>
+  </footer>
 
-    <a href="https://wa.me/50672792650" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
-        <i data-lucide="phone"></i>
-    </a>
+  <a href="https://wa.me/50672792650" class="whatsapp-float" target="_blank" rel="noopener"
+    aria-label="Contactar por WhatsApp para consultas de ciberseguridad">
+    <i data-lucide="phone"></i>
+  </a>
 
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#' && href.length > 1) {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                }
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href.length > 1) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
             });
-        });
+          }
+        }
+      });
+    });
 
-        // Intersection Observer for animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
 
-        // Observe all cards and sections
-        document.querySelectorAll('.security-card, .why-card, .threat-card, .section-intro').forEach(el => {
-            observer.observe(el);
-        });
+    // Observe all cards and sections
+    document.querySelectorAll('.security-card, .why-card, .threat-card, .section-intro').forEach(el => {
+      observer.observe(el);
+    });
 
-        // Add animation delay to cards
-        document.querySelectorAll('.security-card').forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.1}s`;
-        });
+    // Add animation delay to cards
+    document.querySelectorAll('.security-card').forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.1}s`;
+    });
 
-        document.querySelectorAll('.why-card').forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.1}s`;
-        });
+    document.querySelectorAll('.why-card').forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.1}s`;
+    });
 
-        document.querySelectorAll('.threat-card').forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.05}s`;
-        });
+    document.querySelectorAll('.threat-card').forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.05}s`;
+    });
 
-        // Re-initialize Lucide icons after page load
-        window.addEventListener('load', () => {
-            lucide.createIcons();
-        });
-    </script>
+    // Re-initialize Lucide icons after page load
+    window.addEventListener('load', () => {
+      lucide.createIcons();
+    });
+  </script>
 </body>
 
 </html>
