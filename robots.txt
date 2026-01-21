@@ -1,0 +1,64 @@
+# robots.txt para Costa Rica EBS
+# Sitio web: https://www.costaricaebs.com
+
+# Permitir acceso a todos los bots de búsqueda
+User-agent: *
+Allow: /
+
+# Bloquear directorios privados o temporales
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
+Disallow: /test/
+
+# Bloquear archivos temporales
+Disallow: /*.bak$
+Disallow: /*.tmp$
+Disallow: /*.log$
+
+# Permitir explícitamente imágenes
+Allow: /img/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Permitir CSS y JavaScript para mejor indexación
+Allow: /*.css$
+Allow: /*.js$
+
+# Configuración específica para Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Configuración específica para Googlebot-Image
+User-agent: Googlebot-Image
+Allow: /img/
+
+# Configuración específica para Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Bloquear bots maliciosos conocidos
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Ubicación del sitemap
+Sitemap: https://www.costaricaebs.com/sitemap.xml
+
+# Host canónico
+Host: www.costaricaebs.com
