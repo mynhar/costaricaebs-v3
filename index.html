@@ -95,8 +95,10 @@
     <div class="container header-content">
       <div class="brand-container">
         <div class="logo-placeholder">
-          <img src="./img/logo-costa-rica-ebs.gif" width="56" height="55"
-            alt="Logo Costa Rica EBS - Soluciones IT y Cloud">
+          <a href="#home">
+            <img src="./img/logo-costa-rica-ebs.gif" width="56" height="55"
+              alt="Logo Costa Rica EBS - Soluciones IT y Cloud">
+          </a>
         </div>
         <span class="logo-text-sub">Enterprise Business Solutions</span>
       </div>
@@ -114,9 +116,8 @@
           <li style="--i:5"><a href="ciberseguridad.html">Ciberseguridad</a></li>
           <li style="--i:6"><a href="diseno-web.html">Diseño Web</a></li>
           <li style="--i:8"><a href="#industrias">Industrias</a></li>
-          <li style="--i:9"><a href="#whycrebs">Por qué EBS</a></li>
-          <li style="--i:10"><a href="#contacto">Contacto</a></li>
-          <li style="--i:11"><a href="term-cond.html">Términos y Condiciones</a></li>
+          <li style="--i:9"><a href="https://cloud.costaricaebs.com/">Microsoft Cloud Service Provider</a></li>
+
         </ul>
       </nav>
     </div>
@@ -490,7 +491,7 @@
 
           <div class="contact-form-container">
             <div id="formMessage" class="form-message"></div>
-            <form id="contactForm" class="modern-form" action="enviar.php" method="POST">
+            <form id="contactForm" class="modern-form" action="send-email.php" method="POST">
               <div class="form-row">
                 <div class="form-group">
                   <label for="name">Nombre Completo</label>
@@ -533,6 +534,8 @@
                   placeholder="Describa sus necesidades de infraestructura IT, migración cloud o ciberseguridad"></textarea>
               </div>
 
+              <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
               <button type="submit" class="primary-btn" aria-label="Enviar solicitud de consultoría">
                 <span>Enviar Solicitud</span>
                 <i data-lucide="arrow-right"></i>
@@ -548,17 +551,12 @@
     <div class="container footer-content">
       <div class="footer-logo">
         <div class="logo-placeholder">
-          <img src="./img/logo-costa-rica-ebs.gif" width="56" height="55" alt="Costa Rica EBS Logo">
+          <a href="#home">
+            <img src="./img/logo-costa-rica-ebs.gif" width="56" height="55" alt="Costa Rica EBS Logo">
+          </a>
         </div>
       </div>
       <nav class="footer-links" aria-label="Navegación del pie de página">
-        <a href="#home">Inicio</a>
-        <a href="#servicios">Servicios IT</a>
-        <a href="microsoft-azure.html">Microsoft Azure</a>
-        <a href="data-center.html">Centro de Datos</a>
-        <a href="ciberseguridad.html">Ciberseguridad</a>
-        <a href="diseno-web.html">Diseño Web</a>
-        <a href="#industrias">Industrias</a>
         <a href="#whycrebs">Por qué EBS</a>
         <a href="#contacto">Contacto</a>
         <a href="term-cond.html">Términos y Condiciones</a>
