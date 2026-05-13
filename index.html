@@ -594,19 +594,20 @@
       const contactForm = document.getElementById('contactForm');
       const formMessage = document.getElementById('formMessage');
 
+      let menuScrollY = 0;
+
       const closeMenu = () => {
-        const scrollY = parseInt(document.body.style.top || '0', 10) * -1;
         navMenu.classList.remove('active');
         navOverlay.classList.remove('active');
         document.body.classList.remove('no-scroll');
-        document.body.style.removeProperty('top');
-        if (scrollY) window.scrollTo(0, scrollY);
+        if (menuScrollY) window.scrollTo(0, menuScrollY);
+        menuScrollY = 0;
         menuToggle.querySelector('i').setAttribute('data-lucide', 'menu');
         lucide.createIcons();
       };
 
       const openMenu = () => {
-        document.body.style.top = `-${window.scrollY}px`;
+        menuScrollY = window.scrollY;
         navMenu.classList.add('active');
         navOverlay.classList.add('active');
         document.body.classList.add('no-scroll');
