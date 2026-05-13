@@ -55,7 +55,9 @@ body {
 }
 
 body.no-scroll {
-  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  overflow-y: hidden;
 }
 
 .container {
@@ -720,7 +722,7 @@ footer {
 /* WhatsApp Float */
 .whatsapp-float {
   position: fixed;
-  bottom: 30px;
+  bottom: calc(30px + env(safe-area-inset-bottom, 0px));
   right: 30px;
   background: #25d366;
   color: white;
@@ -734,6 +736,12 @@ footer {
   z-index: 3000;
   transition: 0.3s;
   text-decoration: none;
+}
+
+.whatsapp-float svg {
+  fill: white;
+  display: block;
+  flex-shrink: 0;
 }
 
 .whatsapp-float:hover {
