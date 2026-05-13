@@ -323,6 +323,7 @@ nav a.active {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  isolation: isolate;
   color: white;
 }
 
@@ -922,6 +923,10 @@ footer {
   z-index: 3000;
   transition: 0.3s;
   text-decoration: none;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .whatsapp-float svg {
