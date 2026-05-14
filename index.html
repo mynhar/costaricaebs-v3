@@ -452,8 +452,8 @@
             ciberseguridad.</p>
         </div>
 
-        <div class="contact-grid">
-          <div class="contact-info-card">
+        <div class="contact-info-card">
+          <div class="contact-benefits">
             <h3>¿Qué incluye la evaluación?</h3>
             <ul class="benefit-list">
               <li><i data-lucide="check-circle"></i> Análisis de brechas de ciberseguridad</li>
@@ -461,86 +461,32 @@
               <li><i data-lucide="check-circle"></i> Diagnóstico de eficiencia energética</li>
               <li><i data-lucide="check-circle"></i> Roadmap de modernización IT</li>
             </ul>
-
-            <div class="direct-contact">
-              <div class="info-item">
-                <div class="info-icon"><i data-lucide="mail"></i></div>
-                <div>
-                  <span>Escríbenos</span>
-                  <strong><a href="mailto:contacto@costaricaebs.com"
-                      style="color: white; text-decoration: none;">contacto@costaricaebs.com</a></strong>
-                </div>
-              </div>
-              <div class="info-item">
-                <div class="info-icon"><i data-lucide="phone"></i></div>
-                <div>
-                  <span>Llámanos</span>
-                  <strong><a href="tel:+50621012374" style="color: white; text-decoration: none;">+506
-                      2101-2374</a></strong>
-                </div>
-              </div>
-              <div class="info-item">
-                <div class="info-icon"><i data-lucide="map-pin"></i></div>
-                <div>
-                  <span>Sede Central</span>
-                  <strong>San Rafael de Heredia, Costa Rica</strong>
-                </div>
-              </div>
-            </div>
           </div>
 
-          <div class="contact-form-container">
-            <div id="formMessage" class="form-message"></div>
-            <form id="contactForm" class="modern-form" action="send-email.php" method="POST">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Nombre Completo</label>
-                  <input type="text" id="name" name="name" maxlength="50" required aria-required="true">
-                </div>
-                <div class="form-group">
-                  <label for="company">Empresa</label>
-                  <input type="text" id="company" name="company" maxlength="50" required aria-required="true">
-                </div>
+          <div class="direct-contact">
+            <div class="info-item">
+              <div class="info-icon"><i data-lucide="mail"></i></div>
+              <div>
+                <span>Escríbenos</span>
+                <strong><a href="mailto:contacto@costaricaebs.com"
+                    style="color: white; text-decoration: none;">contacto@costaricaebs.com</a></strong>
               </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="email">Correo Corporativo</label>
-                  <input type="email" id="email" name="email" maxlength="50" required aria-required="true">
-                </div>
-                <div class="form-group">
-                  <label for="phone">Teléfono</label>
-                  <input type="tel" id="phone" name="phone" maxlength="30" required aria-required="true">
-                </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i data-lucide="phone"></i></div>
+              <div>
+                <span>Llámanos</span>
+                <strong><a href="tel:+50621012374" style="color: white; text-decoration: none;">+506
+                    2101-2374</a></strong>
               </div>
-
-              <div class="form-group">
-                <label for="service">Servicio de Interés</label>
-                <select id="service" name="service" required aria-required="true">
-                  <option value="" disabled selected>Seleccione una solución</option>
-                  <option value="Infraestructura IT Principal">Infraestructura IT Principal</option>
-                  <option value="Centro de Datos & Disaster Recovery">Centro de Datos & Disaster Recovery</option>
-                  <option value="Microsoft & Azure">Microsoft Azure</option>
-                  <option value="Ciberseguridad">Ciberseguridad Empresarial</option>
-                  <option value="Soluciones de Energía Solar">Soluciones de Energía Solar</option>
-                  <option value="Servicios Gestionados">Servicios Gestionados (Managed Services)</option>
-                  <option value="Diseño Web. Soluciones Web Empresariales">Diseño Web Empresarial</option>
-                </select>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i data-lucide="map-pin"></i></div>
+              <div>
+                <span>Sede Central</span>
+                <strong>San Rafael de Heredia, Costa Rica</strong>
               </div>
-
-              <div class="form-group">
-                <label for="message">Detalles del Proyecto</label>
-                <textarea id="message" name="message" rows="16" maxlength="983" required aria-required="true"
-                  placeholder="Describa sus necesidades de infraestructura IT, migración cloud o ciberseguridad"></textarea>
-              </div>
-
-              <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
-
-              <button type="submit" class="primary-btn" aria-label="Enviar solicitud de consultoría">
-                <span>Enviar Solicitud</span>
-                <i data-lucide="arrow-right"></i>
-              </button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -591,9 +537,6 @@
       const menuToggle = document.querySelector('.menu-toggle');
       const navMenu = document.querySelector('.nav-menu');
       const navOverlay = document.querySelector('.nav-overlay');
-      const contactForm = document.getElementById('contactForm');
-      const formMessage = document.getElementById('formMessage');
-
       let menuScrollY = 0;
 
       const closeMenu = () => {
@@ -655,12 +598,6 @@
           if (p !== evt.currentTarget) p.setAttribute('aria-selected', 'false');
         });
         document.getElementById('servicios').scrollIntoView({ behavior: 'smooth', block: 'start' });
-      };
-
-      const showMessage = (message, type) => {
-        formMessage.textContent = message;
-        formMessage.className = `form-message ${type}`;
-        formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       };
 
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {

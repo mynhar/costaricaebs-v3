@@ -647,23 +647,20 @@ h1 {
   border-color: rgba(124, 58, 237, 0.3);
 }
 
-.contact-grid {
+.contact-info-card {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1fr;
   gap: 48px;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
-}
-
-.contact-info-card {
   background: rgba(255, 255, 255, 0.05);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-lg);
-  padding: 40px;
+  padding: 48px;
 }
 
 .contact-info-card h3 {
@@ -676,7 +673,7 @@ h1 {
 .benefit-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 40px 0;
+  margin: 0;
 }
 
 .benefit-list li {
@@ -697,9 +694,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-top: 32px;
-  padding-top: 32px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  justify-content: center;
 }
 
 .info-item {
@@ -739,133 +734,6 @@ h1 {
   font-weight: 600;
   font-size: 0.9375rem;
 }
-
-/* Form */
-.contact-form-container {
-  background: white;
-  border-radius: var(--radius-lg);
-  padding: 48px;
-  box-shadow: var(--shadow-xl);
-}
-
-.modern-form {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-  gap: 20px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.form-group label {
-  color: var(--text-primary);
-  font-weight: 600;
-  font-size: 0.875rem;
-}
-
-.form-group label::after {
-  content: "*";
-  color: var(--accent-red);
-  margin-left: 4px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 14px 16px;
-  background: var(--bg-secondary);
-  border: 2px solid transparent;
-  border-radius: var(--radius-md);
-  font-size: 0.9375rem;
-  font-family: var(--font-main);
-  color: var(--text-primary);
-  transition: var(--transition);
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--accent-purple);
-  background: white;
-  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.form-group select {
-  cursor: pointer;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%233a4256' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  background-size: 20px;
-  padding-right: 44px;
-}
-
-.primary-btn {
-  background: var(--accent-purple);
-  color: white;
-  padding: 16px 32px;
-  border: none;
-  border-radius: var(--radius-md);
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  box-shadow: var(--shadow-md);
-  margin-top: 8px;
-}
-
-.primary-btn:hover {
-  background: var(--accent-blue);
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-2px);
-}
-
-.form-message {
-  padding: 16px 20px;
-  border-radius: var(--radius-md);
-  display: none;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-
-.form-message.success,
-.form-message.error {
-  display: flex;
-}
-
-.form-message.success {
-  background: rgba(16, 185, 129, 0.1);
-  border: 1px solid var(--accent-green);
-  color: var(--accent-green);
-}
-
-.form-message.error {
-  background: rgba(239, 68, 68, 0.1);
-  border: 1px solid var(--accent-red);
-  color: var(--accent-red);
-}
-
 /* Footer */
 footer {
   background: var(--text-primary);
@@ -962,8 +830,9 @@ textarea:focus-visible {
 }
 
 @media (max-width: 1024px) {
-  .contact-grid {
+  .contact-info-card {
     grid-template-columns: 1fr;
+    max-width: 560px;
   }
 }
 
@@ -980,8 +849,7 @@ textarea:focus-visible {
     padding: 80px 0;
   }
 
-  .contact-info-card,
-  .contact-form-container {
+  .contact-info-card {
     padding: 32px;
   }
 
